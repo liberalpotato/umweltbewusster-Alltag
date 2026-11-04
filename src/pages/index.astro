@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import { bereiche } from '../data/bereiche';
+import { veroeffentlichteRatgeber } from '../data/inhalte';
+
+const neueste = (await veroeffentlichteRatgeber()).slice(0, 5);
+---
+
+<Base titel="Umweltbewusster Alltag" beschreibung="Ehrliche Antworten auf die Frage, was im Alltag wirklich am nachhaltigsten ist: Kochen, Wohnen, Mobilität und Konsum. Unabhängig, mit Quellen.">
+  <h1>Was ist im Alltag wirklich am nachhaltigsten?</h1>
+  <p>Hier findest du ehrliche Antworten auf konkrete Alltagsfragen, mit nachvollziehbaren Quellen. Ich verkaufe nichts und verdiene nichts an Empfehlungen. Deshalb steht oft „brauchst du es überhaupt?“ oder „gebraucht kaufen“ ganz oben.</p>
+
+  <h2>Themen</h2>
+  <ul class="karten">
+    {bereiche.map((b) => (
+      <li>
+        <a href={`/themen/${b.slug}/`}>{b.name}</a>
+        <p>{b.beschreibung}</p>
+      </li>
+    ))}
+  </ul>
+
+  {neueste.length > 0 && (
+    <>
+      <h2>Neueste Ratgeber</h2>
+      <ul class="karten">
+        {neueste.map((r) => (
+          <li>
+            <a href={`/ratgeber/${r.id}/`}>{r.data.titel}</a>
+            <p>{r.data.fazit}</p>
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+</Base>

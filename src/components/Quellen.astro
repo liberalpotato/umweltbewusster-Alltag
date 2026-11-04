@@ -1,0 +1,16 @@
+---
+interface Props {
+  quellen: { titel: string; url: string; hinweis?: string }[];
+}
+const { quellen } = Astro.props;
+---
+
+<h2>Quellen</h2>
+<ol class="quellen">
+  {quellen.map((q) => (
+    <li>
+      <a href={q.url} rel="noopener">{q.titel}</a>
+      {q.hinweis && <span> ({q.hinweis})</span>}
+    </li>
+  ))}
+</ol>

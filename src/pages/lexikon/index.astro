@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const eintraege = (await getCollection('lexikon')).sort((a, b) => a.data.begriff.localeCompare(b.data.begriff, 'de'));
+---
+
+<Base titel="Lexikon" beschreibung="Kurze, belegte Erklärungen zu Begriffen rund um Nachhaltigkeit im Alltag.">
+  <h1>Lexikon</h1>
+  <ul class="karten">
+    {eintraege.map((e) => (
+      <li>
+        <a href={`/lexikon/${e.id}/`}>{e.data.begriff}</a>
+        <p>{e.data.beschreibung}</p>
+      </li>
+    ))}
+  </ul>
+</Base>

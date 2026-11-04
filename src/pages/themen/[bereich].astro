@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import { bereiche } from '../../data/bereiche';
+import { veroeffentlichteRatgeber } from '../../data/inhalte';
+
+export function getStaticPaths() {
+  return bereiche.map((b) => ({ params: { bereich: b.slug }, props: { bereich: b } }));
+}
+
+const { bereich } = Astro.props;
+const liste = (await veroeffentlichteRatgeber()).filter((r) => r.data.bereich === bereich.slug);
+---
+
+<Base titel={bereich.name} beschreibung={`Ratgeber zu ${bereich.name}: ${bereich.beschreibung}`}>
+  <h1>{bereich.name}</h1>
+  <p>{bereich.beschreibung}</p>
+  {liste.length > 0 ? (
+    <ul class="karten">
+      {liste.map((r) => (
+        <li>
+          <a href={`/ratgeber/${r.id}/`}>{r.data.titel}</a>
+          <p>{r.data.fazit}</p>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="meta">Zu diesem Thema entstehen gerade die ersten Ratgeber.</p>
+  )}
+</Base>

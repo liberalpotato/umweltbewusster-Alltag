@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+import { bereiche } from '../data/bereiche';
+
+interface Props {
+  titel: string;
+  beschreibung: string;
+}
+
+const { titel, beschreibung } = Astro.props;
+const seitenTitel = titel === 'Umweltbewusster Alltag' ? titel : `${titel} | Umweltbewusster Alltag`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{seitenTitel}</title>
+    <meta name="description" content={beschreibung} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:title" content={seitenTitel} />
+    <meta property="og:description" content={beschreibung} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="de_DE" />
+  </head>
+  <body>
+    <header class="kopf">
+      <div class="breite kopf-innen">
+        <a class="logo" href="/">Umweltbewusster Alltag</a>
+        <nav aria-label="Hauptnavigation">
+          <ul>
+            {bereiche.map((b) => (
+              <li><a href={`/themen/${b.slug}/`}>{b.name}</a></li>
+            ))}
+            <li><a href="/lexikon/">Lexikon</a></li>
+            <li><a href="/ueber/">Über</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="breite">
+      <slot />
+    </main>
+    <footer class="fuss">
+      <div class="breite">
+        <p>Unabhängig und nicht-kommerziell: keine Werbung, keine bezahlten Links, kein Tracking.</p>
+        <p><a href="/ueber/">Über das Projekt</a> · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
