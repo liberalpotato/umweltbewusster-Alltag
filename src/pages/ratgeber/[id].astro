@@ -1,0 +1,27 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Quellen from '../../components/Quellen.astro';
+import { bereichName } from '../../data/bereiche';
+import { veroeffentlichteRatgeber, datum } from '../../data/inhalte';
+
+export async function getStaticPaths() {
+  const alle = await veroeffentlichteRatgeber();
+  return alle.map((eintrag) => ({ params: { id: eintrag.id }, props: { eintrag } }));
+}
+
+const { eintrag } = Astro.props;
+const { Content } = await render(eintrag);
+const d = eintrag.data;
+---
+
+<Base titel={d.titel} beschreibung={d.beschreibung}>
+  <article>
+    <p class="meta"><a href={`/themen/${d.bereich}/`}>{bereichName(d.bereich)}</a> · Stand: {datum(d.stand)}</p>
+    <h1>{d.titel}</h1>
+    <div class="fazit"><strong>Kurz gesagt</strong>{d.fazit}</div>
+    <Content />
+    <Quellen quellen={d.quellen} />
+    <p class="hinweis">Keine bezahlten Links, keine Kooperationen. Fehler gefunden oder eine bessere Quelle? Schreib mir über das <a href="/impressum/">Impressum</a>.</p>
+  </article>
+</Base>

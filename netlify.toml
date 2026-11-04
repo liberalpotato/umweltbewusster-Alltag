@@ -1,0 +1,67 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Alte Jimdo-Adressen auf die neue Struktur umleiten, damit Links und Google-Treffer weiter funktionieren.
+[[redirects]]
+  from = "/blog/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/produktdetails/essen/burger/"
+  to = "/ratgeber/burger/"
+  status = 301
+
+[[redirects]]
+  from = "/produktdetails/essen/*"
+  to = "/themen/kochen-essen/"
+  status = 301
+
+[[redirects]]
+  from = "/produktdetails/haushalt/*"
+  to = "/themen/wohnen-haushalt/"
+  status = 301
+
+[[redirects]]
+  from = "/produktdetails/m%C3%B6bel/*"
+  to = "/themen/wohnen-haushalt/"
+  status = 301
+
+[[redirects]]
+  from = "/produktdetails/klamotten/*"
+  to = "/themen/kleidung-konsum/"
+  status = 301
+
+[[redirects]]
+  from = "/produktdetails/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/l%C3%B6sungen/*"
+  to = "/themen/wohnen-haushalt/"
+  status = 301
+
+[[redirects]]
+  from = "/haushaltsger%C3%A4te-abo/*"
+  to = "/themen/wohnen-haushalt/"
+  status = 301
+
+[[redirects]]
+  from = "/abonnements/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/about/"
+  to = "/impressum/"
+  status = 301
+
+[[redirects]]
+  from = "/kontakt/"
+  to = "/impressum/"
+  status = 301
