@@ -12,8 +12,8 @@
   status = 301
 
 [[redirects]]
-  from = "/produktdetails/essen/burger/"
-  to = "/ratgeber/burger/"
+  from = "/ratgeber/burger/"
+  to = "/ratgeber/"
   status = 301
 
 [[redirects]]
