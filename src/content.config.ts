@@ -51,6 +51,8 @@ const produkte = defineCollection({
     shop: z.object({ name: z.string(), url: z.string().url() }),
     /** Punktzahl 0–10, vergibt ausschließlich Florian. Leer = „Bewertung folgt“. */
     punkte: z.number().min(0).max(10).optional(),
+    /** Kurzer Tipp von Florian, erscheint auf der Produktseite unter dem Shop-Knopf. */
+    tipp: z.string().optional(),
     kriterien: z.object({
       kreislauf: kriterium,
       /** Nur bei Hosen, Jacken und Taschen (siehe reparaturUnterkategorien). */

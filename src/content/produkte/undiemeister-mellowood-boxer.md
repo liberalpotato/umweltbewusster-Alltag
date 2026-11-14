@@ -1,15 +1,15 @@
 ---
-name: Boxer Briefs aus Mellowood
+name: Weite Boxershorts Volcano Ash
 marke: Undiemeister
 bereich: kleidung
 unterkategorie: unterwaesche
-beschreibung: "Undiemeister Boxer Briefs im Check: weicher Holzfaser-Mix mit 2 Jahren Garantie, aber ohne Rücknahme und deutlich teurer als üblich."
-kurz: "Weiche Boxer Briefs, überwiegend aus Holzfaser (TENCEL™ Modal), mit 2 Jahren Qualitätsgarantie. Rücknahme und Klimadaten fehlen, und der Preis liegt weit über dem Doppelten günstiger Ware."
+beschreibung: "Undiemeister Boxershorts im Check: weicher Holzfaser-Mix mit 2 Jahren Garantie, aber ohne Rücknahme und deutlich teurer als üblich."
+kurz: "Weite Boxershorts, überwiegend aus Holzfaser (TENCEL™ Modal), mit 2 Jahren Qualitätsgarantie. Rücknahme und Klimadaten fehlen, und der Preis liegt weit über dem Doppelten günstiger Ware."
 material: "68 % TENCEL™ Modal, 28 % Bio-Baumwolle, 4 % Elasthan"
-preis: "67,49 € im 3er-Pack (22,49 € pro Stück), einzeln 24,99 €"
+preis: "29,99 € pro Stück, im 6er-Pack 23,99 € pro Stück"
 shop:
   name: undiemeister.com
-  url: https://undiemeister.com/en/collections/mens-tencel-boxer-briefs
+  url: https://undiemeister.com/en/products/mens-black-boxer-shorts-volcano-ash-3-pack
 kriterien:
   kreislauf:
     status: fehlt
@@ -27,14 +27,14 @@ kriterien:
     status: teilweise
     text: "Für die Bio-Baumwolle nennt Undiemeister GOTS, auf der Produktseite sind außerdem Logos des Organic Content Standard (OCS), von TENCEL™ und amfori BSCI zu sehen. Das Holz stammt laut Hersteller aus FSC-zertifizierten Quellen. Cradle to Cradle oder den Grünen Knopf hat das Produkt nicht."
   versand:
-    status: offen
-    text: "Undiemeister schreibt nur, man achte auf Transport und Verpackung. Konkrete Angaben zum Verpackungsmaterial, zur Wiederverwendung oder einen Rabatt dafür gibt es nicht. Versand ab 45 € kostenlos, Rücksendungen innerhalb von 30 Tagen auf eigene Kosten."
+    status: teilweise
+    text: "Laut Produktseite wird ohne unnötiges Plastik verpackt. Genauer erklärt Undiemeister das nicht. Eine wiederverwendbare Versandverpackung oder einen Rabatt dafür gibt es nicht. Versand ab 45 € kostenlos, Rücksendungen innerhalb von 30 Tagen auf eigene Kosten."
   preis:
     status: fehlt
-    text: "22,49 € pro Stück im 3er-Pack. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Undiemeister liegt damit beim 3,5- bis 5,6-Fachen, also weit über dem Doppelten. Ein Abo, bei dem der Hersteller Eigentümer bleibt, bietet Undiemeister nicht an."
+    text: "29,99 € pro Stück, im 6er-Pack 23,99 € pro Stück. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Selbst im 6er-Pack liegt Undiemeister damit beim 3,7- bis 6-Fachen, also weit über dem Doppelten. Ein Abo, bei dem der Hersteller Eigentümer bleibt, bietet Undiemeister nicht an."
   aussehen:
     status: offen
-    text: "Boxer Briefs in vielen Farben. Ob das Design modern wirkt, bewerte ich selbst."
+    text: "Weite Boxershorts mit etwas längerem Bein und Knopfleiste, ohne kratzendes Etikett innen. Ob das Design modern wirkt, bewerte ich selbst."
 pluspunkte:
   - "Überwiegend Holzfaser aus FSC-Holz statt reiner Baumwolle"
   - "2 Jahre Qualitätsgarantie auf den Stoff"
@@ -42,14 +42,18 @@ pluspunkte:
 minuspunkte:
   - "Keine Rücknahme, kein Kreislaufkonzept"
   - "„CO₂-neutral“ ohne Erklärung"
-  - "Preis 3,5- bis 5,6-mal so hoch wie bei großen Modeketten"
+  - "Preis 3,7- bis 6-mal so hoch wie bei großen Modeketten"
 punkte: 5
+tipp: "Undiemeister hat oft Rabattaktionen. Wer nicht sofort neue Unterwäsche braucht, wartet am besten auf das nächste Angebot."
 stand: 2026-11-14
 entwurf: false
 quellen:
-  - titel: "Undiemeister: Boxer Briefs 3er-Pack (Produktseite)"
-    url: https://undiemeister.com/en/boxer-briefs-3-pack-shades-of-red
+  - titel: "Undiemeister: Loose Boxer Shorts Volcano Ash (Produktseite)"
+    url: https://undiemeister.com/en/products/mens-black-boxer-shorts-volcano-ash-3-pack
     hinweis: "Herstellerangaben zu Preis, Material, Herkunft, Siegeln, Garantie und Versand"
+  - titel: "Undiemeister: Losse Boxershort Volcano Ash (Produktseite, niederländisch)"
+    url: https://undiemeister.com/products/heren-zwarte-losse-boxershort-volcano-ash
+    hinweis: "Herstellerangaben zu Einzelpreis, Passform und Verpackung"
   - titel: "Undiemeister: Mellowood-Stoff"
     url: https://undiemeister.com/en/mellowood
     hinweis: "Herstellerangaben zu Zusammensetzung und Abbaubarkeit"
