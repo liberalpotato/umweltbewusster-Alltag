@@ -28,7 +28,7 @@ kriterien:
     text: "Für die Bio-Baumwolle nennt Undiemeister GOTS, auf der Produktseite sind außerdem Logos des Organic Content Standard (OCS), von TENCEL™ und amfori BSCI zu sehen. Das Holz stammt laut Hersteller aus FSC-zertifizierten Quellen. Cradle to Cradle oder den Grünen Knopf hat das Produkt nicht."
   versand:
     status: teilweise
-    text: "Laut Produktseite wird ohne unnötiges Plastik verpackt. Genauer erklärt Undiemeister das nicht. Eine wiederverwendbare Versandverpackung oder einen Rabatt dafür gibt es nicht. Versand ab 45 € kostenlos, Rücksendungen innerhalb von 30 Tagen auf eigene Kosten."
+    text: "Bei meiner Bestellung kam die Ware in einem normalen Pappkarton, nichts Besonderes. Laut Produktseite wird ohne unnötiges Plastik verpackt. Eine wiederverwendbare Versandverpackung oder einen Rabatt dafür gibt es nicht. Versand ab 45 € kostenlos, Rücksendungen innerhalb von 30 Tagen auf eigene Kosten."
   preis:
     status: fehlt
     text: "29,99 € pro Stück, im 6er-Pack 23,99 € pro Stück. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Selbst im 6er-Pack liegt Undiemeister damit beim 3,7- bis 6-Fachen, also weit über dem Doppelten. Ein Abo, bei dem der Hersteller Eigentümer bleibt, bietet Undiemeister nicht an."

@@ -27,8 +27,8 @@ kriterien:
     status: teilweise
     text: "Die Bio-Baumwolle ist GOTS-zertifiziert, alle Modelle tragen OEKO-TEX Standard 100. Cradle to Cradle oder den Grünen Knopf hat das Produkt nicht."
   versand:
-    status: offen
-    text: "Zur Verpackung macht Snocks keine Angaben. Hinweise auf eine wiederverwendbare Versandverpackung oder einen Rabatt dafür gibt es nicht. Versand ab 39 € kostenlos."
+    status: teilweise
+    text: "Bei meiner Bestellung kam die Ware in einem normalen Pappkarton, nichts Besonderes. Eine wiederverwendbare Versandverpackung oder einen Rabatt dafür gibt es nicht. Versand ab 39 € kostenlos."
   preis:
     status: gut
     text: "8,17 € pro Stück im 6er-Pack. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Snocks liegt damit beim 1,3- bis 2-Fachen, also gerade noch im Rahmen. Das Snocks-Abo ist eine regelmäßige Lieferung mit 10 % Rabatt. Die Wäsche gehört danach dir, der Hersteller bleibt nicht Eigentümer."
@@ -44,7 +44,7 @@ minuspunkte:
   - "Keine Rücknahme, kein Kreislaufkonzept"
   - "Elasthan erschwert Kompostieren und Recycling (Einschätzung)"
   - "Keine CO₂-Zahlen und kein Ausgleich"
-  - "Keine Angaben zur Verpackung"
+  - "Normaler Pappkarton, keine Mehrweg-Verpackung"
 punkte: 5
 tipp: "Snocks hat oft Rabattaktionen. Wer nicht sofort neue Unterwäsche braucht, wartet am besten auf das nächste Angebot."
 stand: 2026-11-14
