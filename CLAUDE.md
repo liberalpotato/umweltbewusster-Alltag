@@ -35,6 +35,7 @@ Neue Beiträge kommen immer als Pull Request mit Netlify-Vorschau. Florian liest
 2. Jedes Kriterium aus `kriterienKleidung` bekommt einen Status (`gut`, `teilweise`, `fehlt`, `offen`) und einen kurzen, belegten Text. `offen` heißt: keine Angaben gefunden oder Florian entscheidet (z. B. Aussehen).
 3. Kreislauf nach Cradle to Cradle ist das wichtigste Kriterium. Faire Arbeitsbedingungen werden nicht bewertet.
 4. Wirbt ein Hersteller mit CO₂-Ausgleich oder „klimaneutral“: genau erklären, wie (welche Projekte, vermeiden oder dauerhaft entfernen), und Florian entscheiden lassen, ob das zählt.
-5. Preis: mit vergleichbarer Ware bei C&A oder H&M vergleichen, Quelle mit Abrufdatum angeben.
+5. Preis: mit vergleichbarer Ware großer Modeketten (z. B. C&A, H&M) vergleichen. Auf der Seite die Kette nicht namentlich nennen, sondern „große Modeketten“ schreiben, mit Stand (Monat/Jahr).
 6. `shop` verlinkt eine seriöse Seite, auf der man das Produkt wirklich kaufen kann, ohne Affiliate-Parameter.
 7. Herstellerangaben als solche kennzeichnen, eigene Einschätzungen als „Einschätzung“.
+8. Reparatur nur bei Hosen & Jeans, Jacken und Taschen/Rucksäcken bewerten (`reparaturUnterkategorien`), bei allen anderen Unterkategorien weglassen.

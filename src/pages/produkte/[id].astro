@@ -5,7 +5,7 @@ import Punkte from '../../components/Punkte.astro';
 import Icon from '../../components/Icon.astro';
 import StatusChip from '../../components/StatusChip.astro';
 import Quellen from '../../components/Quellen.astro';
-import { findeBereich, findeUnterkategorie, kriterienKleidung, zaehleStatus, type Status } from '../../data/alltag';
+import { findeBereich, findeUnterkategorie, kriterienFuer, zaehleStatus, type Status } from '../../data/alltag';
 import { sichtbareProdukte, datum } from '../../data/inhalte';
 
 export async function getStaticPaths() {
@@ -20,6 +20,10 @@ const hatText = (eintrag.body ?? '').trim().length > 0;
 const bereich = findeBereich(d.bereich);
 const unter = findeUnterkategorie(d.bereich, d.unterkategorie);
 const zahl = zaehleStatus(d.kriterien);
+const kriterien = kriterienFuer(d.unterkategorie).flatMap((k) => {
+  const kr = d.kriterien[k.key];
+  return kr ? [{ ...k, ...kr }] : [];
+});
 const reihenfolge: Status[] = ['gut', 'teilweise', 'fehlt', 'offen'];
 const woerter: Record<Status, string> = { gut: 'erfüllt', teilweise: 'teilweise erfüllt', fehlt: 'fehlen', offen: 'offen' };
 ---
@@ -84,21 +88,18 @@ const woerter: Record<Status, string> = { gut: 'erfüllt', teilweise: 'teilweise
       <p>Nach meinen Kriterien, das Wichtigste zuerst.</p>
     </div>
     <ol class="kriterien">
-      {kriterienKleidung.map((k) => {
-        const kr = d.kriterien[k.key];
-        return (
-          <li class:list={['kriterium', `kriterium-${kr.status}`]}>
-            <div>
-              <div class="kriterium-kopf">
-                <h3>{k.name}</h3>
-                <StatusChip status={kr.status} />
-              </div>
-              <p class="kriterium-frage">{k.frage}</p>
-              <p class="kriterium-text">{kr.text}</p>
+      {kriterien.map((k) => (
+        <li class:list={['kriterium', `kriterium-${k.status}`]}>
+          <div>
+            <div class="kriterium-kopf">
+              <h3>{k.name}</h3>
+              <StatusChip status={k.status} />
             </div>
-          </li>
-        );
-      })}
+            <p class="kriterium-frage">{k.frage}</p>
+            <p class="kriterium-text">{k.text}</p>
+          </div>
+        </li>
+      ))}
     </ol>
 
     {hatText && (

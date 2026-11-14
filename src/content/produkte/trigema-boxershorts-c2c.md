@@ -14,9 +14,6 @@ kriterien:
   kreislauf:
     status: teilweise
     text: "Die Shorts gehören zu Trigemas Cradle-to-Cradle-Kollektion. Laut Utopia sind diese Produkte kompostierbar. Trigema erklärt auf der Produktseite aber nicht, wie man sie kompostiert und ob auch Gummibund und Nähgarn verrotten. Eine Rücknahme gibt es nicht."
-  reparatur:
-    status: fehlt
-    text: "Ein Reparaturangebot oder Anleitungen nennt Trigema auf der Produktseite nicht."
   transparenz:
     status: teilweise
     text: "Hergestellt in Deutschland, laut Trigema „100 % Made in Burladingen“. Woher die Baumwolle kommt und was mit den Shorts nach dem Tragen passieren soll, steht auf der Produktseite nicht."
@@ -34,7 +31,7 @@ kriterien:
     text: "Zur Verpackung macht Trigema keine Angaben. Versand ab 150 € kostenlos."
   preis:
     status: fehlt
-    text: "48,20 € pro Stück. Trunks im Mehrfachpack kosten bei C&A 4 bis 6,50 € pro Stück. Trigema liegt damit beim 7- bis 12-Fachen. Ein Abo, bei dem der Hersteller Eigentümer bleibt, gibt es nicht."
+    text: "48,20 € pro Stück. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Trigema liegt damit beim 7- bis 12-Fachen. Ein Abo, bei dem der Hersteller Eigentümer bleibt, gibt es nicht."
   aussehen:
     status: offen
     text: "Klassische Boxershorts mit Zierknöpfen. Ob das Design modern wirkt, bewerte ich selbst."
@@ -60,7 +57,4 @@ quellen:
   - titel: "Utopia: Trigema Change"
     url: https://utopia.de/produkt/trigema-change_115918
     hinweis: "Zur Kompostierbarkeit, Stand Februar 2024"
-  - titel: "C&A: Herren-Trunks"
-    url: https://www.c-and-a.com/de/de/shop/herren-unterwaesche-trunks
-    hinweis: "Vergleichspreise, abgerufen am 14.11.2026"
 ---

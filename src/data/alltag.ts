@@ -92,17 +92,25 @@ export function findeUnterkategorie(bereichSlug: string, slug: string) {
 /** Florians Bewertungskriterien für Kleidung, in seiner Reihenfolge. */
 export const kriterienKleidung = [
   { key: 'kreislauf', name: 'Kreislauf (Cradle to Cradle)', frage: 'Kann das Material vollständig zurück in die Natur oder wird es zu neuer Kleidung? Nimmt der Hersteller Altes zurück?' },
-  { key: 'reparatur', name: 'Reparatur', frage: 'Wie einfach und transparent lässt sich das Produkt reparieren?' },
+  { key: 'reparatur', name: 'Reparatur', frage: 'Nur bei Hosen, Jacken und Taschen: Wie einfach und transparent lässt sich das Produkt reparieren?' },
   { key: 'transparenz', name: 'Transparenz', frage: 'Erfährt man, wie das Produkt hergestellt wurde und was später damit passiert?' },
   { key: 'haltbarkeit', name: 'Haltbarkeit', frage: 'Hält das Produkt lange, mindestens ein Jahr in gutem Zustand?' },
   { key: 'klima', name: 'Klimabilanz', frage: 'Werden Emissionen gesenkt und der Rest nachvollziehbar und wirksam ausgeglichen?' },
   { key: 'siegel', name: 'Siegel', frage: 'Gibt es unabhängige Siegel wie Cradle to Cradle oder Grüner Knopf?' },
   { key: 'versand', name: 'Versand & Verpackung', frage: 'Wie ressourcenschonend ist der Versand?' },
-  { key: 'preis', name: 'Preis', frage: 'Höchstens doppelt so teuer wie vergleichbare Ware großer Händler? Gibt es ein Abo, bei dem der Hersteller Eigentümer bleibt?' },
+  { key: 'preis', name: 'Preis', frage: 'Höchstens doppelt so teuer wie vergleichbare Ware großer Modeketten? Gibt es ein Abo, bei dem der Hersteller Eigentümer bleibt?' },
   { key: 'aussehen', name: 'Aussehen', frage: 'Sieht es modern aus?' },
 ] as const;
 
 export type KriteriumKey = (typeof kriterienKleidung)[number]['key'];
+
+/** Reparatur bewertet Florian nur bei hochwertigen Teilen (Hosen, Jacken, Rucksäcke und Taschen). */
+export const reparaturUnterkategorien = ['hosen-jeans', 'jacken', 'taschen'];
+
+/** Die Kriterien, die für eine Unterkategorie gelten. */
+export function kriterienFuer(unterkategorie: string) {
+  return kriterienKleidung.filter((k) => k.key !== 'reparatur' || reparaturUnterkategorien.includes(unterkategorie));
+}
 
 export type Status = 'gut' | 'teilweise' | 'fehlt' | 'offen';
 
@@ -114,8 +122,8 @@ export const statusLabel: Record<Status, string> = {
 };
 
 /** Zählt, wie viele Kriterien eines Produkts welchen Status haben. */
-export function zaehleStatus(kriterien: Record<string, { status: Status }>) {
+export function zaehleStatus(kriterien: Record<string, { status: Status } | undefined>) {
   const zahl: Record<Status, number> = { gut: 0, teilweise: 0, fehlt: 0, offen: 0 };
-  for (const k of Object.values(kriterien)) zahl[k.status] += 1;
+  for (const k of Object.values(kriterien)) if (k) zahl[k.status] += 1;
   return zahl;
 }

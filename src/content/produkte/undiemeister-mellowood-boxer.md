@@ -4,7 +4,7 @@ marke: Undiemeister
 bereich: kleidung
 unterkategorie: unterwaesche
 beschreibung: "Undiemeister Boxer Briefs im Check: weicher Holzfaser-Mix mit 2 Jahren Garantie, aber ohne Rücknahme und deutlich teurer als üblich."
-kurz: "Weiche Boxer Briefs, überwiegend aus Holzfaser (TENCEL™ Modal), mit 2 Jahren Qualitätsgarantie. Rücknahme, Reparatur und Klimadaten fehlen, und der Preis liegt weit über dem Doppelten günstiger Ware."
+kurz: "Weiche Boxer Briefs, überwiegend aus Holzfaser (TENCEL™ Modal), mit 2 Jahren Qualitätsgarantie. Rücknahme und Klimadaten fehlen, und der Preis liegt weit über dem Doppelten günstiger Ware."
 material: "68 % TENCEL™ Modal, 28 % Bio-Baumwolle, 4 % Elasthan"
 preis: "67,49 € im 3er-Pack (22,49 € pro Stück), einzeln 24,99 €"
 shop:
@@ -14,9 +14,6 @@ kriterien:
   kreislauf:
     status: fehlt
     text: "Undiemeister nimmt keine alte Wäsche zurück und erklärt nicht, was am Ende mit der Unterhose passieren soll. Holzfaser und Baumwolle sind laut Hersteller biologisch abbaubar. Einschätzung: Die 4 % Elasthan sind es nicht, deshalb kann die Unterhose nicht vollständig in die Natur zurück."
-  reparatur:
-    status: fehlt
-    text: "Ein Reparaturangebot oder Anleitungen zum Selbstreparieren nennt Undiemeister nicht."
   transparenz:
     status: teilweise
     text: "Laut Produktseite in der Türkei hergestellt, die Beschreibung spricht von Produktion in Europa. Die Produktionspartner nennt Undiemeister nicht. Die Holzfaser stammt vom österreichischen Hersteller Lenzing, das Holz laut Produktseite aus FSC-zertifizierten Quellen."
@@ -34,7 +31,7 @@ kriterien:
     text: "Undiemeister schreibt nur, man achte auf Transport und Verpackung. Konkrete Angaben zum Verpackungsmaterial, zur Wiederverwendung oder einen Rabatt dafür gibt es nicht. Versand ab 45 € kostenlos, Rücksendungen innerhalb von 30 Tagen auf eigene Kosten."
   preis:
     status: fehlt
-    text: "22,49 € pro Stück im 3er-Pack. Trunks im Mehrfachpack kosten bei C&A 4 bis 6,50 € pro Stück. Undiemeister liegt damit beim 3,5- bis 5,6-Fachen, also weit über dem Doppelten. Ein Abo, bei dem der Hersteller Eigentümer bleibt, bietet Undiemeister nicht an."
+    text: "22,49 € pro Stück im 3er-Pack. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Undiemeister liegt damit beim 3,5- bis 5,6-Fachen, also weit über dem Doppelten. Ein Abo, bei dem der Hersteller Eigentümer bleibt, bietet Undiemeister nicht an."
   aussehen:
     status: offen
     text: "Boxer Briefs in vielen Farben. Ob das Design modern wirkt, bewerte ich selbst."
@@ -45,8 +42,7 @@ pluspunkte:
 minuspunkte:
   - "Keine Rücknahme, kein Kreislaufkonzept"
   - "„CO₂-neutral“ ohne Erklärung"
-  - "Kein Reparaturangebot"
-  - "Preis 3,5- bis 5,6-mal so hoch wie bei C&A"
+  - "Preis 3,5- bis 5,6-mal so hoch wie bei großen Modeketten"
 punkte: 5
 stand: 2026-11-14
 entwurf: false
@@ -63,9 +59,6 @@ quellen:
   - titel: "UN-Partnerschaftsdatenbank: True carbon-zero TENCEL™ fibers (Lenzing)"
     url: https://sdgs.un.org/partnerships/true-carbon-zero-tencel-fibers
     hinweis: "Wie Lenzing klimaneutrale Fasern ausgleicht"
-  - titel: "C&A: Herren-Trunks"
-    url: https://www.c-and-a.com/de/de/shop/herren-unterwaesche-trunks
-    hinweis: "Vergleichspreise, abgerufen am 14.11.2026"
 ---
 
 ## Gut zu wissen
