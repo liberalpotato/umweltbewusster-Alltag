@@ -1,0 +1,76 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ProduktKarte from '../../../components/ProduktKarte.astro';
+import StatusChip from '../../../components/StatusChip.astro';
+import { alltagsBereiche, kriterienKleidung } from '../../../data/alltag';
+import { sichtbareProdukte } from '../../../data/inhalte';
+
+export async function getStaticPaths() {
+  const produkte = await sichtbareProdukte();
+  return alltagsBereiche
+    .filter((b) => b.aktiv)
+    .flatMap((b) =>
+      b.unterkategorien
+        .map((u) => ({ b, u, liste: produkte.filter((p) => p.data.bereich === b.slug && p.data.unterkategorie === u.slug) }))
+        .filter(({ liste }) => liste.length > 0)
+        .map(({ b, u, liste }) => ({
+          params: { bereich: b.slug, unterkategorie: u.slug },
+          props: { bereich: b, unterkategorie: u, produkte: liste },
+        })),
+    );
+}
+
+const { bereich, unterkategorie, produkte } = Astro.props;
+const zeigeVergleich = bereich.slug === 'kleidung' && produkte.length > 1;
+---
+
+<Base titel={`Nachhaltige ${unterkategorie.name}`} beschreibung={`${unterkategorie.name} im ehrlichen Nachhaltigkeits-Check: ${produkte.map((p) => p.data.marke).join(', ')} im Vergleich, mit Punktzahl und Quellen.`} weit>
+  <nav class="brotkrumen" aria-label="Brotkrumen">
+    <ol>
+      <li><a href="/alltag/">Alltagsgegenstände</a></li>
+      <li><a href={`/alltag/${bereich.slug}/`}>{bereich.name}</a></li>
+      <li aria-current="page">{unterkategorie.name}</li>
+    </ol>
+  </nav>
+
+  <section class="held">
+    <p class="ueberzeile">{bereich.name}</p>
+    <h1>{unterkategorie.name}</h1>
+    <p class="lead">{produkte.length} {produkte.length === 1 ? 'Produkt' : 'Produkte'} im Check. Ein Klick auf ein Produkt öffnet den ausführlichen Bericht.</p>
+  </section>
+
+  <ul class="raster raster-produkte">
+    {produkte.map((p) => <li><ProduktKarte produkt={p} /></li>)}
+  </ul>
+
+  {zeigeVergleich && (
+    <>
+      <div class="abschnitt-kopf">
+        <h2>Im Vergleich</h2>
+        <p><a href={`/alltag/${bereich.slug}/`}>Worauf ich achte</a></p>
+      </div>
+      <div class="tabelle-rahmen">
+        <table class="vergleich">
+          <thead>
+            <tr>
+              <th scope="col">Kriterium</th>
+              {produkte.map((p) => (
+                <th scope="col"><a href={`/produkte/${p.id}/`}><small>{p.data.marke}</small>{p.data.name}</a></th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {kriterienKleidung.map((k) => (
+              <tr>
+                <th scope="row">{k.name}</th>
+                {produkte.map((p) => (
+                  <td><StatusChip status={p.data.kriterien[k.key].status} klein /></td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+</Base>

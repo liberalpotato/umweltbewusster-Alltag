@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Punkte from './Punkte.astro';
+import Icon from './Icon.astro';
+import StatusChip from './StatusChip.astro';
+import { zaehleStatus, type Status } from '../data/alltag';
+
+interface Props {
+  produkt: CollectionEntry<'produkte'>;
+}
+const { produkt } = Astro.props;
+const d = produkt.data;
+const zahl = zaehleStatus(d.kriterien);
+const reihenfolge: Status[] = ['gut', 'teilweise', 'fehlt', 'offen'];
+const woerter: Record<Status, string> = { gut: 'erfüllt', teilweise: 'teilweise', fehlt: 'fehlen', offen: 'offen' };
+---
+
+<a class="karte produkt-karte" href={`/produkte/${produkt.id}/`}>
+  {d.entwurf && <span class="entwurf-hinweis">Entwurf</span>}
+  <div class="produkt-karte-kopf">
+    <div>
+      <p class="produkt-marke">{d.marke}</p>
+      <h3>{d.name}</h3>
+    </div>
+    <Punkte punkte={d.punkte} />
+  </div>
+  <p>{d.kurz}</p>
+  <div class="produkt-bilanz" aria-label="Kriterien auf einen Blick">
+    {reihenfolge.filter((s) => zahl[s] > 0).map((s) => (
+      <StatusChip status={s} klein text={`${zahl[s]} ${woerter[s]}`} />
+    ))}
+  </div>
+  <dl class="produkt-fakten">
+    <div><dt>Material</dt><dd>{d.material}</dd></div>
+    <div><dt>Preis</dt><dd>{d.preis}</dd></div>
+  </dl>
+  <span class="mehr">Zum Bericht <Icon name="pfeil" size={18} /></span>
+</a>

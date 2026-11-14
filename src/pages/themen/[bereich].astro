@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { bereiche } from '../../data/bereiche';
 import { veroeffentlichteRatgeber } from '../../data/inhalte';
+import { alltagsBereiche } from '../../data/alltag';
 
 export function getStaticPaths() {
   return bereiche.map((b) => ({ params: { bereich: b.slug }, props: { bereich: b } }));
@@ -9,11 +10,15 @@ export function getStaticPaths() {
 
 const { bereich } = Astro.props;
 const liste = (await veroeffentlichteRatgeber()).filter((r) => r.data.bereich === bereich.slug);
+const alltag = alltagsBereiche.find((a) => a.aktiv && a.ratgeberBereich === bereich.slug);
 ---
 
 <Base titel={bereich.name} beschreibung={`Ratgeber zu ${bereich.name}: ${bereich.beschreibung}`}>
   <h1>{bereich.name}</h1>
   <p>{bereich.beschreibung}</p>
+  {alltag && (
+    <p class="fazit"><strong>Produkte im Check</strong>Konkrete Produkte mit Bewertung findest du unter <a href={`/alltag/${alltag.slug}/`}>{alltag.name}</a>.</p>
+  )}
   {liste.length > 0 ? (
     <ul class="karten">
       {liste.map((r) => (

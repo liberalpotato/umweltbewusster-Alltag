@@ -1,9 +1,26 @@
 import { getCollection } from 'astro:content';
 
-/** Alle veröffentlichten Ratgeber, neueste zuerst. Entwürfe erscheinen nur lokal (npm run dev). */
+/**
+ * Entwürfe zeigen wir lokal (npm run dev) und in Netlify-Vorschauen (CONTEXT=deploy-preview),
+ * aber nie auf der Live-Seite (CONTEXT=production).
+ */
+export const zeigeEntwuerfe = import.meta.env.DEV || (process.env.CONTEXT !== undefined && process.env.CONTEXT !== 'production');
+
+/** Alle veröffentlichten Ratgeber, neueste zuerst. */
 export async function veroeffentlichteRatgeber() {
-  const alle = await getCollection('ratgeber', ({ data }) => import.meta.env.DEV || !data.entwurf);
+  const alle = await getCollection('ratgeber', ({ data }) => zeigeEntwuerfe || !data.entwurf);
   return alle.sort((a, b) => b.data.stand.getTime() - a.data.stand.getTime());
+}
+
+/** Alle sichtbaren Produkte, bewertete zuerst (höchste Punktzahl oben), dann alphabetisch. */
+export async function sichtbareProdukte() {
+  const alle = await getCollection('produkte', ({ data }) => zeigeEntwuerfe || !data.entwurf);
+  return alle.sort((a, b) => {
+    const pa = a.data.punkte ?? -1;
+    const pb = b.data.punkte ?? -1;
+    if (pa !== pb) return pb - pa;
+    return a.data.marke.localeCompare(b.data.marke, 'de');
+  });
 }
 
 export function datum(d: Date): string {

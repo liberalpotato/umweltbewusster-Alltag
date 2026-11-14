@@ -1,0 +1,25 @@
+---
+interface Props {
+  punkte?: number;
+  gross?: boolean;
+}
+const { punkte, gross = false } = Astro.props;
+const stufe = punkte === undefined ? 'offen' : punkte >= 7 ? 'hoch' : punkte >= 4 ? 'mittel' : 'niedrig';
+const anteil = punkte === undefined ? 0 : punkte / 10;
+const r = 26;
+const umfang = 2 * Math.PI * r;
+const text = punkte === undefined ? 'Bewertung folgt' : `${punkte.toLocaleString('de-DE')} von 10 Punkten`;
+---
+
+<div class:list={['punkte', `punkte-${stufe}`, { 'punkte-gross': gross }]} role="img" aria-label={text}>
+  <div class="punkte-ring">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r={r} class="punkte-spur" />
+      {anteil > 0 && (
+        <circle cx="32" cy="32" r={r} class="punkte-wert" stroke-dasharray={`${umfang * anteil} ${umfang}`} transform="rotate(-90 32 32)" />
+      )}
+    </svg>
+    <span class="punkte-zahl" aria-hidden="true">{punkte === undefined ? '–' : punkte.toLocaleString('de-DE')}</span>
+  </div>
+  {gross && <span class="punkte-label" aria-hidden="true">{punkte === undefined ? 'Bewertung folgt' : 'von 10 Punkten'}</span>}
+</div>

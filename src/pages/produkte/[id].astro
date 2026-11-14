@@ -1,0 +1,115 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Punkte from '../../components/Punkte.astro';
+import Icon from '../../components/Icon.astro';
+import StatusChip from '../../components/StatusChip.astro';
+import Quellen from '../../components/Quellen.astro';
+import { findeBereich, findeUnterkategorie, kriterienKleidung, zaehleStatus, type Status } from '../../data/alltag';
+import { sichtbareProdukte, datum } from '../../data/inhalte';
+
+export async function getStaticPaths() {
+  const alle = await sichtbareProdukte();
+  return alle.map((eintrag) => ({ params: { id: eintrag.id }, props: { eintrag } }));
+}
+
+const { eintrag } = Astro.props;
+const d = eintrag.data;
+const { Content } = await render(eintrag);
+const hatText = (eintrag.body ?? '').trim().length > 0;
+const bereich = findeBereich(d.bereich);
+const unter = findeUnterkategorie(d.bereich, d.unterkategorie);
+const zahl = zaehleStatus(d.kriterien);
+const reihenfolge: Status[] = ['gut', 'teilweise', 'fehlt', 'offen'];
+const woerter: Record<Status, string> = { gut: 'erfüllt', teilweise: 'teilweise erfüllt', fehlt: 'fehlen', offen: 'offen' };
+---
+
+<Base titel={`${d.marke} ${d.name}: Wie nachhaltig?`} beschreibung={d.beschreibung} weit>
+  <nav class="brotkrumen" aria-label="Brotkrumen">
+    <ol>
+      <li><a href="/alltag/">Alltagsgegenstände</a></li>
+      {bereich && <li><a href={`/alltag/${bereich.slug}/`}>{bereich.name}</a></li>}
+      {bereich && unter && <li><a href={`/alltag/${bereich.slug}/${unter.slug}/`}>{unter.name}</a></li>}
+      <li aria-current="page">{d.marke}</li>
+    </ol>
+  </nav>
+
+  {d.entwurf && (
+    <p class="entwurf-banner"><strong>Entwurf:</strong> Diese Seite ist nur in der Vorschau sichtbar und noch nicht veröffentlicht.</p>
+  )}
+
+  <article>
+    <header class="produkt-kopf">
+      <div>
+        <p class="produkt-marke">{d.marke}</p>
+        <h1>{d.name}</h1>
+        <p class="lead">{d.kurz}</p>
+        <dl class="fakten-zeile">
+          <div><dt>Material</dt><dd>{d.material}</dd></div>
+          <div><dt>Preis</dt><dd>{d.preis}</dd></div>
+          <div><dt>Stand</dt><dd>{datum(d.stand)}</dd></div>
+        </dl>
+        <div class="knopf-reihe">
+          <a class="knopf" href={d.shop.url} rel="noopener" target="_blank">Bei {d.shop.name} ansehen <Icon name="extern" size={18} /></a>
+        </div>
+        <p class="kein-affiliate">Kein Affiliate-Link: Ich verdiene nichts an diesem Link.</p>
+      </div>
+      <div class="bewertung-box">
+        <p class="bewertung-titel">Meine Bewertung</p>
+        <Punkte punkte={d.punkte} gross />
+      </div>
+    </header>
+
+    <div class="abschnitt-kopf">
+      <h2>Auf einen Blick</h2>
+      <ul class="bilanz" aria-label="Kriterien gezählt">
+        {reihenfolge.filter((s) => zahl[s] > 0).map((s) => (
+          <li><StatusChip status={s} text={`${zahl[s]} ${woerter[s]}`} /></li>
+        ))}
+      </ul>
+    </div>
+    <div class="pro-contra">
+      <div class="pro">
+        <h3>Das ist gut</h3>
+        <ul>{d.pluspunkte.map((p) => <li>{p}</li>)}</ul>
+      </div>
+      <div class="contra">
+        <h3>Das fehlt</h3>
+        <ul>{d.minuspunkte.map((p) => <li>{p}</li>)}</ul>
+      </div>
+    </div>
+
+    <div class="abschnitt-kopf">
+      <h2>Der Check im Detail</h2>
+      <p>Nach meinen Kriterien, das Wichtigste zuerst.</p>
+    </div>
+    <ol class="kriterien">
+      {kriterienKleidung.map((k) => {
+        const kr = d.kriterien[k.key];
+        return (
+          <li class:list={['kriterium', `kriterium-${kr.status}`]}>
+            <div>
+              <div class="kriterium-kopf">
+                <h3>{k.name}</h3>
+                <StatusChip status={kr.status} />
+              </div>
+              <p class="kriterium-frage">{k.frage}</p>
+              <p class="kriterium-text">{kr.text}</p>
+            </div>
+          </li>
+        );
+      })}
+    </ol>
+
+    {hatText && (
+      <div class="prosa">
+        <Content />
+      </div>
+    )}
+
+    <div class="prosa">
+      <Quellen quellen={d.quellen} />
+      <p class="hinweis">Die Beschreibung beruht vor allem auf Angaben des Herstellers, Stand {datum(d.stand)}. Die Punktzahl vergebe ich persönlich nach meinen Kriterien. Keine bezahlten Links, keine Kooperationen. Fehler gefunden? Schreib mir über das <a href="/impressum/">Impressum</a>.</p>
+    </div>
+  </article>
+</Base>

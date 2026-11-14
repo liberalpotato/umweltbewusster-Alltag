@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: 'kleidung' | 'bad' | 'haushalt' | 'kueche' | 'garten' | 'reisen' | 'pfeil' | 'extern';
+  size?: number;
+}
+const { name, size = 28 } = Astro.props;
+const pfade: Record<Props['name'], string> = {
+  kleidung: 'M9 3 4 6v4l3-1v11h10V9l3 1V6l-5-3a3 3 0 0 1-6 0Z',
+  bad: 'M7 3v8M5 3h4M7 11c-1.5 0-2 1-2 2v7h4v-7c0-1-.5-2-2-2ZM14 21V9a3 3 0 0 1 6 0v12M14 14h6',
+  haushalt: 'M4 21V10l8-6 8 6v11M9 21v-6h6v6',
+  kueche: 'M6 3v8a2 2 0 0 0 4 0V3M8 11v10M16 3c-2 0-3 3-3 6s1 4 3 4v8',
+  garten: 'M12 21v-9M12 12c0-4 3-7 8-7 0 5-3 7-8 7ZM12 15c0-3-2-5-7-5 0 4 2 5 7 5Z',
+  reisen: 'M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M4 7h16v12H4ZM9 7v12M15 7v12',
+  pfeil: 'M5 12h14M13 6l6 6-6 6',
+  extern: 'M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5',
+};
+---
+
+<svg class="icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d={pfade[name]} />
+</svg>

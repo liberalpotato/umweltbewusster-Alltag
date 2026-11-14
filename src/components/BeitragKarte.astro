@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from './Icon.astro';
+import { bereichName } from '../data/bereiche';
+
+interface Props {
+  beitrag: CollectionEntry<'ratgeber'>;
+}
+const { beitrag } = Astro.props;
+const d = beitrag.data;
+---
+
+<a class="karte" href={`/ratgeber/${beitrag.id}/`}>
+  {d.entwurf && <span class="entwurf-hinweis">Entwurf</span>}
+  <span class="abzeichen abzeichen-akzent">{bereichName(d.bereich)}</span>
+  <h3>{d.titel}</h3>
+  <p>{d.fazit}</p>
+  <span class="mehr">Lesen <Icon name="pfeil" size={18} /></span>
+</a>

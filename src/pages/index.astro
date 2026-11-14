@@ -1,35 +1,45 @@
 ---
 import Base from '../layouts/Base.astro';
-import { bereiche } from '../data/bereiche';
-import { veroeffentlichteRatgeber } from '../data/inhalte';
+import Icon from '../components/Icon.astro';
+import BereichKachel from '../components/BereichKachel.astro';
+import BeitragKarte from '../components/BeitragKarte.astro';
+import { alltagsBereiche } from '../data/alltag';
+import { veroeffentlichteRatgeber, sichtbareProdukte } from '../data/inhalte';
 
-const neueste = (await veroeffentlichteRatgeber()).slice(0, 5);
+const neueste = (await veroeffentlichteRatgeber()).slice(0, 3);
+const produkte = await sichtbareProdukte();
+const anzahl = (slug: string) => produkte.filter((p) => p.data.bereich === slug).length;
 ---
 
-<Base titel="Umweltbewusster Alltag" beschreibung="Ehrliche Antworten auf die Frage, was im Alltag wirklich am nachhaltigsten ist: Kochen, Wohnen, Mobilität und Konsum. Unabhängig, mit Quellen.">
-  <h1>Was ist im Alltag wirklich am nachhaltigsten?</h1>
-  <p>Hier findest du ehrliche Antworten auf konkrete Alltagsfragen, mit nachvollziehbaren Quellen. Ich verkaufe nichts und verdiene nichts an Empfehlungen. Deshalb steht oft „brauchst du es überhaupt?“ oder „gebraucht kaufen“ ganz oben.</p>
+<Base titel="Umweltbewusster Alltag" beschreibung="Ehrliche Antworten auf die Frage, was im Alltag wirklich am nachhaltigsten ist: Kochen, Wohnen, Mobilität und Konsum. Unabhängig, mit Quellen." weit>
+  <section class="held-flaeche">
+    <p class="ueberzeile">Unabhängig · ohne Werbung · mit Quellen</p>
+    <h1>Was ist im Alltag wirklich am nachhaltigsten?</h1>
+    <p class="lead">Hier findest du ehrliche Antworten auf konkrete Alltagsfragen, mit nachvollziehbaren Quellen. Ich verkaufe nichts und verdiene nichts an Empfehlungen. Deshalb steht oft „brauchst du es überhaupt?“ oder „gebraucht kaufen“ ganz oben.</p>
+    <div class="knopf-reihe">
+      <a class="knopf" href="/alltag/">Alltagsgegenstände entdecken <Icon name="pfeil" size={18} /></a>
+      <a class="knopf knopf-zweit" href="/ratgeber/">Zu den Ratgebern</a>
+    </div>
+  </section>
 
-  <h2>Themen</h2>
-  <ul class="karten">
-    {bereiche.map((b) => (
-      <li>
-        <a href={`/themen/${b.slug}/`}>{b.name}</a>
-        <p>{b.beschreibung}</p>
-      </li>
+  <div class="abschnitt-kopf">
+    <h2>Alltagsgegenstände</h2>
+    <p><a href="/alltag/">Alle Bereiche</a></p>
+  </div>
+  <ul class="raster raster-bereiche">
+    {alltagsBereiche.map((b) => (
+      <li><BereichKachel bereich={b} anzahlProdukte={anzahl(b.slug)} /></li>
     ))}
   </ul>
 
   {neueste.length > 0 && (
     <>
-      <h2>Neueste Ratgeber</h2>
-      <ul class="karten">
-        {neueste.map((r) => (
-          <li>
-            <a href={`/ratgeber/${r.id}/`}>{r.data.titel}</a>
-            <p>{r.data.fazit}</p>
-          </li>
-        ))}
+      <div class="abschnitt-kopf">
+        <h2>Neueste Ratgeber</h2>
+        <p><a href="/ratgeber/">Alle Ratgeber</a></p>
+      </div>
+      <ul class="raster raster-beitraege">
+        {neueste.map((r) => <li><BeitragKarte beitrag={r} /></li>)}
       </ul>
     </>
   )}
