@@ -57,6 +57,7 @@ const woerter: Record<Status, string> = { gut: 'erfüllt', teilweise: 'teilweise
           <a class="knopf" href={d.shop.url} rel="noopener" target="_blank">Bei {d.shop.name} ansehen <Icon name="extern" size={18} /></a>
         </div>
         <p class="kein-affiliate">Kein Affiliate-Link: Ich verdiene nichts an diesem Link.</p>
+        {d.tipp && <p class="tipp"><strong>Tipp:</strong> {d.tipp}</p>}
       </div>
       <div class="bewertung-box">
         <p class="bewertung-titel">Meine Bewertung</p>

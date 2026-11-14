@@ -255,6 +255,8 @@ a.unter-kachel span { color: var(--akzent); font-weight: 600; }
 .fakten-zeile dd { margin: 0.1rem 0 0; font-weight: 550; }
 .bewertung-box { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 1.5rem 1.75rem; border-radius: var(--radius); background: var(--grund); border: 1px solid var(--linie); text-align: center; }
 .bewertung-titel { margin: 0 0 0.5rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-leise); }
+.tipp { margin: 1rem 0 0; padding: 0.75rem 1rem; border-radius: 12px; background: var(--akzent-hell); font-size: 0.95rem; }
+.tipp strong { color: var(--akzent-stark); }
 .kein-affiliate { font-size: 0.85rem; color: var(--text-leise); margin: 0.75rem 0 0; }
 @media (max-width: 46rem) {
   .produkt-kopf { grid-template-columns: 1fr; }

@@ -46,6 +46,7 @@ minuspunkte:
   - "Keine CO₂-Zahlen und kein Ausgleich"
   - "Keine Angaben zur Verpackung"
 punkte: 5
+tipp: "Snocks hat oft Rabattaktionen. Wer nicht sofort neue Unterwäsche braucht, wartet am besten auf das nächste Angebot."
 stand: 2026-11-14
 entwurf: false
 quellen:
