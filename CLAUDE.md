@@ -39,3 +39,4 @@ Neue Beiträge kommen immer als Pull Request mit Netlify-Vorschau. Florian liest
 6. `shop` verlinkt eine seriöse Seite, auf der man das Produkt wirklich kaufen kann, ohne Affiliate-Parameter.
 7. Herstellerangaben als solche kennzeichnen, eigene Einschätzungen als „Einschätzung“.
 8. Reparatur nur bei Hosen & Jeans, Jacken und Taschen/Rucksäcken bewerten (`reparaturUnterkategorien`), bei allen anderen Unterkategorien weglassen.
+9. Fehlen Angaben (z. B. Verpackung, Haltbarkeit, Aussehen), vor dem ersten Entwurf Florian fragen. Er hat viele Produkte selbst getestet. Seine Erfahrungen in der Ich-Form eintragen („Bei meiner Bestellung …“).

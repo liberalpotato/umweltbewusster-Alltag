@@ -27,8 +27,8 @@ kriterien:
     status: gut
     text: "Cradle to Cradle Certified Gold (Version 3.1) für Trigemas Bio-Baumwoll-Kollektion samt Unterwäsche, dazu der Grüne Knopf. Achtung: Im offiziellen C2C-Register steht als Gültigkeit „bis 8. April 2026“. Ob das Zertifikat verlängert wurde, ist dort nicht zu sehen."
   versand:
-    status: offen
-    text: "Zur Verpackung macht Trigema keine Angaben. Versand ab 150 € kostenlos."
+    status: teilweise
+    text: "Bei meiner Bestellung kam die Ware in einem normalen Pappkarton, nichts Besonderes. Eine wiederverwendbare Versandverpackung oder einen Rabatt dafür gibt es nicht. Versand ab 150 € kostenlos."
   preis:
     status: fehlt
     text: "48,20 € pro Stück. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Trigema liegt damit beim 7- bis 12-Fachen. Ein Abo, bei dem der Hersteller Eigentümer bleibt, gibt es nicht."
@@ -43,7 +43,7 @@ minuspunkte:
   - "Keine Anleitung zum Kompostieren, keine Rücknahme"
   - "C2C-Zertifikat laut Register nur bis April 2026 gültig"
   - "Sehr teuer: 48,20 € pro Stück"
-  - "Keine Angaben zu Klima, Garantie und Verpackung"
+  - "Keine Angaben zu Klima und Garantie"
 punkte: 5
 stand: 2026-11-14
 entwurf: false
