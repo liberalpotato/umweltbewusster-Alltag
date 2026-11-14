@@ -1,0 +1,12 @@
+---
+import { statusLabel, type Status } from '../data/alltag';
+
+interface Props {
+  status: Status;
+  klein?: boolean;
+  text?: string;
+}
+const { status, klein = false, text } = Astro.props;
+---
+
+<span class:list={['status', `status-${status}`, { 'status-klein': klein }]}>{text ?? statusLabel[status]}</span>

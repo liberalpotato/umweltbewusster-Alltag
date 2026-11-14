@@ -1,15 +1,25 @@
 ---
+import '@fontsource-variable/inter';
 import '../styles/global.css';
-import { bereiche } from '../data/bereiche';
 
 interface Props {
   titel: string;
   beschreibung: string;
+  /** Breites Layout für Übersichten und Produktseiten, schmales für Fließtext. */
+  weit?: boolean;
 }
 
-const { titel, beschreibung } = Astro.props;
+const { titel, beschreibung, weit = false } = Astro.props;
 const seitenTitel = titel === 'Umweltbewusster Alltag' ? titel : `${titel} | Umweltbewusster Alltag`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const pfad = Astro.url.pathname;
+
+const navigation = [
+  { href: '/alltag/', name: 'Alltagsgegenstände', kurz: 'Alltag', aktiv: pfad.startsWith('/alltag/') || pfad.startsWith('/produkte/') },
+  { href: '/ratgeber/', name: 'Ratgeber', aktiv: pfad.startsWith('/ratgeber/') || pfad.startsWith('/themen/') },
+  { href: '/lexikon/', name: 'Lexikon', aktiv: pfad.startsWith('/lexikon/') },
+  { href: '/ueber/', name: 'Über', aktiv: pfad.startsWith('/ueber/') },
+];
 ---
 
 <!doctype html>
@@ -22,6 +32,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#f6f5ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101512" media="(prefers-color-scheme: dark)" />
     <meta property="og:title" content={seitenTitel} />
     <meta property="og:description" content={beschreibung} />
     <meta property="og:type" content="website" />
@@ -29,27 +41,45 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:locale" content="de_DE" />
   </head>
   <body>
+    <a class="sprung" href="#inhalt">Zum Inhalt springen</a>
     <header class="kopf">
-      <div class="breite kopf-innen">
-        <a class="logo" href="/">Umweltbewusster Alltag</a>
+      <div class="weit kopf-innen">
+        <a class="logo" href="/">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15" />
+            <path d="M5 19c3-4 6-7 10-9" />
+          </svg>
+          <span>Umweltbewusster Alltag</span>
+        </a>
         <nav aria-label="Hauptnavigation">
           <ul>
-            {bereiche.map((b) => (
-              <li><a href={`/themen/${b.slug}/`}>{b.name}</a></li>
+            {navigation.map((n) => (
+              <li>
+                <a href={n.href} aria-current={n.aktiv ? 'page' : undefined}>
+                  {n.kurz ? (<><span class="nav-lang">{n.name}</span><span class="nav-kurz">{n.kurz}</span></>) : n.name}
+                </a>
+              </li>
             ))}
-            <li><a href="/lexikon/">Lexikon</a></li>
-            <li><a href="/ueber/">Über</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="breite">
+    <main id="inhalt" class={weit ? 'weit' : 'breite'}>
       <slot />
     </main>
     <footer class="fuss">
-      <div class="breite">
-        <p>Unabhängig und nicht-kommerziell: keine Werbung, keine bezahlten Links, kein Tracking.</p>
-        <p><a href="/ueber/">Über das Projekt</a> · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p>
+      <div class="weit fuss-innen">
+        <div>
+          <p class="fuss-logo">Umweltbewusster Alltag</p>
+          <p>Unabhängig und nicht-kommerziell: keine Werbung, keine bezahlten Links, kein Tracking.</p>
+        </div>
+        <ul>
+          <li><a href="/alltag/">Alltagsgegenstände</a></li>
+          <li><a href="/ratgeber/">Ratgeber</a></li>
+          <li><a href="/ueber/">Über das Projekt</a></li>
+          <li><a href="/impressum/">Impressum</a></li>
+          <li><a href="/datenschutz/">Datenschutz</a></li>
+        </ul>
       </div>
     </footer>
   </body>

@@ -1,0 +1,25 @@
+---
+import Icon from './Icon.astro';
+import type { AlltagsBereich } from '../data/alltag';
+
+interface Props {
+  bereich: AlltagsBereich;
+  anzahlProdukte: number;
+}
+const { bereich, anzahlProdukte } = Astro.props;
+const Tag = bereich.aktiv ? 'a' : 'div';
+---
+
+<Tag class:list={['karte', { 'karte-bald': !bereich.aktiv }]} href={bereich.aktiv ? `/alltag/${bereich.slug}/` : undefined}>
+  <span class="symbol"><Icon name={bereich.icon} /></span>
+  <h3>{bereich.name}</h3>
+  <p>{bereich.beschreibung}</p>
+  {bereich.aktiv ? (
+    <span class="mehr">
+      {anzahlProdukte > 0 ? `${anzahlProdukte} ${anzahlProdukte === 1 ? 'Produkt' : 'Produkte'} im Check` : 'Ansehen'}
+      <Icon name="pfeil" size={18} />
+    </span>
+  ) : (
+    <span class="abzeichen">Kommt bald</span>
+  )}
+</Tag>

@@ -31,4 +31,44 @@ const lexikon = defineCollection({
   }),
 });
 
-export const collections = { ratgeber, lexikon };
+const kriterium = z.object({
+  /** gut = erfüllt, teilweise = teilweise erfüllt, fehlt = nicht erfüllt, offen = keine Angaben gefunden oder Florian entscheidet */
+  status: z.enum(['gut', 'teilweise', 'fehlt', 'offen']),
+  text: z.string(),
+});
+
+const produkte = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/produkte' }),
+  schema: z.object({
+    name: z.string(),
+    marke: z.string(),
+    bereich: z.string(),
+    unterkategorie: z.string(),
+    beschreibung: z.string().max(160),
+    kurz: z.string(),
+    material: z.string(),
+    preis: z.string(),
+    shop: z.object({ name: z.string(), url: z.string().url() }),
+    /** Punktzahl 0–10, vergibt ausschließlich Florian. Leer = „Bewertung folgt“. */
+    punkte: z.number().min(0).max(10).optional(),
+    kriterien: z.object({
+      kreislauf: kriterium,
+      reparatur: kriterium,
+      transparenz: kriterium,
+      haltbarkeit: kriterium,
+      klima: kriterium,
+      siegel: kriterium,
+      versand: kriterium,
+      preis: kriterium,
+      aussehen: kriterium,
+    }),
+    pluspunkte: z.array(z.string()),
+    minuspunkte: z.array(z.string()),
+    stand: z.coerce.date(),
+    /** Entwürfe erscheinen nur lokal und in Netlify-Vorschauen, nicht auf der Live-Seite. */
+    entwurf: z.boolean().default(true),
+    quellen: z.array(quelle).min(1),
+  }),
+});
+
+export const collections = { ratgeber, lexikon, produkte };

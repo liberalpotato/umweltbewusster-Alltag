@@ -1,0 +1,93 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Icon from '../../../components/Icon.astro';
+import BeitragKarte from '../../../components/BeitragKarte.astro';
+import { alltagsBereiche, kriterienKleidung, type AlltagsBereich } from '../../../data/alltag';
+import { sichtbareProdukte, veroeffentlichteRatgeber } from '../../../data/inhalte';
+
+export function getStaticPaths() {
+  return alltagsBereiche.filter((b) => b.aktiv).map((b) => ({ params: { bereich: b.slug }, props: { bereich: b } }));
+}
+
+interface Props {
+  bereich: AlltagsBereich;
+}
+const { bereich } = Astro.props;
+const produkte = (await sichtbareProdukte()).filter((p) => p.data.bereich === bereich.slug);
+const beitraege = bereich.ratgeberBereich
+  ? (await veroeffentlichteRatgeber()).filter((r) => r.data.bereich === bereich.ratgeberBereich)
+  : [];
+const anzahl = (slug: string) => produkte.filter((p) => p.data.unterkategorie === slug).length;
+const kriterien = bereich.slug === 'kleidung' ? kriterienKleidung : [];
+---
+
+<Base titel={bereich.name} beschreibung={`${bereich.name} nachhaltig: Beiträge und Produkte im ehrlichen Check. ${bereich.beschreibung}`} weit>
+  <nav class="brotkrumen" aria-label="Brotkrumen">
+    <ol>
+      <li><a href="/alltag/">Alltagsgegenstände</a></li>
+      <li aria-current="page">{bereich.name}</li>
+    </ol>
+  </nav>
+
+  <section class="held-flaeche">
+    <span class="symbol"><Icon name={bereich.icon} /></span>
+    <h1>{bereich.name}</h1>
+    <p class="lead">{bereich.beschreibung}</p>
+  </section>
+
+  <div class="abschnitt-kopf">
+    <h2>Beiträge zum Thema</h2>
+  </div>
+  {beitraege.length > 0 ? (
+    <ul class="raster raster-beitraege">
+      {beitraege.map((r) => <li><BeitragKarte beitrag={r} /></li>)}
+    </ul>
+  ) : (
+    <div class="leer-karte"><p>Der erste Beitrag zu diesem Bereich entsteht gerade.</p></div>
+  )}
+
+  <div class="abschnitt-kopf">
+    <h2>Unterkategorien</h2>
+    <p>{produkte.length} {produkte.length === 1 ? 'Produkt' : 'Produkte'} im Check</p>
+  </div>
+  <ul class="raster raster-unter">
+    {bereich.unterkategorien.map((u) => {
+      const n = anzahl(u.slug);
+      return (
+        <li>
+          {n > 0 ? (
+            <a class="karte unter-kachel" href={`/alltag/${bereich.slug}/${u.slug}/`}>
+              <strong>{u.name}</strong>
+              <span>{n} {n === 1 ? 'Produkt' : 'Produkte'} →</span>
+            </a>
+          ) : (
+            <div class="karte unter-kachel karte-bald">
+              <strong>{u.name}</strong>
+              <span>Kommt bald</span>
+            </div>
+          )}
+        </li>
+      );
+    })}
+  </ul>
+
+  {kriterien.length > 0 && (
+    <>
+      <div class="abschnitt-kopf">
+        <h2>Worauf ich bei Kleidung achte</h2>
+        <p>In dieser Reihenfolge, das Wichtigste zuerst.</p>
+      </div>
+      <ol class="kriterien-kurz">
+        {kriterien.map((k) => (
+          <li>
+            <div>
+              <strong>{k.name}</strong>
+              <span>{k.frage}</span>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="meta">Die Punktzahl von 0 bis 10 vergebe ich selbst. Sie beruht auf diesen Kriterien und den Angaben, die ich zum Produkt finde.</p>
+    </>
+  )}
+</Base>

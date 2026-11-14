@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import BeitragKarte from '../../components/BeitragKarte.astro';
+import { bereiche } from '../../data/bereiche';
+import { veroeffentlichteRatgeber } from '../../data/inhalte';
+
+const alle = await veroeffentlichteRatgeber();
+---
+
+<Base titel="Ratgeber" beschreibung="Alle Ratgeber zu Kochen, Wohnen, Mobilität und Kleidung: ehrliche Antworten auf die Frage, was im Alltag wirklich nachhaltiger ist." weit>
+  <section class="held">
+    <p class="ueberzeile">Ratgeber</p>
+    <h1>Ehrliche Antworten auf Alltagsfragen</h1>
+    <p class="lead">Jeder Ratgeber beantwortet eine konkrete Frage, mit Quellen und klarem Fazit.</p>
+  </section>
+
+  {bereiche.map((b) => {
+    const liste = alle.filter((r) => r.data.bereich === b.slug);
+    return (
+      <section>
+        <div class="abschnitt-kopf">
+          <h2><a href={`/themen/${b.slug}/`} style="color: inherit; text-decoration: none;">{b.name}</a></h2>
+          <p>{b.beschreibung}</p>
+        </div>
+        {liste.length > 0 ? (
+          <ul class="raster raster-beitraege">
+            {liste.map((r) => <li><BeitragKarte beitrag={r} /></li>)}
+          </ul>
+        ) : (
+          <div class="leer-karte"><p>Zu diesem Thema entstehen gerade die ersten Ratgeber.</p></div>
+        )}
+      </section>
+    );
+  })}
+</Base>
