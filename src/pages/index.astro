@@ -9,17 +9,40 @@ import { veroeffentlichteRatgeber, sichtbareProdukte } from '../data/inhalte';
 const neueste = (await veroeffentlichteRatgeber()).slice(0, 3);
 const produkte = await sichtbareProdukte();
 const anzahl = (slug: string) => produkte.filter((p) => p.data.bereich === slug).length;
+
+const schritte = [
+  { icon: 'frage', titel: 'Brauchst du es überhaupt?', text: 'Das Nachhaltigste ist oft, gar nichts Neues zu kaufen.' },
+  { icon: 'kreislauf', titel: 'Gebraucht kaufen, reparieren, leihen', text: 'Was schon da ist, weiter nutzen. Viele Dinge gibt es gebraucht oder zum Ausleihen.' },
+  { icon: 'haken', titel: 'Erst dann neu kaufen', text: 'Und dann das Produkt, das in meinem Check am besten abschneidet.' },
+] as const;
 ---
 
-<Base titel="Umweltbewusster Alltag" beschreibung="Ehrliche Antworten auf die Frage, was im Alltag wirklich am nachhaltigsten ist: Kochen, Wohnen, Mobilität und Konsum. Unabhängig, mit Quellen." weit>
-  <section class="held-flaeche">
-    <p class="ueberzeile">Unabhängig · ohne Werbung · mit Quellen</p>
-    <h1>Was ist im Alltag wirklich am nachhaltigsten?</h1>
-    <p class="lead">Hier findest du ehrliche Antworten auf konkrete Alltagsfragen, mit nachvollziehbaren Quellen. Ich verkaufe nichts und verdiene nichts an Empfehlungen. Deshalb steht oft „brauchst du es überhaupt?“ oder „gebraucht kaufen“ ganz oben.</p>
-    <div class="knopf-reihe">
-      <a class="knopf" href="/alltag/">Alltagsgegenstände entdecken <Icon name="pfeil" size={18} /></a>
-      <a class="knopf knopf-zweit" href="/ratgeber/">Zu den Ratgebern</a>
+<Base titel="Umweltbewusster Alltag" beschreibung="Ehrliche Antworten auf die Frage, was im Alltag wirklich am nachhaltigsten ist: Alltagsgegenstände im Check, unabhängig und mit Quellen." weit>
+  <section class="held-flaeche start-held">
+    <div class="start-text">
+      <p class="ueberzeile">Unabhängig · ohne Werbung · mit Quellen</p>
+      <h1>Was ist im Alltag wirklich am nachhaltigsten?</h1>
+      <p class="lead">Hier findest du ehrliche Antworten auf konkrete Alltagsfragen, mit nachvollziehbaren Quellen. Ich verkaufe nichts und verdiene nichts an Empfehlungen.</p>
+      <div class="knopf-reihe">
+        <a class="knopf" href="/alltag/">Alltagsgegenstände entdecken <Icon name="pfeil" size={18} /></a>
+        <a class="knopf knopf-zweit" href="/ratgeber/">Zu den Ratgebern</a>
+      </div>
     </div>
+
+    <aside class="schritte" aria-labelledby="schritte-titel">
+      <p class="schritte-titel" id="schritte-titel">Deshalb steht bei mir oft „gebraucht kaufen“ ganz oben</p>
+      <ol>
+        {schritte.map((s, i) => (
+          <li>
+            <span class="schritt-symbol"><Icon name={s.icon} size={22} /></span>
+            <div>
+              <strong><span class="schritt-nr">{i + 1}.</span> {s.titel}</strong>
+              <span>{s.text}</span>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </aside>
   </section>
 
   <div class="abschnitt-kopf">

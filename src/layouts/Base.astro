@@ -16,7 +16,7 @@ const pfad = Astro.url.pathname;
 
 const navigation = [
   { href: '/alltag/', name: 'Alltagsgegenstände', kurz: 'Alltag', aktiv: pfad.startsWith('/alltag/') || pfad.startsWith('/produkte/') },
-  { href: '/ratgeber/', name: 'Ratgeber', aktiv: pfad.startsWith('/ratgeber/') || pfad.startsWith('/themen/') },
+  { href: '/ratgeber/', name: 'Ratgeber', aktiv: pfad.startsWith('/ratgeber/') },
   { href: '/lexikon/', name: 'Lexikon', aktiv: pfad.startsWith('/lexikon/') },
   { href: '/ueber/', name: 'Über', aktiv: pfad.startsWith('/ueber/') },
 ];

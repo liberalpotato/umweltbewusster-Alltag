@@ -1,35 +1,40 @@
 ---
 import Base from '../../layouts/Base.astro';
 import BeitragKarte from '../../components/BeitragKarte.astro';
-import { bereiche } from '../../data/bereiche';
+import Icon from '../../components/Icon.astro';
+import { alltagsBereiche } from '../../data/alltag';
 import { veroeffentlichteRatgeber } from '../../data/inhalte';
 
 const alle = await veroeffentlichteRatgeber();
+// Ratgeber gehören zu einem Bereich der Alltagsgegenstände. Gezeigt werden nur Bereiche mit Beiträgen.
+const gruppen = alltagsBereiche
+  .map((b) => ({ bereich: b, liste: alle.filter((r) => r.data.bereich === b.slug) }))
+  .filter((g) => g.liste.length > 0);
 ---
 
-<Base titel="Ratgeber" beschreibung="Alle Ratgeber zu Kochen, Wohnen, Mobilität und Kleidung: ehrliche Antworten auf die Frage, was im Alltag wirklich nachhaltiger ist." weit>
+<Base titel="Ratgeber" beschreibung="Alle Ratgeber: ehrliche Antworten auf die Frage, was im Alltag wirklich nachhaltiger ist, mit Quellen und klarem Fazit." weit>
   <section class="held">
     <p class="ueberzeile">Ratgeber</p>
     <h1>Ehrliche Antworten auf Alltagsfragen</h1>
-    <p class="lead">Jeder Ratgeber beantwortet eine konkrete Frage, mit Quellen und klarem Fazit.</p>
+    <p class="lead">Jeder Ratgeber beantwortet eine konkrete Frage, mit Quellen und klarem Fazit. Du findest sie auch oben in jedem Bereich der Alltagsgegenstände.</p>
   </section>
 
-  {bereiche.map((b) => {
-    const liste = alle.filter((r) => r.data.bereich === b.slug);
-    return (
+  {gruppen.length > 0 ? (
+    gruppen.map(({ bereich, liste }) => (
       <section>
         <div class="abschnitt-kopf">
-          <h2><a href={`/themen/${b.slug}/`} style="color: inherit; text-decoration: none;">{b.name}</a></h2>
-          <p>{b.beschreibung}</p>
+          <h2>{bereich.name}</h2>
+          {bereich.aktiv && <p><a href={`/alltag/${bereich.slug}/`}>Produkte im Check</a></p>}
         </div>
-        {liste.length > 0 ? (
-          <ul class="raster raster-beitraege">
-            {liste.map((r) => <li><BeitragKarte beitrag={r} /></li>)}
-          </ul>
-        ) : (
-          <div class="leer-karte"><p>Zu diesem Thema entstehen gerade die ersten Ratgeber.</p></div>
-        )}
+        <ul class="raster raster-beitraege">
+          {liste.map((r) => <li><BeitragKarte beitrag={r} /></li>)}
+        </ul>
       </section>
-    );
-  })}
+    ))
+  ) : (
+    <div class="leer-karte">
+      <p>Die ersten Ratgeber entstehen gerade. Bis dahin findest du konkrete Produkte im Check bei den Alltagsgegenständen.</p>
+      <div class="knopf-reihe" style="margin-top: 1.25rem;"><a class="knopf" href="/alltag/">Zu den Alltagsgegenständen <Icon name="pfeil" size={18} /></a></div>
+    </div>
+  )}
 </Base>
