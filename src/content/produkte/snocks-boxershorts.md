@@ -14,9 +14,6 @@ kriterien:
   kreislauf:
     status: fehlt
     text: "Snocks nimmt keine alte Wäsche zurück. Der Hersteller empfiehlt, getragene Kleidung zu spenden (Sammelstellen von FairWertung) oder weiterzuverkaufen. Unterwäsche aus reiner Baumwolle soll in die Altkleidersammlung, synthetische in den Restmüll. Einschätzung: Wegen der 5 % Elasthan kann das Material weder vollständig in die Natur zurück noch einfach zu neuer Kleidung werden."
-  reparatur:
-    status: teilweise
-    text: "Snocks zeigt auf seiner Pflegeseite Videos zum Selbstreparieren: Löcher stopfen und aufgegangene Nähte schließen. Einen Reparaturservice gibt es nicht. Bekommt die Shorts innerhalb von 12 Monaten ein Loch, schickt Snocks Ersatz."
   transparenz:
     status: teilweise
     text: "Snocks nennt seine Produktionsländer bis auf die Region: vor allem China, außerdem Pakistan, Türkei, Sri Lanka und Rumänien. Dazu gibt es einen Lieferkettenbericht (Tier 1 bis 4) und einen Fortschrittsbericht 2025. Am einzelnen Produkt erfährt man aber nicht, wo genau es hergestellt wurde."
@@ -34,7 +31,7 @@ kriterien:
     text: "Zur Verpackung macht Snocks keine Angaben. Hinweise auf eine wiederverwendbare Versandverpackung oder einen Rabatt dafür gibt es nicht. Versand ab 39 € kostenlos."
   preis:
     status: gut
-    text: "8,17 € pro Stück im 6er-Pack. Trunks im Mehrfachpack kosten bei C&A 4 bis 6,50 € pro Stück. Snocks liegt damit beim 1,3- bis 2-Fachen, also gerade noch im Rahmen. Das Snocks-Abo ist eine regelmäßige Lieferung mit 10 % Rabatt. Die Wäsche gehört danach dir, der Hersteller bleibt nicht Eigentümer."
+    text: "8,17 € pro Stück im 6er-Pack. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Snocks liegt damit beim 1,3- bis 2-Fachen, also gerade noch im Rahmen. Das Snocks-Abo ist eine regelmäßige Lieferung mit 10 % Rabatt. Die Wäsche gehört danach dir, der Hersteller bleibt nicht Eigentümer."
   aussehen:
     status: offen
     text: "Ob das Design modern wirkt, bewerte ich selbst."
@@ -42,7 +39,7 @@ pluspunkte:
   - "95 % Bio-Baumwolle mit GOTS-Siegel"
   - "12 Monate Anti-Loch-Garantie mit Ersatz"
   - "Produktionsländer und Lieferkette offen dokumentiert"
-  - "Preis höchstens etwa doppelt so hoch wie bei C&A"
+  - "Preis höchstens etwa doppelt so hoch wie bei großen Modeketten"
 minuspunkte:
   - "Keine Rücknahme, kein Kreislaufkonzept"
   - "Elasthan erschwert Kompostieren und Recycling (Einschätzung)"
@@ -60,8 +57,5 @@ quellen:
     hinweis: "Herstellerangaben zu Produktionsländern, Transport und Berichten"
   - titel: "Snocks: Care & Repair"
     url: https://snocks.com/en-es/pages/care-and-repair
-    hinweis: "Herstellerangaben zu Reparatur und Entsorgung"
-  - titel: "C&A: Herren-Trunks"
-    url: https://www.c-and-a.com/de/de/shop/herren-unterwaesche-trunks
-    hinweis: "Vergleichspreise, abgerufen am 14.11.2026"
+    hinweis: "Herstellerangaben zur Entsorgung"
 ---

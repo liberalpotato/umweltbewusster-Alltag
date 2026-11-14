@@ -53,7 +53,8 @@ const produkte = defineCollection({
     punkte: z.number().min(0).max(10).optional(),
     kriterien: z.object({
       kreislauf: kriterium,
-      reparatur: kriterium,
+      /** Nur bei Hosen, Jacken und Taschen (siehe reparaturUnterkategorien). */
+      reparatur: kriterium.optional(),
       transparenz: kriterium,
       haltbarkeit: kriterium,
       klima: kriterium,

@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import ProduktKarte from '../../../components/ProduktKarte.astro';
 import StatusChip from '../../../components/StatusChip.astro';
-import { alltagsBereiche, kriterienKleidung } from '../../../data/alltag';
+import { alltagsBereiche, kriterienFuer } from '../../../data/alltag';
 import { sichtbareProdukte } from '../../../data/inhalte';
 
 export async function getStaticPaths() {
@@ -22,6 +22,7 @@ export async function getStaticPaths() {
 
 const { bereich, unterkategorie, produkte } = Astro.props;
 const zeigeVergleich = bereich.slug === 'kleidung' && produkte.length > 1;
+const kriterien = kriterienFuer(unterkategorie.slug);
 ---
 
 <Base titel={`Nachhaltige ${unterkategorie.name}`} beschreibung={`${unterkategorie.name} im ehrlichen Nachhaltigkeits-Check: ${produkte.map((p) => p.data.marke).join(', ')} im Vergleich, mit Punktzahl und Quellen.`} weit>
@@ -60,12 +61,13 @@ const zeigeVergleich = bereich.slug === 'kleidung' && produkte.length > 1;
             </tr>
           </thead>
           <tbody>
-            {kriterienKleidung.map((k) => (
+            {kriterien.map((k) => (
               <tr>
                 <th scope="row">{k.name}</th>
-                {produkte.map((p) => (
-                  <td><StatusChip status={p.data.kriterien[k.key].status} klein /></td>
-                ))}
+                {produkte.map((p) => {
+                  const kr = p.data.kriterien[k.key];
+                  return <td>{kr ? <StatusChip status={kr.status} klein /> : '–'}</td>;
+                })}
               </tr>
             ))}
           </tbody>
