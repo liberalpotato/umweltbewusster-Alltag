@@ -47,8 +47,9 @@ minuspunkte:
   - "C2C-Zertifikat laut Register nur bis April 2026 gültig"
   - "Sehr teuer: 48,20 € pro Stück"
   - "Keine Angaben zu Klima, Garantie und Verpackung"
+punkte: 5
 stand: 2026-11-14
-entwurf: true
+entwurf: false
 quellen:
   - titel: "Trigema: Boxershorts aus 100 % Biobaumwolle schwarz-C2C (Produktseite)"
     url: https://www.trigema.de/herren/organic-and-recycled/Boxershorts-aus-100-Biobaumwolle-schwarz-C2C-XXL.html
