@@ -13,8 +13,6 @@ export interface AlltagsBereich {
   beschreibung: string;
   icon: 'kleidung' | 'bad' | 'haushalt' | 'kueche' | 'garten' | 'reisen';
   aktiv: boolean;
-  /** Ratgeber-Themenbereich, dessen Beiträge oben auf der Bereichsseite erscheinen. */
-  ratgeberBereich?: string;
   unterkategorien: Unterkategorie[];
 }
 
@@ -25,7 +23,6 @@ export const alltagsBereiche: AlltagsBereich[] = [
     beschreibung: 'Von Unterwäsche bis Jacke, dazu Schuhe, Accessoires und Taschen.',
     icon: 'kleidung',
     aktiv: true,
-    ratgeberBereich: 'kleidung-konsum',
     unterkategorien: [
       { slug: 'unterwaesche', name: 'Unterwäsche' },
       { slug: 'socken', name: 'Socken' },
@@ -80,6 +77,13 @@ export const alltagsBereiche: AlltagsBereich[] = [
     unterkategorien: [],
   },
 ];
+
+/** Slugs aller Bereiche. Ratgeber ordnen sich über `bereich` einem dieser Bereiche zu. */
+export const alltagSlugs = alltagsBereiche.map((b) => b.slug) as [string, ...string[]];
+
+export function alltagName(slug: string): string {
+  return findeBereich(slug)?.name ?? slug;
+}
 
 export function findeBereich(slug: string) {
   return alltagsBereiche.find((b) => b.slug === slug);

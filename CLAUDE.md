@@ -8,7 +8,7 @@ Technik: Astro 5, statisch, gehostet bei Netlify. `npm run build` muss fehlerfre
 
 - Ratgeber: `src/content/ratgeber/<slug>.md`, Lexikon: `src/content/lexikon/<slug>.md`. Pflichtfelder siehe `src/content.config.ts`.
 - `entwurf: true` blendet einen Ratgeber im Live-Build aus.
-- Themenbereiche der Ratgeber stehen in `src/data/bereiche.ts`.
+- Ratgeber gehören zu einem Bereich der Alltagsgegenstände: `bereich` ist ein Slug aus `src/data/alltag.ts` (z. B. `kleidung`). Sie erscheinen oben auf der Bereichsseite und unter /ratgeber/. Eigene Themenseiten (/themen/) gibt es nicht mehr.
 - Alltagsgegenstände (Bereiche, Unterkategorien, Florians Kriterien) stehen in `src/data/alltag.ts`. Bereiche mit `aktiv: false` erscheinen als „Kommt bald“.
 - Produkte: `src/content/produkte/<marke-produkt>.md`. `entwurf: true` (Standard) zeigt ein Produkt nur lokal und in Netlify-Vorschauen.
 
