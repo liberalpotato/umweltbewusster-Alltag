@@ -48,8 +48,9 @@ minuspunkte:
   - "Elasthan erschwert Kompostieren und Recycling (Einschätzung)"
   - "Keine CO₂-Zahlen und kein Ausgleich"
   - "Keine Angaben zur Verpackung"
+punkte: 5
 stand: 2026-11-14
-entwurf: true
+entwurf: false
 quellen:
   - titel: "Snocks: Boxershorts (Produktseite)"
     url: https://snocks.com/products/boxershorts

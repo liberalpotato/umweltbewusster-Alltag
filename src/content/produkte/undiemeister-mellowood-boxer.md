@@ -47,8 +47,9 @@ minuspunkte:
   - "„CO₂-neutral“ ohne Erklärung"
   - "Kein Reparaturangebot"
   - "Preis 3,5- bis 5,6-mal so hoch wie bei C&A"
+punkte: 5
 stand: 2026-11-14
-entwurf: true
+entwurf: false
 quellen:
   - titel: "Undiemeister: Boxer Briefs 3er-Pack (Produktseite)"
     url: https://undiemeister.com/en/boxer-briefs-3-pack-shades-of-red
