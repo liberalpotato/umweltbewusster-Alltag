@@ -43,6 +43,7 @@ minuspunkte:
   - "15 % Kunstfaser, kein Kreislauf, keine Rücknahme"
   - "Keine Angaben zu Klima, Färbung und Herkunft der Baumwolle"
   - "Teuer"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "Trigema: Sportsocken mit Trigema-Schriftzug weiß (Produktseite)"

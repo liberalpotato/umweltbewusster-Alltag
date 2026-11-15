@@ -6,7 +6,7 @@ fazit: "Am nachhaltigsten sind die Socken, die du schon hast: lange tragen, Woll
 stand: 2026-11-15
 titelbild: /bilder/nachhaltigste-socken.svg
 titelbildAlt: "Illustration: Zwei Socken und ein Wollknäuel"
-entwurf: true
+entwurf: false
 quellen:
   - titel: "Umweltbundesamt: Fragen und Antworten zu Cradle to Cradle"
     url: https://umweltbundesamt.de/themen/abfall-ressourcen/ressourcenschonung-in-produktion-konsum/fragen-antworten-zu-cradle-to-cradle

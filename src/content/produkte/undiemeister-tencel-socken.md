@@ -45,6 +45,7 @@ minuspunkte:
   - "Keine Rücknahme"
   - "Widersprüchliche Angaben zum Herstellungsort"
   - "Keine Garantie auf die Socken"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "Undiemeister: Black Socks 3-pack Volcano Ash (Produktseite)"
