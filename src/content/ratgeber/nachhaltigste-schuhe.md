@@ -6,7 +6,7 @@ fazit: "Am nachhaltigsten sind die Schuhe, die du schon hast: pflegen, neu besoh
 stand: 2026-11-15
 titelbild: /bilder/nachhaltigste-schuhe.svg
 titelbildAlt: "Illustration: Sneaker mit Kreppsohle, daneben ein Blatt sowie Nadel und Faden"
-entwurf: true
+entwurf: false
 quellen:
   - titel: "Verbraucherzentrale NRW: Schuhe nachhaltig tragen"
     url: https://www.verbraucherzentrale.nrw/wissen/umwelt-haushalt/nachhaltigkeit/schuhe-nachhaltig-tragen-78764
