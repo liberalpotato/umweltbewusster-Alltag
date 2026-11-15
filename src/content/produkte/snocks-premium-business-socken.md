@@ -44,6 +44,7 @@ minuspunkte:
   - "Herstellungsort nicht angegeben"
   - "Keine CO₂-Zahlen und kein eigener Ausgleich"
   - "Keine Angaben zur Färbung"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "Snocks: Premium Business Socken (Produktseite)"
