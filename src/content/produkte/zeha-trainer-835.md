@@ -10,6 +10,7 @@ preis: "215,20 € bei FORMOST (statt 269 €, November 2026)"
 shop:
   name: FORMOST Berlin
   url: https://en.formost.de/assortment/prd.12438.zeha-berlin-ledersportschuh-trainer-835-cognac-zeha-berlin
+punkte: 4
 kriterien:
   kreislauf:
     status: teilweise
