@@ -29,6 +29,15 @@ Vor jedem Text, der veröffentlicht werden soll, Florian fragen, was ihm bei gen
 
 Neue Beiträge kommen immer als Pull Request mit Netlify-Vorschau. Florian liest und gibt frei, nichts wird direkt auf `main` veröffentlicht.
 
+## Gestaltung längerer Texte
+
+Längere Ratgeber und Lexikon-Einträge nie als reinen Fließtext (Florian, 2026-11-15). Immer einbauen, direkt vor dem Absatz, neben dem es stehen soll (auf großen Bildschirmen steht es am Rand, auf dem Handy im Text):
+
+- Randzitat in großer Schrift: `<aside class="rand randzitat"><p>Wichtige Aussage.</p><small>Quelle oder „Einschätzung“</small></aside>`
+- Grafik-Kasten: `<aside class="rand grafik"><p class="grafik-titel">Titel</p> … </aside>`, z. B. Rangfolge mit `<ol class="stufen">` (`<li class="stufe-top">` hebt den besten Schritt hervor).
+- Kreisläufe: biologisch in Grün (`kreislauf bio`), technisch in Silber (`kreislauf tech`). Beispiel in `src/content/ratgeber/kompostierbare-produkte.md`.
+- Bilder nur mit geklärter Lizenz (eigene Fotos, freie Lizenz oder Erlaubnis), sonst eigene Illustration als SVG.
+
 ## Regeln für Produktseiten
 
 1. Die Punktzahl (`punkte`, 0 bis 10) vergibt nur Florian. Nie selbst eintragen; ohne Punktzahl zeigt die Seite „Bewertung folgt“.

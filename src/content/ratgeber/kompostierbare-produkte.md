@@ -55,6 +55,16 @@ quellen:
 
 ## Die Rangfolge
 
+<aside class="rand grafik" aria-label="Rangfolge">
+<p class="grafik-titel">Was am Ende mit einem Produkt passieren sollte</p>
+<ol class="stufen">
+<li><span>Lange nutzen<small>spart am meisten Material</small></span></li>
+<li><span>Reparieren<small>stopfen, neu besohlen, weitergeben</small></span></li>
+<li class="stufe-top"><span>Recyceln<small>zu neuer Ware, mein Favorit</small></span></li>
+<li><span>Kompostieren<small>wenn Recycling nicht geht</small></span></li>
+</ol>
+</aside>
+
 1. **Lange nutzen.** Ein Produkt, das doppelt so lange hält, braucht nur halb so viel Material. Das schlägt jeden Kompost.
 2. **Reparieren und weitergeben.** Socken stopfen, Schuhe neu besohlen lassen, gut erhaltene Kleidung spenden.
 3. **Recyceln zu neuer Ware.** Aus alten Socken werden neue Socken, aus alten Jeans neue Jeans. Das halte ich für den besten Weg am Ende des Lebens.
@@ -63,6 +73,14 @@ quellen:
 Es gibt aber eine wichtige Ausnahme: alles, was sich beim Benutzen abreibt. Dazu unten mehr.
 
 ## Was heißt „kompostierbar“ überhaupt?
+
+<aside class="rand grafik" aria-label="Die zwei Kreisläufe von Cradle to Cradle">
+<p class="grafik-titel">Die zwei Kreisläufe</p>
+<div class="kreislaeufe">
+<div class="kreislauf bio"><svg class="kreislauf-svg bio" viewBox="0 0 240 192" role="img" aria-label="biologischer Kreislauf: Pflanze, Tier – Produkt – Kompost – Nährstoff"><defs><marker id="pfeil-bio" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pfeil-spitze"/></marker></defs><path d="M141.2 48.5 A52 52 0 0 1 167.5 74.8" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M167.5 117.2 A52 52 0 0 1 141.2 143.5" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M98.8 143.5 A52 52 0 0 1 72.5 117.2" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M72.5 74.8 A52 52 0 0 1 98.8 48.5" class="bogen" marker-end="url(#pfeil-bio)"/><text x="120" y="36" text-anchor="middle" class="etikett">Pflanze, Tier</text><text x="180" y="100" text-anchor="start" class="etikett">Produkt</text><text x="120" y="166" text-anchor="middle" class="etikett">Kompost</text><text x="60" y="100" text-anchor="end" class="etikett">Nährstoff</text><text x="120" y="101" text-anchor="middle" class="mitte">biologisch</text></svg><p>Das Material geht gefahrlos zurück in die Natur.</p></div>
+<div class="kreislauf tech"><svg class="kreislauf-svg tech" viewBox="0 0 240 192" role="img" aria-label="technischer Kreislauf: Rohstoff – Produkt – Rücknahme – Recycling"><defs><marker id="pfeil-tech" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pfeil-spitze"/></marker></defs><path d="M141.2 48.5 A52 52 0 0 1 167.5 74.8" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M167.5 117.2 A52 52 0 0 1 141.2 143.5" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M98.8 143.5 A52 52 0 0 1 72.5 117.2" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M72.5 74.8 A52 52 0 0 1 98.8 48.5" class="bogen" marker-end="url(#pfeil-tech)"/><text x="120" y="36" text-anchor="middle" class="etikett">Rohstoff</text><text x="180" y="100" text-anchor="start" class="etikett">Produkt</text><text x="120" y="166" text-anchor="middle" class="etikett">Rücknahme</text><text x="60" y="100" text-anchor="end" class="etikett">Recycling</text><text x="120" y="101" text-anchor="middle" class="mitte">technisch</text></svg><p>Das Material wird immer wieder zu neuen Produkten.</p></div>
+</div>
+</aside>
 
 Die Idee stammt aus dem Prinzip Cradle to Cradle. Es unterscheidet zwei Kreisläufe:
 
@@ -85,11 +103,15 @@ Drei Dinge sind mir dabei aufgefallen:
 
 Für das Umweltbundesamt ist Kompostieren bei Textilien meist nicht die hochwertigste Lösung. Recycling ist in der Regel besser. Der Grund: Beim Kompostieren geht alles verloren, was in Anbau, Spinnen, Färben und Nähen gesteckt wurde. Übrig bleibt etwas Humus.
 
+<aside class="rand randzitat"><p>Auch eine Baumwollsocke ist ein eher schwacher Dünger.</p><small>Einschätzung</small></aside>
+
 Dazu kommt: Abbaubare Kunststoffe bringen dem Boden laut Umweltbundesamt keine Nährstoffe. Einschätzung: Auch eine Baumwollsocke ist ein eher schwacher Dünger. Schafwolle ist hier eine Ausnahme: Als Pellets wird sie gezielt als Dünger eingesetzt und ersetzt dort Mineraldünger.
 
 Und Kompost braucht die richtigen Bedingungen. PUMA hat 2021 ein Experiment mit 500 Paar kompostierbaren Sneakern gestartet (RE:SUEDE). Die Schuhe wurden zerkleinert und rund dreieinhalb Monate in einer speziell ausgestatteten Industrieanlage in den Niederlanden kompostiert. Normale Kompostverfahren reichten laut PUMA nicht aus, vor allem die Sohle brauchte mehr Zeit.
 
 ## Warum ist Recycling zu neuen Socken besser?
+
+<aside class="rand randzitat"><p>2025 stellte die Marke eine Jeans mit 55 % Baumwolle aus alten Jeans vor.</p><small>Mud Jeans, laut FashionUnited</small></aside>
 
 Beim Recycling bleibt die Faser erhalten und wird wieder zu Garn. Dass das bei Socken geht, zeigt die Marke Smartwool in den USA: Sie sammelt alte Socken ein und spinnt aus alten Smartwool-Socken neues Garn, gemischt mit neuer Merinowolle. Ähnlich arbeitet Mud Jeans mit Jeans. 2025 stellte die Marke eine Jeans mit 55 % Baumwolle aus alten Jeans vor, üblich sind 20 bis 40 %.
 
@@ -103,6 +125,19 @@ Leider ist das noch die Ausnahme. Laut Öko-Institut werden weltweit nur etwa 1 
 ## Wo Abbaubarkeit wirklich wichtig ist: beim Verschleiß
 
 Es gibt Produkte, bei denen ein Teil des Materials beim Benutzen verloren geht, ob man will oder nicht. Diesen Abrieb kann niemand einsammeln und recyceln. Er landet in der Luft, im Boden und im Wasser. Hier ist es deshalb entscheidend, dass das Material biologisch abbaubar und für die Natur unbedenklich ist.
+
+<figure class="rand grafik grafik-bild">
+<svg viewBox="0 0 280 150" role="img" aria-label="Illustration: Ein Schuh, von dessen Sohle beim Gehen kleine Teilchen abreiben">
+<path d="M30 92 C30 70 46 52 70 50 L118 46 C132 45 140 36 150 30 L170 22 C182 18 192 26 196 38 L204 62 C210 76 230 80 248 86 C262 91 266 100 262 108 L40 108 C33 108 30 102 30 92 Z" fill="var(--flaeche)" stroke="var(--text-leise)" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M30 104 L262 104 C264 112 258 120 248 120 L44 120 C34 120 28 114 30 104 Z" fill="var(--akzent-hell)" stroke="var(--akzent)" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M150 40 L176 64 M140 46 L166 70 M130 50 L154 72" stroke="var(--text-leise)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+<g fill="var(--akzent)"><circle cx="70" cy="132" r="3"/><circle cx="96" cy="140" r="2.2"/><circle cx="124" cy="134" r="2.6"/><circle cx="150" cy="143" r="1.8"/><circle cx="178" cy="133" r="2.8"/><circle cx="205" cy="141" r="2"/><circle cx="232" cy="134" r="2.4"/></g>
+<path d="M14 132 L266 132" stroke="var(--linie)" stroke-width="2" stroke-dasharray="4 6"/>
+</svg>
+<figcaption>Bei jedem Schritt reibt sich ein wenig Sohle ab. Dieser Abrieb lässt sich nicht einsammeln, er sollte deshalb abbaubar und unbedenklich sein. Illustration.</figcaption>
+</figure>
+
+<aside class="rand randzitat"><p>Rund 100 g Abrieb von Schuhsohlen pro Kopf und Jahr</p><small>Fraunhofer UMSICHT, Schätzung für Deutschland</small></aside>
 
 Das beste Beispiel ist der Schuh. Bei jedem Schritt reibt sich die Sohle ein wenig ab. Laut einer Studie von Fraunhofer UMSICHT sind das in Deutschland rund 100 g Abrieb pro Kopf und Jahr. Die Forschenden halten ihre Zahlen selbst eher für hoch geschätzt. Trotzdem liegt Schuhsohlenabrieb damit auf Platz 7 der Quellen für Mikroplastik, weit vor Kosmetik.
 

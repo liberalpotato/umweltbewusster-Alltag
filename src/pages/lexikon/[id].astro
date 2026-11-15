@@ -14,8 +14,8 @@ const { Content } = await render(eintrag);
 const d = eintrag.data;
 ---
 
-<Base titel={d.begriff} beschreibung={d.beschreibung}>
-  <article>
+<Base titel={d.begriff} beschreibung={d.beschreibung} weit>
+  <article class="text-mit-rand">
     <p class="meta"><a href="/lexikon/">Lexikon</a> · Stand: {datum(d.stand)}</p>
     <h1>{d.begriff}</h1>
     <Content />

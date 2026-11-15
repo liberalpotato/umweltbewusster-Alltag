@@ -17,8 +17,8 @@ const bereich = findeBereich(d.bereich);
 const bereichLink = bereich?.aktiv ? `/alltag/${bereich.slug}/` : '/alltag/';
 ---
 
-<Base titel={d.titel} beschreibung={d.beschreibung}>
-  <article>
+<Base titel={d.titel} beschreibung={d.beschreibung} weit>
+  <article class="text-mit-rand">
     <p class="meta"><a href={bereichLink}>{bereich?.name ?? d.bereich}</a> · Stand: {datum(d.stand)}</p>
     <h1>{d.titel}</h1>
     <div class="fazit"><strong>Kurz gesagt</strong>{d.fazit}</div>
