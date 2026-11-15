@@ -6,7 +6,7 @@ import BeitragKarte from '../components/BeitragKarte.astro';
 import { alltagsBereiche } from '../data/alltag';
 import { veroeffentlichteRatgeber, sichtbareProdukte } from '../data/inhalte';
 
-const neueste = (await veroeffentlichteRatgeber()).slice(0, 3);
+const [aufmacher, ...weitere] = (await veroeffentlichteRatgeber()).slice(0, 4);
 const produkte = await sichtbareProdukte();
 const anzahl = (slug: string) => produkte.filter((p) => p.data.bereich === slug).length;
 
@@ -21,7 +21,7 @@ const schritte = [
   <section class="held-flaeche start-held">
     <div class="start-text">
       <p class="ueberzeile">Unabhängig · ohne Werbung · mit Quellen</p>
-      <h1>Was ist im Alltag wirklich am nachhaltigsten?</h1>
+      <h1>Was ist im Alltag <mark>wirklich</mark> am nachhaltigsten?</h1>
       <p class="lead">Hier findest du ehrliche Antworten auf konkrete Alltagsfragen, mit nachvollziehbaren Quellen. Ich verkaufe nichts und verdiene nichts an Empfehlungen.</p>
       <div class="knopf-reihe">
         <a class="knopf" href="/alltag/">Alltagsgegenstände entdecken <Icon name="pfeil" size={18} /></a>
@@ -45,6 +45,21 @@ const schritte = [
     </aside>
   </section>
 
+  {aufmacher && (
+    <>
+      <div class="abschnitt-kopf">
+        <h2>Neu im Ratgeber</h2>
+        <p><a href="/ratgeber/">Alle Ratgeber</a></p>
+      </div>
+      <BeitragKarte beitrag={aufmacher} gross />
+      {weitere.length > 0 && (
+        <ul class="raster raster-beitraege weitere-beitraege">
+          {weitere.map((r) => <li><BeitragKarte beitrag={r} /></li>)}
+        </ul>
+      )}
+    </>
+  )}
+
   <div class="abschnitt-kopf">
     <h2>Alltagsgegenstände</h2>
     <p><a href="/alltag/">Alle Bereiche</a></p>
@@ -54,16 +69,4 @@ const schritte = [
       <li><BereichKachel bereich={b} anzahlProdukte={anzahl(b.slug)} /></li>
     ))}
   </ul>
-
-  {neueste.length > 0 && (
-    <>
-      <div class="abschnitt-kopf">
-        <h2>Neueste Ratgeber</h2>
-        <p><a href="/ratgeber/">Alle Ratgeber</a></p>
-      </div>
-      <ul class="raster raster-beitraege">
-        {neueste.map((r) => <li><BeitragKarte beitrag={r} /></li>)}
-      </ul>
-    </>
-  )}
 </Base>

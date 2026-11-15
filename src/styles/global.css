@@ -2,7 +2,7 @@
 :root {
   --text: #18221c;
   --text-leise: #56635b;
-  --grund: #f6f5ef;
+  --grund: #fbf7ef;
   --karte: #ffffff;
   --flaeche: #eeece3;
   --akzent: #2c6a47;
@@ -429,3 +429,153 @@ th { background: var(--flaeche); }
 
 .grafik-bild svg { display: block; width: 100%; height: auto; }
 .grafik-bild figcaption { margin-top: 0.6rem; font-size: 0.85rem; line-height: 1.45; color: var(--text-leise); }
+
+/* =====================================================================
+   Magazin-Look „Modern und farbig“ (Florian, 2026-11-15)
+   Jeder Bereich hat eine Erkennungsfarbe (.farbe-*), Überschriften in Bricolage Grotesque.
+   ===================================================================== */
+:root {
+  --titel-schrift: 'Bricolage Grotesque Variable', var(--schrift);
+  --tinte: #2a1a14;
+  --beere: #c8235f;  --beere-hell: #fde4ee;  --beere-ton: #ad1c51;
+  --himmel: #1f73b7; --himmel-hell: #dcecf9; --himmel-ton: #1a659f;
+  --orange: #e8681a; --orange-hell: #ffe6d4; --orange-ton: #b24d0e;
+  --sonne: #ffd23f;  --sonne-hell: #fff4c7;  --sonne-ton: #8a6500;
+  --mint: #138a5a;   --mint-hell: #d8f5e7;   --mint-ton: #0f7a4f;
+  --lila: #6c4ee0;   --lila-hell: #e8e3fd;   --lila-ton: #5a3dcc;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --beere-hell: #3a1525;  --beere-ton: #ff8fb5;
+    --himmel-hell: #132a3d; --himmel-ton: #8cc6f2;
+    --orange-hell: #3a2213; --orange-ton: #ffb27e;
+    --sonne-hell: #362d0c;  --sonne-ton: #ffd966;
+    --mint-hell: #11301f;   --mint-ton: #7fd9ab;
+    --lila-hell: #241c45;   --lila-ton: #b9a8ff;
+  }
+}
+.farbe-beere  { --b: var(--beere);  --b-hell: var(--beere-hell);  --b-ton: var(--beere-ton);  --b-auf: #ffffff; }
+.farbe-himmel { --b: var(--himmel); --b-hell: var(--himmel-hell); --b-ton: var(--himmel-ton); --b-auf: #ffffff; }
+.farbe-orange { --b: var(--orange); --b-hell: var(--orange-hell); --b-ton: var(--orange-ton); --b-auf: #1e120a; }
+.farbe-sonne  { --b: var(--sonne);  --b-hell: var(--sonne-hell);  --b-ton: var(--sonne-ton);  --b-auf: #2a1a14; }
+.farbe-mint   { --b: var(--mint);   --b-hell: var(--mint-hell);   --b-ton: var(--mint-ton);   --b-auf: #ffffff; }
+.farbe-lila   { --b: var(--lila);   --b-hell: var(--lila-hell);   --b-ton: var(--lila-ton);   --b-auf: #ffffff; }
+
+h1, h2, h3, .logo, .randzitat p, .grosse-zahl strong, .kurz-titel, .schritte-titel {
+  font-family: var(--titel-schrift);
+  font-optical-sizing: auto;
+}
+h1 { font-weight: 800; letter-spacing: -0.035em; }
+h2 { font-weight: 750; letter-spacing: -0.025em; }
+
+mark { background: linear-gradient(transparent 58%, var(--sonne) 58%, var(--sonne) 92%, transparent 92%); color: inherit; padding: 0 0.1em; }
+@media (prefers-color-scheme: dark) { mark { background: linear-gradient(transparent 58%, #8a6a00 58%, #8a6a00 92%, transparent 92%); } }
+
+/* Startseite: bunter Kopf */
+.held-flaeche {
+  background:
+    radial-gradient(circle at calc(100% + 1.5rem) -1.5rem, var(--sonne) 0 6rem, transparent 6.1rem),
+    radial-gradient(circle at 4% 96%, color-mix(in srgb, var(--beere) 70%, transparent) 0 4rem, transparent 4.1rem),
+    radial-gradient(circle at 60% 110%, color-mix(in srgb, var(--himmel) 30%, transparent) 0 7rem, transparent 7.1rem),
+    var(--mint-hell);
+}
+.ueberzeile { color: var(--beere-ton); }
+
+/* Lesefortschritt */
+.lesefortschritt { position: fixed; top: 0; left: 0; right: 0; height: 4px; z-index: 40; pointer-events: none; }
+.lesefortschritt span { display: block; height: 100%; background: linear-gradient(90deg, var(--sonne), var(--orange), var(--beere)); transform-origin: left; transform: scaleX(0); }
+
+/* Artikelkopf in der Bereichsfarbe */
+.artikel-kopf { position: relative; background: var(--b); color: var(--b-auf); overflow: hidden; }
+.artikel-kopf::before, .artikel-kopf::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; }
+.artikel-kopf::before { width: 22rem; height: 22rem; left: -8rem; top: -10rem; background: color-mix(in srgb, var(--sonne) 35%, transparent); }
+.artikel-kopf::after { display: none; width: 9rem; height: 9rem; right: 38%; bottom: -3rem; background: color-mix(in srgb, #ffffff 14%, transparent); }
+.artikel-kopf-innen { position: relative; z-index: 1; display: grid; gap: 1.5rem; align-items: center; padding-top: clamp(2rem, 5vw, 4rem); padding-bottom: clamp(3.5rem, 7vw, 5.5rem); }
+@media (min-width: 56rem) { .artikel-kopf-innen { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 3rem; } }
+.artikel-kopf h1 { margin: 0.9rem 0 1rem; font-size: clamp(2.2rem, 1.3rem + 3.6vw, 4rem); line-height: 1.04; text-wrap: balance; }
+.rubrik { display: inline-block; padding: 0.3rem 0.85rem; border-radius: 999px; background: var(--sonne); color: var(--tinte); font-size: 0.8rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
+.rubrik:hover { color: var(--tinte); background: #ffe27a; }
+.vorspann { margin: 0; max-width: 38rem; font-size: clamp(1.1rem, 1rem + 0.45vw, 1.35rem); line-height: 1.5; opacity: 0.95; }
+.autor-zeile { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 1.1rem; margin: 1.5rem 0 0; font-size: 0.92rem; font-weight: 550; }
+.autor-zeile a { color: inherit; }
+.autor-bild { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--sonne); color: var(--tinte); font-family: var(--titel-schrift); font-weight: 800; font-size: 1.1rem; }
+.artikel-titelbild { display: block; width: 100%; max-width: 26rem; height: auto; justify-self: center; }
+@media (min-width: 56rem) { .artikel-kopf::after { display: block; } }
+@media (max-width: 56rem) { .artikel-titelbild { max-width: 17rem; order: -1; } }
+.artikel-kopf-welle { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(1.5rem, 4vw, 3.5rem); z-index: 1; }
+.artikel-kopf-welle path { fill: var(--grund); }
+
+/* Kasten „Das Wichtigste in Kürze“ */
+.kurz-kasten { position: relative; z-index: 2; margin: -1.25rem 0 2.5rem; padding: 1.4rem 1.5rem 1.5rem; border-radius: 22px; background: var(--sonne-hell); border: 3px solid var(--tinte); box-shadow: 6px 6px 0 var(--tinte); }
+@media (prefers-color-scheme: dark) { .kurz-kasten { border-color: var(--sonne); box-shadow: 6px 6px 0 var(--sonne); } }
+.kurz-kasten p { margin: 0; font-size: 1.08rem; }
+.kurz-kasten .kurz-titel { margin-bottom: 0.4rem; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+
+/* Text im Beitrag */
+.artikel h2 { position: relative; font-size: clamp(1.5rem, 1.25rem + 1vw, 2.05rem); }
+.artikel-text h2::before { content: ''; display: block; width: 3rem; height: 0.4rem; margin-bottom: 0.8rem; border-radius: 999px; background: var(--b); }
+.artikel-text > p:first-of-type::first-letter { float: left; margin: 0.08em 0.12em 0 0; font-family: var(--titel-schrift); font-size: 4.1em; line-height: 0.82; font-weight: 800; color: var(--b-ton); }
+.artikel a { color: var(--b-ton); }
+.artikel strong { color: var(--text); }
+
+/* Inhaltsverzeichnis am Rand */
+.inhaltsverzeichnis ol { margin: 0; padding: 0; list-style: none; counter-reset: kapitel; display: grid; gap: 0.15rem; }
+.inhaltsverzeichnis li { counter-increment: kapitel; display: grid; grid-template-columns: 1.7rem 1fr; gap: 0.4rem; font-size: 0.92rem; line-height: 1.35; }
+.inhaltsverzeichnis li::before { content: counter(kapitel); font-family: var(--titel-schrift); font-weight: 800; color: var(--b-ton); }
+.inhaltsverzeichnis a { display: block; padding: 0.2rem 0; color: var(--text); text-decoration: none; }
+.inhaltsverzeichnis a:hover { color: var(--b-ton); text-decoration: underline; }
+@media (max-width: 71.99rem) { .inhaltsverzeichnis { display: none; } }
+h2[id] { scroll-margin-top: 5rem; }
+
+/* Randzitate in Farbe */
+.artikel .randzitat { padding: 1.4rem 1.4rem 1.2rem; border: 0; border-radius: 22px; background: var(--b-hell); }
+.artikel .randzitat::before { content: '“'; position: absolute; top: -1.6rem; left: 1rem; font-family: var(--titel-schrift); font-size: 6rem; line-height: 1; font-weight: 800; color: var(--b); }
+.artikel .randzitat p { color: var(--b-ton); font-size: clamp(1.45rem, 1.2rem + 0.9vw, 1.8rem); font-weight: 800; }
+.artikel .randzitat p::before, .artikel .randzitat p::after { content: none; }
+
+/* Grafik-Kästen */
+.artikel .grafik { border: 3px solid var(--tinte); box-shadow: 5px 5px 0 var(--tinte); border-radius: 22px; }
+@media (prefers-color-scheme: dark) { .artikel .grafik { border-color: var(--linie); box-shadow: 5px 5px 0 var(--linie); } }
+.artikel .stufen .stufe-top { background: var(--sonne-hell); }
+.artikel .stufen .stufe-top::before { background: var(--sonne); color: var(--tinte); }
+
+/* Große Zahl über die volle Breite */
+.grosse-zahl { clear: both; display: grid; gap: 0.25rem 2rem; align-items: center; margin: 2.5rem 0; padding: clamp(1.5rem, 4vw, 2.5rem); border-radius: 26px; background: var(--b); color: var(--b-auf); }
+@media (min-width: 40rem) { .grosse-zahl { grid-template-columns: auto 1fr; } }
+@media (min-width: 72rem) { .grosse-zahl { margin-right: -21rem; } }
+.grosse-zahl strong { color: var(--sonne) !important; font-size: clamp(4rem, 2.5rem + 6vw, 7.5rem); line-height: 0.95; font-weight: 800; letter-spacing: -0.05em; }
+.grosse-zahl p { margin: 0; font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem); line-height: 1.35; font-weight: 650; }
+.grosse-zahl small { grid-column: 1 / -1; font-size: 0.8rem; font-weight: 650; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; }
+@media (min-width: 40rem) { .grosse-zahl small { grid-column: 2; } }
+
+/* Beitragskarten mit Bild */
+.beitrag-karte { padding: 0; overflow: visible; gap: 0; border: 3px solid var(--tinte); box-shadow: 5px 5px 0 var(--tinte); border-radius: 22px; }
+a.beitrag-karte:hover { border-color: var(--tinte); box-shadow: 8px 8px 0 var(--tinte); transform: translate(-2px, -2px); }
+@media (prefers-color-scheme: dark) {
+  .beitrag-karte, a.beitrag-karte:hover { border-color: var(--linie); }
+  .beitrag-karte { box-shadow: 5px 5px 0 var(--linie); }
+  a.beitrag-karte:hover { box-shadow: 8px 8px 0 var(--b); }
+}
+.beitrag-bild { display: grid; place-items: center; padding: 1.25rem; background: var(--b); color: var(--b-auf); border-radius: 19px 19px 0 0; aspect-ratio: 16 / 10; overflow: hidden; }
+.beitrag-bild img { display: block; width: auto; height: 100%; max-width: 100%; object-fit: contain; }
+.beitrag-text { display: flex; flex-direction: column; gap: 0.55rem; flex: 1; padding: 1.25rem 1.4rem 1.4rem; }
+.beitrag-text h2, .beitrag-text h3 { margin: 0; }
+.beitrag-text h3 { font-size: 1.3rem; line-height: 1.2; }
+.rubrik-chip { align-self: flex-start; padding: 0.15rem 0.65rem; border-radius: 999px; background: var(--b-hell); color: var(--b-ton); font-size: 0.75rem; font-weight: 750; letter-spacing: 0.05em; text-transform: uppercase; }
+.beitrag-karte .mehr { color: var(--b-ton); }
+.beitrag-karte .entwurf-hinweis { z-index: 2; }
+@media (min-width: 50rem) {
+  .beitrag-gross { flex-direction: row; }
+  .beitrag-gross .beitrag-bild { flex: 0 0 44%; aspect-ratio: auto; min-height: 20rem; border-radius: 19px 0 0 19px; }
+  .beitrag-gross .beitrag-text { justify-content: center; padding: 2rem 2.5rem; }
+}
+.beitrag-gross h2 { font-size: clamp(1.7rem, 1.2rem + 2vw, 2.6rem); line-height: 1.08; }
+.beitrag-gross p { font-size: 1.05rem; }
+.weitere-beitraege { margin-top: 1.5rem; }
+
+/* Bereichskacheln in ihrer Farbe */
+.bereich-kachel .symbol { background: var(--b-hell); color: var(--b-ton); }
+a.bereich-kachel { border-top: 6px solid var(--b); }
+a.bereich-kachel:hover { border-color: var(--b); }
+a.bereich-kachel .mehr { color: var(--b-ton); }
+.karte-bald.bereich-kachel .symbol { background: var(--b-hell); color: var(--b-ton); opacity: 0.8; }

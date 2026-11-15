@@ -4,6 +4,8 @@ beschreibung: "Kompostierbar ist vor allem bei Abrieb wichtig, etwa bei Schuhsoh
 bereich: kleidung
 fazit: "Kompostierbar ist vor allem dort sinnvoll, wo sich ein Produkt beim Benutzen abreibt und der Abrieb unkontrolliert in die Umwelt gelangt, etwa bei Schuhsohlen. Was danach vom Produkt übrig bleibt, sollte möglichst zu neuer Ware recycelt werden, zum Beispiel alte Socken zu neuen Socken. Kompost ist ein guter Notausgang, aber selten der beste Weg."
 stand: 2026-11-15
+titelbild: /bilder/kompostierbare-produkte.svg
+titelbildAlt: "Illustration: Eine Socke steckt in einem Komposthaufen, daneben Blätter und Recycling-Pfeile"
 quellen:
   - titel: "Umweltbundesamt: Fragen und Antworten zu Cradle to Cradle"
     url: https://umweltbundesamt.de/themen/abfall-ressourcen/ressourcenschonung-in-produktion-konsum/fragen-antworten-zu-cradle-to-cradle
@@ -140,9 +142,9 @@ Es gibt Produkte, bei denen ein Teil des Materials beim Benutzen verloren geht, 
 <figcaption>Bei jedem Schritt reibt sich ein wenig Sohle ab. Dieser Abrieb lässt sich nicht einsammeln, er sollte deshalb abbaubar und unbedenklich sein. Illustration.</figcaption>
 </figure>
 
-<aside class="rand randzitat"><p>Rund 100 g Abrieb von Schuhsohlen pro Kopf und Jahr</p><small>Fraunhofer UMSICHT, Schätzung für Deutschland</small></aside>
-
 Das beste Beispiel ist der Schuh. Bei jedem Schritt reibt sich die Sohle ein wenig ab. Laut einer Studie von Fraunhofer UMSICHT sind das in Deutschland rund 100 g Abrieb pro Kopf und Jahr. Die Forschenden halten ihre Zahlen selbst eher für hoch geschätzt. Trotzdem liegt Schuhsohlenabrieb damit auf Platz 7 der Quellen für Mikroplastik, weit vor Kosmetik.
+
+<div class="grosse-zahl"><strong>100 g</strong><p>Abrieb von Schuhsohlen pro Kopf und Jahr, so die Schätzung für Deutschland.</p><small>Fraunhofer UMSICHT</small></div>
 
 Noch größer ist das Problem bei Autoreifen, der größten Quelle für Mikroplastik. Laut Umweltbundesamt enthalten Kunststoffe oft Zusatzstoffe wie Weichmacher, Flammschutzmittel oder Antioxidantien. In einem Laborversuch der Universität Wien nahm Salat Zusatzstoffe aus Reifenabrieb über die Wurzeln auf. Ob das für Menschen giftig ist, ist noch nicht geklärt.
 

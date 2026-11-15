@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360">
+<circle cx="230" cy="150" r="128" fill="#ffd23f"/>
+<circle cx="70" cy="70" r="22" fill="#ff8a3d"/>
+<circle cx="352" cy="300" r="14" fill="#3ccf91"/>
+<g transform="rotate(-14 230 160)">
+<path d="M160 30 L240 30 L240 185 C240 200 255 210 270 210 L310 210 C342 210 352 248 324 260 C308 267 280 268 258 268 L210 268 C175 268 160 242 160 212 Z" fill="#fff8ec" stroke="#2a1a14" stroke-width="5" stroke-linejoin="round"/>
+<rect x="160" y="30" width="80" height="34" fill="#3ccf91" stroke="#2a1a14" stroke-width="5"/>
+<path d="M176 34 v26 M192 34 v26 M208 34 v26 M224 34 v26" stroke="#2a1a14" stroke-width="3" opacity="0.5"/>
+<path d="M160 96 H240 M160 118 H240" stroke="#ff8a3d" stroke-width="10"/>
+<path d="M240 185 C240 200 255 210 270 210 L262 236 C238 236 222 222 218 200 Z" fill="#ff8a3d" stroke="#2a1a14" stroke-width="4" stroke-linejoin="round"/>
+<path d="M310 210 C342 210 352 248 324 260 C315 264 306 266 296 267 C306 248 306 226 296 210 Z" fill="#ff8a3d" stroke="#2a1a14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<path d="M20 345 C60 255 150 236 210 238 C280 240 350 270 385 345 Z" fill="#7a4a32" stroke="#2a1a14" stroke-width="5" stroke-linejoin="round"/>
+<g fill="#b07a55"><circle cx="90" cy="300" r="6"/><circle cx="140" cy="280" r="4"/><circle cx="200" cy="300" r="7"/><circle cx="260" cy="282" r="5"/><circle cx="310" cy="310" r="6"/><circle cx="170" cy="325" r="4"/><circle cx="240" cy="330" r="5"/></g>
+<path d="M110 262 C96 230 104 206 132 196 C140 224 132 248 110 262 Z" fill="#3ccf91" stroke="#2a1a14" stroke-width="4" stroke-linejoin="round"/>
+<path d="M112 258 C116 236 122 220 130 204" stroke="#2a1a14" stroke-width="3" fill="none"/>
+<path d="M318 266 C330 240 352 230 376 238 C368 262 346 274 318 266 Z" fill="#2fb36b" stroke="#2a1a14" stroke-width="4" stroke-linejoin="round"/>
+<path d="M322 264 C340 252 356 244 372 240" stroke="#2a1a14" stroke-width="3" fill="none"/>
+<g fill="none" stroke="#fff8ec" stroke-width="6" stroke-linecap="round"><path d="M330 60 A34 34 0 0 1 372 92"/><path d="M366 118 A34 34 0 0 1 318 120"/><path d="M304 98 A34 34 0 0 1 316 64"/></g>
+<g fill="#fff8ec"><path d="M372 92 l-14 -2 l12 -12 z"/><path d="M318 120 l8 -12 l6 16 z"/><path d="M316 64 l-2 14 l-12 -10 z"/></g>
+</svg>

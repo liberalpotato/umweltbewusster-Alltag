@@ -12,6 +12,8 @@ export interface AlltagsBereich {
   name: string;
   beschreibung: string;
   icon: 'kleidung' | 'bad' | 'haushalt' | 'kueche' | 'garten' | 'reisen';
+  /** Erkennungsfarbe des Bereichs (Magazin-Look), siehe .farbe-* in global.css */
+  farbe: 'beere' | 'himmel' | 'orange' | 'sonne' | 'mint' | 'lila';
   aktiv: boolean;
   unterkategorien: Unterkategorie[];
 }
@@ -22,6 +24,7 @@ export const alltagsBereiche: AlltagsBereich[] = [
     name: 'Kleidung & Accessoires',
     beschreibung: 'Von Unterwäsche bis Jacke, dazu Schuhe, Accessoires und Taschen.',
     icon: 'kleidung',
+    farbe: 'beere',
     aktiv: true,
     unterkategorien: [
       { slug: 'unterwaesche', name: 'Unterwäsche' },
@@ -41,6 +44,7 @@ export const alltagsBereiche: AlltagsBereich[] = [
     name: 'Bad & Körperpflege',
     beschreibung: 'Zahnbürste, Seife, Duschgel, WC-Duft und mehr.',
     icon: 'bad',
+    farbe: 'himmel',
     aktiv: false,
     unterkategorien: [],
   },
@@ -49,6 +53,7 @@ export const alltagsBereiche: AlltagsBereich[] = [
     name: 'Haushalt & Putzen',
     beschreibung: 'Putzmittel, Spülmaschinen-Tabs, Wäsche, Mülleimer.',
     icon: 'haushalt',
+    farbe: 'orange',
     aktiv: false,
     unterkategorien: [],
   },
@@ -57,6 +62,7 @@ export const alltagsBereiche: AlltagsBereich[] = [
     name: 'Küche',
     beschreibung: 'Geschirr, Flaschen, Vorratsdosen und Küchengeräte.',
     icon: 'kueche',
+    farbe: 'sonne',
     aktiv: false,
     unterkategorien: [],
   },
@@ -65,6 +71,7 @@ export const alltagsBereiche: AlltagsBereich[] = [
     name: 'Garten & Balkon',
     beschreibung: 'Rasenmäher, Werkzeug, Erde und Pflanzen.',
     icon: 'garten',
+    farbe: 'mint',
     aktiv: false,
     unterkategorien: [],
   },
@@ -73,6 +80,7 @@ export const alltagsBereiche: AlltagsBereich[] = [
     name: 'Freizeit & Reisen',
     beschreibung: 'Reisetasche, Rucksack, Sport- und Freizeitbedarf.',
     icon: 'reisen',
+    farbe: 'lila',
     aktiv: false,
     unterkategorien: [],
   },
