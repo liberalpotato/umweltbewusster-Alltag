@@ -44,6 +44,7 @@ minuspunkte:
   - "Herstellungsort nicht angegeben"
   - "Keine CO₂-Zahlen und kein eigener Ausgleich"
   - "Keine Angaben zur Färbung"
+punkte: 3
 entwurf: false
 stand: 2026-11-15
 quellen:

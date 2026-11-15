@@ -43,6 +43,7 @@ minuspunkte:
   - "15 % Kunstfaser, kein Kreislauf, keine Rücknahme"
   - "Keine Angaben zu Klima, Färbung und Herkunft der Baumwolle"
   - "Teuer"
+punkte: 2
 entwurf: false
 stand: 2026-11-15
 quellen:
