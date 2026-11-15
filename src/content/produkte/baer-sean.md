@@ -64,6 +64,7 @@ minuspunkte:
   - "Gerbung des Oberleders nicht angegeben"
   - "Leder-Check nur zu einem Teil erfüllt"
   - "Teuer: 284 €"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "BÄR: Sean (Produktseite)"

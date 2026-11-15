@@ -48,6 +48,7 @@ minuspunkte:
   - "Keine Rücknahme alter Schuhe"
   - "Keine Siegel, keine Klimaangaben"
   - "Andere Doghammer-Modelle enthalten Merino-Loden, beim Kauf auf das Modell achten"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "Bergfreunde: Doghammer Local Wool Commuter"

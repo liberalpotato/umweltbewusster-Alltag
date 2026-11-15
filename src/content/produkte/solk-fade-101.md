@@ -64,6 +64,7 @@ minuspunkte:
   - "Abbautests nur nach eigenem Standard, Ergebnisse nicht veröffentlicht"
   - "Sehr teuer: 435 €"
   - "Shop zeigt bei Deutschland zugleich „Wir liefern noch nicht in dein Land“, Lieferung vor dem Kauf prüfen"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "Solk: Fade 101 (Produktseite)"

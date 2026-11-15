@@ -47,6 +47,7 @@ minuspunkte:
   - "Keine Rücknahme, kein Reparaturservice"
   - "Sohle laut Hersteller rutschig auf nassen Fliesen und Eis"
   - "Keine Angaben zu Klima und Verpackung"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "Cradle to Cradle Products Innovation Institute: glerups slippers"

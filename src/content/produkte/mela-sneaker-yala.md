@@ -48,6 +48,7 @@ minuspunkte:
   - "Anteil Bio-Kautschuk in der Sohle nur „mindestens 50 %“"
   - "Widersprüchliche Angaben zum Herstellungsort"
   - "Für mich nicht sehr bequem und eher altmodisch"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "MELA: Damen-Sneaker YALA (Produktseite)"

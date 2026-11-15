@@ -64,6 +64,7 @@ minuspunkte:
   - "Keine Rücknahme"
   - "Reparatur ohne Ablauf und Preise"
   - "Teuer: 215 bis 269 €"
+entwurf: false
 stand: 2026-11-15
 quellen:
   - titel: "FORMOST: ZEHA Berlin Ledersportschuh Trainer 835 cognac"
