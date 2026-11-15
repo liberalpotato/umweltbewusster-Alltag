@@ -41,7 +41,7 @@ Längere Ratgeber und Lexikon-Einträge nie als reinen Fließtext (Florian, 2026
 ## Regeln für Produktseiten
 
 1. Die Punktzahl (`punkte`, 0 bis 10) vergibt nur Florian. Nie selbst eintragen; ohne Punktzahl zeigt die Seite „Bewertung folgt“.
-2. Jedes Kriterium aus `kriterienKleidung` bekommt einen Status (`gut`, `teilweise`, `fehlt`, `offen`) und einen kurzen, belegten Text. `offen` heißt: keine Angaben gefunden oder Florian entscheidet (z. B. Aussehen).
+2. Jedes Kriterium aus `kriterienKleidung` bekommt einen Status (`gut`, `teilweise`, `fehlt`, `offen`) und einen kurzen, belegten Text. `offen` ist nur erlaubt, wenn Florian es ausdrücklich freigibt (Florian, 2026-11-15). Fehlen Angaben, erst weiter recherchieren und dann Florian gezielt fragen.
 3. Kreislauf nach Cradle to Cradle ist das wichtigste Kriterium. Faire Arbeitsbedingungen werden nicht bewertet.
 4. Wirbt ein Hersteller mit CO₂-Ausgleich oder „klimaneutral“: genau erklären, wie (welche Projekte, vermeiden oder dauerhaft entfernen), und Florian entscheiden lassen, ob das zählt.
 5. Preis: mit vergleichbarer Ware großer Modeketten (z. B. C&A, H&M) vergleichen. Auf der Seite die Kette nicht namentlich nennen, sondern „große Modeketten“ schreiben, mit Stand (Monat/Jahr).
