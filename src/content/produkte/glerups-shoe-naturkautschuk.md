@@ -36,8 +36,8 @@ kriterien:
     status: fehlt
     text: "95 € bei die-form.de. Sneaker aus Kunstleder kosten bei großen Modeketten etwa 20 bis 26 € (Stand November 2026). Ein glerups ist eher ein Hausschuh für draußen als ein Sneaker, ein direkter Vergleich ist schwierig. Einschätzung: deutlich mehr als das Doppelte."
   aussehen:
-    status: teilweise
-    text: "PLATZHALTER"
+    status: gut
+    text: "Sieht besonders aus, mir gefällt er aber. Wie er sich trägt, teste ich noch."
 pluspunkte:
   - "Einziger Schuh mit Cradle-to-Cradle-Zertifikat für das ganze Produkt"
   - "Nur Wolle und Naturkautschuk"

@@ -36,8 +36,8 @@ kriterien:
     status: fehlt
     text: "UVP 159,95 €, im Angebot 137,56 €. Sneaker aus Kunstleder kosten bei großen Modeketten etwa 20 bis 26 € (Stand November 2026). Das ist ein Vielfaches."
   aussehen:
-    status: teilweise
-    text: "PLATZHALTER"
+    status: fehlt
+    text: "Sieht für mich nicht besonders modern aus. Wie er sich trägt, teste ich noch."
 pluspunkte:
   - "Wolle vom Pommerschen Landschaf, ganz im Sinne von Nordwolle"
   - "Fußbett aus recycelten Weinkorken"

@@ -36,8 +36,8 @@ kriterien:
     status: fehlt
     text: "215,20 € im Angebot, sonst 269 €. Sneaker aus Kunstleder kosten bei großen Modeketten etwa 20 bis 26 € (Stand November 2026), echte Leder-Sneaker habe ich dort nicht gefunden. Das ist ein Vielfaches."
   aussehen:
-    status: teilweise
-    text: "PLATZHALTER"
+    status: gut
+    text: "Sieht gut aus, ein klassischer Leder-Sneaker. Wie er sich trägt, teste ich noch."
 leder:
   chromfrei:
     status: gut

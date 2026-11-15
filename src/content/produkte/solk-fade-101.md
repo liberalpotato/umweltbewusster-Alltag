@@ -36,8 +36,8 @@ kriterien:
     status: fehlt
     text: "435 € im Solk-Shop, 2025 lag die UVP noch bei 285 €. Sneaker aus Kunstleder kosten bei großen Modeketten etwa 20 bis 26 € (Stand November 2026). Solk ist ein Start-up, trotzdem ist das ein Vielfaches."
   aussehen:
-    status: teilweise
-    text: "PLATZHALTER"
+    status: gut
+    text: "Sieht sehr gut aus: ein schlichter, moderner Leder-Sneaker. Wie er sich trägt, teste ich noch."
 leder:
   chromfrei:
     status: gut
