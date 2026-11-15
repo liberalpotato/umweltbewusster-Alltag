@@ -75,10 +75,9 @@ Es gibt aber eine wichtige Ausnahme: alles, was sich beim Benutzen abreibt. Dazu
 ## Was heißt „kompostierbar“ überhaupt?
 
 <aside class="rand grafik" aria-label="Die zwei Kreisläufe von Cradle to Cradle">
-<p class="grafik-titel">Die zwei Kreisläufe</p>
 <div class="kreislaeufe">
-<div class="kreislauf bio"><svg class="kreislauf-svg bio" viewBox="0 0 240 192" role="img" aria-label="biologischer Kreislauf: Pflanze, Tier – Produkt – Kompost – Nährstoff"><defs><marker id="pfeil-bio" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pfeil-spitze"/></marker></defs><path d="M141.2 48.5 A52 52 0 0 1 167.5 74.8" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M167.5 117.2 A52 52 0 0 1 141.2 143.5" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M98.8 143.5 A52 52 0 0 1 72.5 117.2" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M72.5 74.8 A52 52 0 0 1 98.8 48.5" class="bogen" marker-end="url(#pfeil-bio)"/><text x="120" y="36" text-anchor="middle" class="etikett">Pflanze, Tier</text><text x="180" y="100" text-anchor="start" class="etikett">Produkt</text><text x="120" y="166" text-anchor="middle" class="etikett">Kompost</text><text x="60" y="100" text-anchor="end" class="etikett">Nährstoff</text><text x="120" y="101" text-anchor="middle" class="mitte">biologisch</text></svg><p>Das Material geht gefahrlos zurück in die Natur.</p></div>
-<div class="kreislauf tech"><svg class="kreislauf-svg tech" viewBox="0 0 240 192" role="img" aria-label="technischer Kreislauf: Rohstoff – Produkt – Rücknahme – Recycling"><defs><marker id="pfeil-tech" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pfeil-spitze"/></marker></defs><path d="M141.2 48.5 A52 52 0 0 1 167.5 74.8" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M167.5 117.2 A52 52 0 0 1 141.2 143.5" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M98.8 143.5 A52 52 0 0 1 72.5 117.2" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M72.5 74.8 A52 52 0 0 1 98.8 48.5" class="bogen" marker-end="url(#pfeil-tech)"/><text x="120" y="36" text-anchor="middle" class="etikett">Rohstoff</text><text x="180" y="100" text-anchor="start" class="etikett">Produkt</text><text x="120" y="166" text-anchor="middle" class="etikett">Rücknahme</text><text x="60" y="100" text-anchor="end" class="etikett">Recycling</text><text x="120" y="101" text-anchor="middle" class="mitte">technisch</text></svg><p>Das Material wird immer wieder zu neuen Produkten.</p></div>
+<div class="kreislauf bio"><p class="kreislauf-titel">biologisch</p><svg class="kreislauf-svg bio" viewBox="56 32 128 128" role="img" aria-label="biologischer Kreislauf"><defs><marker id="pfeil-bio" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pfeil-spitze"/></marker></defs><path d="M141.2 48.5 A52 52 0 0 1 167.5 74.8" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M167.5 117.2 A52 52 0 0 1 141.2 143.5" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M98.8 143.5 A52 52 0 0 1 72.5 117.2" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M72.5 74.8 A52 52 0 0 1 98.8 48.5" class="bogen" marker-end="url(#pfeil-bio)"/></svg></div>
+<div class="kreislauf tech"><p class="kreislauf-titel">technisch</p><svg class="kreislauf-svg tech" viewBox="56 32 128 128" role="img" aria-label="technischer Kreislauf"><defs><marker id="pfeil-tech" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pfeil-spitze"/></marker></defs><path d="M141.2 48.5 A52 52 0 0 1 167.5 74.8" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M167.5 117.2 A52 52 0 0 1 141.2 143.5" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M98.8 143.5 A52 52 0 0 1 72.5 117.2" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M72.5 74.8 A52 52 0 0 1 98.8 48.5" class="bogen" marker-end="url(#pfeil-tech)"/></svg></div>
 </div>
 </aside>
 
@@ -103,7 +102,7 @@ Drei Dinge sind mir dabei aufgefallen:
 
 Für das Umweltbundesamt ist Kompostieren bei Textilien meist nicht die hochwertigste Lösung. Recycling ist in der Regel besser. Der Grund: Beim Kompostieren geht alles verloren, was in Anbau, Spinnen, Färben und Nähen gesteckt wurde. Übrig bleibt etwas Humus.
 
-<aside class="rand randzitat"><p>Auch eine Baumwollsocke ist ein eher schwacher Dünger.</p><small>Einschätzung</small></aside>
+<aside class="rand randzitat"><p>Auch eine Baumwollsocke ist ein eher schwacher Dünger.</p></aside>
 
 Dazu kommt: Abbaubare Kunststoffe bringen dem Boden laut Umweltbundesamt keine Nährstoffe. Einschätzung: Auch eine Baumwollsocke ist ein eher schwacher Dünger. Schafwolle ist hier eine Ausnahme: Als Pellets wird sie gezielt als Dünger eingesetzt und ersetzt dort Mineraldünger.
 
@@ -127,11 +126,15 @@ Leider ist das noch die Ausnahme. Laut Öko-Institut werden weltweit nur etwa 1 
 Es gibt Produkte, bei denen ein Teil des Materials beim Benutzen verloren geht, ob man will oder nicht. Diesen Abrieb kann niemand einsammeln und recyceln. Er landet in der Luft, im Boden und im Wasser. Hier ist es deshalb entscheidend, dass das Material biologisch abbaubar und für die Natur unbedenklich ist.
 
 <figure class="rand grafik grafik-bild">
-<svg viewBox="0 0 280 150" role="img" aria-label="Illustration: Ein Schuh, von dessen Sohle beim Gehen kleine Teilchen abreiben">
-<path d="M30 92 C30 70 46 52 70 50 L118 46 C132 45 140 36 150 30 L170 22 C182 18 192 26 196 38 L204 62 C210 76 230 80 248 86 C262 91 266 100 262 108 L40 108 C33 108 30 102 30 92 Z" fill="var(--flaeche)" stroke="var(--text-leise)" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M30 104 L262 104 C264 112 258 120 248 120 L44 120 C34 120 28 114 30 104 Z" fill="var(--akzent-hell)" stroke="var(--akzent)" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M150 40 L176 64 M140 46 L166 70 M130 50 L154 72" stroke="var(--text-leise)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-<g fill="var(--akzent)"><circle cx="70" cy="132" r="3"/><circle cx="96" cy="140" r="2.2"/><circle cx="124" cy="134" r="2.6"/><circle cx="150" cy="143" r="1.8"/><circle cx="178" cy="133" r="2.8"/><circle cx="205" cy="141" r="2"/><circle cx="232" cy="134" r="2.4"/></g>
+<svg viewBox="0 0 280 160" role="img" aria-label="Illustration: Ein Sneaker, von dessen Sohle beim Gehen kleine Teilchen abreiben">
+<path d="M34 100 L31 66 C30 56 36 50 46 50 C58 50 68 56 80 56 C86 56 90 44 98 40 L108 38 C114 50 128 60 150 68 C176 77 210 78 234 84 C250 88 258 94 258 102 Z" fill="var(--flaeche)" stroke="var(--text-leise)" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M34 100 L32 72 C44 70 58 76 66 100" fill="none" stroke="var(--text-leise)" stroke-width="2" stroke-linejoin="round" opacity="0.7"/>
+<path d="M200 79 C214 84 222 94 222 102" fill="none" stroke="var(--text-leise)" stroke-width="2" opacity="0.7"/>
+<path d="M74 92 C100 88 128 84 176 88" fill="none" stroke="var(--akzent)" stroke-width="3" stroke-linecap="round"/>
+<path d="M106 46 L118 58 M116 44 L102 54 M122 56 L134 64 M132 54 L118 62 M140 62 L152 70 M150 60 L136 68 M158 68 L170 74 M168 66 L154 72" stroke="var(--text-leise)" stroke-width="2" stroke-linecap="round"/>
+<path d="M28 100 L260 100 C266 100 268 106 266 110 C264 116 258 118 250 118 L36 118 C29 118 26 113 26 108 C26 103 26 100 28 100 Z" fill="var(--grund)" stroke="var(--text-leise)" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M34 118 L254 118 C258 118 260 122 256 125 L36 125 C32 125 30 120 34 118 Z" fill="var(--akzent)"/><path d="M60 125 v-4 M90 125 v-4 M120 125 v-4 M150 125 v-4 M180 125 v-4 M210 125 v-4 M240 125 v-4" stroke="var(--grund)" stroke-width="3"/>
+<g fill="var(--akzent)"><circle cx="62" cy="138" r="3"/><circle cx="90" cy="147" r="2.2"/><circle cx="120" cy="140" r="2.6"/><circle cx="148" cy="150" r="1.8"/><circle cx="178" cy="139" r="2.8"/><circle cx="206" cy="148" r="2"/><circle cx="234" cy="140" r="2.4"/></g>
 <path d="M14 132 L266 132" stroke="var(--linie)" stroke-width="2" stroke-dasharray="4 6"/>
 </svg>
 <figcaption>Bei jedem Schritt reibt sich ein wenig Sohle ab. Dieser Abrieb lässt sich nicht einsammeln, er sollte deshalb abbaubar und unbedenklich sein. Illustration.</figcaption>
