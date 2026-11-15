@@ -18,8 +18,8 @@ kriterien:
     status: teilweise
     text: "Hergestellt in Deutschland, laut Trigema „100 % Made in Burladingen“. Woher die Baumwolle kommt und was mit den Socken nach dem Tragen passieren soll, steht nicht auf der Produktseite."
   haltbarkeit:
-    status: offen
-    text: "Trigema gibt keine Garantie. Pflege laut Hersteller: Normalwäsche bis 60 °C, nicht in den Trockner. Meine eigene Erfahrung folgt."
+    status: fehlt
+    text: "Trigema gibt keine Garantie und keine Angaben zur Haltbarkeit. Pflege laut Hersteller: Normalwäsche bis 60 °C, nicht in den Trockner. Nach meinem Test passe ich die Bewertung an."
   klima:
     status: fehlt
     text: "Trigema macht keine Angaben zu CO₂, Reduktion oder Ausgleich. Einschätzung: Die Fertigung in Deutschland spart lange Transportwege, beziffert ist das nicht."
@@ -33,8 +33,8 @@ kriterien:
     status: fehlt
     text: "16 €, die Produktseite sagt nicht, ob pro Paar. Baumwollsocken im Mehrfachpack kosten bei großen Modeketten 1,86 bis 4,33 € pro Paar (Stand November 2026). Gilt der Preis pro Paar, liegt Trigema beim 4- bis 9-Fachen. Ein Abo gibt es nicht."
   aussehen:
-    status: offen
-    text: "Klassische weiße Sportsocken mit Trigema-Schriftzug, auch als kurze Variante. Wie sie sich tragen, teste ich noch."
+    status: gut
+    text: "Klassische weiße Sportsocken mit Trigema-Schriftzug, auch als kurze Variante. Das Aussehen gefällt mir sehr gut. Wie sie sich tragen, teste ich noch."
 pluspunkte:
   - "85 % Bio-Baumwolle"
   - "In Deutschland gestrickt"

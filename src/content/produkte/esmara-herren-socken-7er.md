@@ -18,8 +18,8 @@ kriterien:
     status: fehlt
     text: "Wo die Socken hergestellt werden, steht nicht auf der Produktseite. Auch woher die Baumwolle kommt, erfährt man nicht."
   haltbarkeit:
-    status: offen
-    text: "Keine Angaben zur Haltbarkeit, keine Garantie. Meine eigene Erfahrung folgt."
+    status: fehlt
+    text: "Lidl gibt keine Garantie und keine Angaben zur Haltbarkeit. Nach meinem Test passe ich die Bewertung an."
   klima:
     status: fehlt
     text: "Die Produktseite macht keine Angaben zu CO₂, Reduktion oder Ausgleich."
@@ -27,8 +27,8 @@ kriterien:
     status: teilweise
     text: "OEKO-TEX® Standard 100 (Zertifikat 15.HIN.56397, Hohenstein) und Organic Content Standard (OCS) für den Anteil an Bio-Baumwolle. OEKO-TEX® Standard 100 prüft nur, ob im fertigen Produkt Schadstoffe stecken, nicht, wie umweltfreundlich hergestellt und gefärbt wurde. Cradle to Cradle oder den Grünen Knopf haben die Socken nicht."
   versand:
-    status: offen
-    text: "Online bestellbar oder je nach Angebot in der Filiale. Wie die Lieferung bei mir ankommt, trage ich nach dem Test ein."
+    status: fehlt
+    text: "Der Onlineshop verlangt 4,95 € Versand pro Bestellung und macht keine Angaben zur Verpackung. Eine wiederverwendbare Versandverpackung gibt es nicht."
   preis:
     status: gut
     text: "6,99 € im 7er-Pack, also 1 € pro Paar, im Angebot 4,49 € (64 Cent pro Paar). Das liegt am unteren Ende dessen, was Mehrfachpacks bei großen Modeketten kosten (1,86 bis 4,33 € pro Paar, Stand November 2026)."
@@ -48,6 +48,9 @@ quellen:
   - titel: "Lidl: esmara Herren Socken, 7 Paar (Produktseite)"
     url: https://www.lidl.de/p/esmara-men-herren-socken-7-paar/p100408012
     hinweis: "Händlerangaben zu Material, Preis und Siegeln, abgerufen am 15.11.2026"
+  - titel: "GIGA: Wie kann man bei Lidl ohne Versandkosten bestellen?"
+    url: https://www.giga.de/artikel/wie-kann-man-bei-lidl-ohne-versandkosten-bestellen/
+    hinweis: "Versandkosten 4,95 €, Stand Januar 2023"
   - titel: "Utopia: OEKO-TEX Standard 100"
     url: https://utopia.de/siegel/oeko-tex-standard-100/
     hinweis: "Was das Siegel prüft und was nicht, Stand Februar 2025"

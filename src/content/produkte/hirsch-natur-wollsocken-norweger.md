@@ -18,8 +18,8 @@ kriterien:
     status: teilweise
     text: "Gestrickt wird in Deutschland, beim Familienbetrieb Hirsch Natur in Laer im Münsterland, den es seit 1928 gibt. Die Wolle stammt laut Händler aus Südamerika, ein anderer Händler nennt Patagonien. Welche Höfe sie liefern, steht nicht dabei."
   haltbarkeit:
-    status: offen
-    text: "Hirsch Natur macht keine Angaben zur Haltbarkeit. Einschätzung: Reine Wolle ohne Verstärkung nutzt sich an der Ferse schneller ab als Socken mit Polyamid. Meine eigene Erfahrung folgt."
+    status: fehlt
+    text: "Hirsch Natur gibt keine Garantie und keine Angaben zur Haltbarkeit. Einschätzung: Reine Wolle ohne Verstärkung nutzt sich an der Ferse schneller ab als Socken mit Polyamid. Nach meinem Test passe ich die Bewertung an."
   klima:
     status: fehlt
     text: "Keine Angaben zu CO₂, Reduktion oder Ausgleich. Einschätzung: Gestrickt wird in Deutschland, die Wolle reist aber aus Südamerika an."
@@ -27,19 +27,20 @@ kriterien:
     status: teilweise
     text: "GOTS-zertifiziert („GOTS 100“). GOTS prüft die ganze Lieferkette, von der Bio-Tierhaltung bis zur Färberei. Cradle to Cradle oder den Grünen Knopf haben die Socken nicht."
   versand:
-    status: offen
-    text: "Wie memolife verschickt, trage ich nach meiner Bestellung ein."
+    status: gut
+    text: "memolife verschickt auf Wunsch in der memo Box. Das ist eine Mehrweg-Versandbox aus Recyclingplastik, ausgezeichnet mit dem Blauen Engel. So entsteht kein Verpackungsmüll."
   preis:
     status: fehlt
     text: "12,99 € pro Paar. Baumwollsocken im Mehrfachpack kosten bei großen Modeketten 1,86 bis 4,33 € pro Paar (Stand November 2026). Wollsocken habe ich dort nicht gefunden. Hirsch Natur liegt damit beim 3- bis 7-Fachen. Ein Abo gibt es nicht."
   aussehen:
-    status: offen
-    text: "Klassische Norweger-Socken mit Sternenmuster, in Rot, Hellgrau oder Blau mit Naturweiß. Wer es schlichter mag: Hirsch Natur hat auch einfarbige Socken, etwa bei Manufactum. Wie sie sich tragen, teste ich noch."
+    status: gut
+    text: "Klassische Norweger-Socken mit Sternenmuster, in Rot, Hellgrau oder Blau mit Naturweiß. Das Aussehen gefällt mir gut. Wie sie sich tragen, teste ich noch."
 pluspunkte:
   - "100 % Bio-Schurwolle, ohne Kunstfaser"
   - "GOTS-Siegel für die ganze Lieferkette"
   - "Gestrickt im Münsterland, Familienbetrieb seit 1928"
   - "Günstiger als die anderen Wollsocken im Vergleich"
+  - "Versand auf Wunsch in der Mehrweg-Box mit Blauem Engel"
 minuspunkte:
   - "Wolle aus Südamerika statt aus der Region"
   - "Keine Rücknahme, keine Anleitung zur Rückführung"
@@ -53,6 +54,12 @@ quellen:
   - titel: "lifeverde: memo AG, Zahlen, Daten, Fakten"
     url: https://www.lifeverde.de/gruene-unternehmen/nachhaltig-wohnen-und-leben/memo-ag/zahlen-daten-fakten
     hinweis: "memolife ist der Shop der memo AG aus Greußenheim für Privatkunden"
+  - titel: "Umweltpakt Bayern: Mehrweg-Versandsystem memo Box"
+    url: https://www.umweltpakt.bayern.de/umwelt_klimapakt/praxis_innovation/beispiele/praxis/detail.htm?id=21
+    hinweis: "Mehrweg-Box aus Recyclingplastik mit Blauem Engel, Stand Februar 2021"
+  - titel: "Utopia: memolife, nachhaltiger Shop von memo"
+    url: https://utopia.de/memolife-nachhaltiger-shop-von-memo_934/
+    hinweis: "Versand für Privatkunden auf Wunsch in der memo Box"
   - titel: "Miraherba: Hirsch Natur Ringelsocke Bio-Schurwolle"
     url: https://www.miraherba.de/gb/christmas/7238-hirsch-natur-striped-sock-organic-virgin-wool-green.html
     hinweis: "Händlerangabe zur Herkunft der Wolle (Patagonien)"
