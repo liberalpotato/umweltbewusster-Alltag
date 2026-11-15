@@ -50,5 +50,8 @@ Längere Ratgeber und Lexikon-Einträge nie als reinen Fließtext (Florian, 2026
 5. Preis: mit vergleichbarer Ware großer Modeketten (z. B. C&A, H&M) vergleichen. Auf der Seite die Kette nicht namentlich nennen, sondern „große Modeketten“ schreiben, mit Stand (Monat/Jahr).
 6. `shop` verlinkt eine seriöse Seite, auf der man das Produkt wirklich kaufen kann, ohne Affiliate-Parameter.
 7. Herstellerangaben als solche kennzeichnen, eigene Einschätzungen als „Einschätzung“.
-8. Reparatur nur bei Hosen & Jeans, Jacken und Taschen/Rucksäcken bewerten (`reparaturUnterkategorien`), bei allen anderen Unterkategorien weglassen.
+8. Reparatur nur bei Hosen & Jeans, Jacken, Taschen/Rucksäcken und Schuhen bewerten (`reparaturUnterkategorien`), bei allen anderen Unterkategorien weglassen.
 9. Fehlen Angaben (z. B. Verpackung, Haltbarkeit, Aussehen), vor dem ersten Entwurf Florian fragen. Er hat viele Produkte selbst getestet. Seine Erfahrungen in der Ich-Form eintragen („Bei meiner Bestellung …“).
+10. Leder ist nur in Ordnung, wenn alle fünf Bedingungen erfüllt sind (Florian, 2026-11-15): chromfrei gegerbt, ohne Kunststoffbeschichtung, Abbaubarkeit per Test belegt, Rücknahme durch den Hersteller, Sohle tauschbar. Produkte mit Leder bekommen dafür das Feld `leder` (Leder-Check, siehe `lederKriterien`). Die Herkunft der Häute muss nicht streng geprüft werden.
+11. Schuhe: Die Laufsohle soll biologisch abbaubar sein (Abrieb). Keine Merinowolle. Ein Produkt muss online oder in einem Laden in Deutschland kaufbar sein.
+12. Klima: Keiner gleicht aus heißt, keiner ist CO₂-negativ, dann `fehlt`. Eingesparte Emissionen im Text nennen.
