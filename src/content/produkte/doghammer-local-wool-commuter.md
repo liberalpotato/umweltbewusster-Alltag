@@ -10,6 +10,7 @@ preis: "UVP 159,95 €, bei Bergfreunde 137,56 € (November 2026)"
 shop:
   name: Bergfreunde
   url: https://www.bergfreunde.de/doghammer-local-wool-commuter-sneaker/
+punkte: 4
 kriterien:
   kreislauf:
     status: teilweise

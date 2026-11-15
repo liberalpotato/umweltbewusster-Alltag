@@ -10,6 +10,7 @@ preis: "UVP 99,89 €, bei memo.de 79,99 € (November 2026)"
 shop:
   name: memo.de
   url: https://www.memo.de/mela-bio-damen-sneaker-yala-ecru-gum-gr-38-n22hk
+punkte: 6
 kriterien:
   kreislauf:
     status: teilweise

@@ -10,6 +10,7 @@ preis: "95 € bei die-form.de, 145 US-Dollar bei glerups (November 2026)"
 shop:
   name: die-form.de
   url: https://die-form.de/en/437/glerups-shoe-xx-ar-01-rubber-sole
+punkte: 6
 kriterien:
   kreislauf:
     status: teilweise

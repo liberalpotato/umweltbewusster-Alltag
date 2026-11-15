@@ -10,6 +10,7 @@ preis: "284 € (zuvor 299 €), Versand 5,90 € (November 2026)"
 shop:
   name: baer-schuhe.de
   url: https://www.baer-schuhe.de/sean-1100
+punkte: 6
 kriterien:
   kreislauf:
     status: teilweise

@@ -10,6 +10,7 @@ preis: "435 € inkl. Versand im Solk-Shop (November 2026)"
 shop:
   name: solk.com
   url: https://solk.com/products/fade-101
+punkte: 6
 kriterien:
   kreislauf:
     status: gut
