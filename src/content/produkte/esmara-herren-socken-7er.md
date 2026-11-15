@@ -33,8 +33,8 @@ kriterien:
     status: gut
     text: "6,99 € im 7er-Pack, also 1 € pro Paar, im Angebot 4,49 € (64 Cent pro Paar). Das liegt am unteren Ende dessen, was Mehrfachpacks bei großen Modeketten kosten (1,86 bis 4,33 € pro Paar, Stand November 2026)."
   aussehen:
-    status: offen
-    text: "Schlichte Socken in Grau, Navy und Schwarz oder in Weiß und Beige. Wie sie sich tragen, teste ich noch."
+    status: gut
+    text: "Schlichte Socken in Grau, Navy und Schwarz oder in Weiß und Beige. Das Aussehen gefällt mir sehr gut. Wie sie sich tragen, teste ich noch."
 pluspunkte:
   - "Sehr günstig: rund 1 € pro Paar"
   - "OEKO-TEX® Standard 100, auf Schadstoffe geprüft"

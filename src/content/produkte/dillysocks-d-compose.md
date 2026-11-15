@@ -3,8 +3,8 @@ name: D-Compose Socken (2er-Pack)
 marke: DillySocks
 bereich: kleidung
 unterkategorie: socken
-beschreibung: "DillySocks D-Compose im Check: Cradle to Cradle Gold und laut Hersteller kompostierbar, aber ohne Rücknahme und recht teuer."
-kurz: "Socken aus mindestens 98 % Bio-Baumwolle, bei denen auch Polyester und Elasthan abbaubar sein sollen. Die einzigen Socken mit Cradle-to-Cradle-Gold, die ich gefunden habe. Wie man sie kompostiert, erklärt DillySocks nicht, und eine Rücknahme gibt es nicht."
+beschreibung: "DillySocks D-Compose im Check: laut Hersteller kompostierbar, Materialien mit C2C-Zertifikat, aber ohne Rücknahme und Anleitung."
+kurz: "Socken aus mindestens 98 % Bio-Baumwolle, bei denen auch Polyester und Elasthan abbaubar sein sollen. Zwei der Materialien sind Cradle to Cradle zertifiziert, die Socke selbst steht nicht im offiziellen Register. Wie man sie kompostiert, erklärt DillySocks nicht, und eine Rücknahme gibt es nicht."
 material: "mind. 98 % Bio-Baumwolle, 1 % naNea (abbaubares Polyester von OceanSafe), 1 % ROICA™ (Elasthan)"
 preis: "17,90 € im 2er-Pack (8,95 € pro Paar), im Angebot 14,30 €"
 shop:
@@ -24,8 +24,8 @@ kriterien:
     status: teilweise
     text: "DillySocks tut etwas: Laut eigener Seite zahlt die Marke seit 2020 jedes Jahr einen Klimabeitrag und gleicht damit nicht vermeidbare Emissionen über Wind- und Solarprojekte in Afrika und Asien aus. Kritikpunkt: Es fehlt die Transparenz. Wie viel CO₂ DillySocks ausstößt und wie viel ausgeglichen wird, steht nirgends. Mehr dazu unten unter „Gut zu wissen“."
   siegel:
-    status: gut
-    text: "Laut DillySocks Cradle to Cradle Certified® Gold für die Socken. Im offiziellen C2C-Register habe ich keinen Eintrag unter dem Namen DillySocks gefunden. Vermutlich laufen die Socken über das Zertifikat „OceanSafe Ready Made Garments“ des Faserherstellers, das ist aber nicht bestätigt. Dazu haben laut Hersteller alle DillySocks das Siegel OEKO-TEX® Standard 100, das auf Schadstoffe im fertigen Produkt prüft."
+    status: teilweise
+    text: "DillySocks wirbt damit, die Socken seien Cradle to Cradle Certified® Gold. Im offiziellen C2C-Register sind aber nur zwei Materialien eingetragen: das Garn naNea (Gold, gültig bis 3. Februar 2028) und das Elasthan ROICA™. Die Socken selbst habe ich dort nicht gefunden. Dazu haben laut Hersteller alle DillySocks das Siegel OEKO-TEX® Standard 100, das auf Schadstoffe im fertigen Produkt prüft."
   versand:
     status: teilweise
     text: "Laut Hersteller kommen die Socken in einer Schachtel aus 100 % Recyclingkarton, wo möglich ohne zusätzlichen Umkarton. Etiketten sind aus Recyclingpapier, Plastikhüllen werden durch PLA ersetzt. Eine wiederverwendbare Versandverpackung gibt es nicht."
@@ -36,7 +36,7 @@ kriterien:
     status: teilweise
     text: "Einfarbige Socken in vielen Farben (Gelb, Weinrot, Moosgrün, Hellblau, Royalblau, Schwarz), kurz oder hoch. Das Aussehen finde ich in Ordnung. Wie sie sich tragen, teste ich noch."
 pluspunkte:
-  - "Cradle to Cradle Gold, auch Polyester und Elasthan sind laut Hersteller abbaubar"
+  - "Polyester und Elasthan laut Hersteller abbaubar, beide Materialien mit C2C-Zertifikat"
   - "Laut Hersteller in sechs Wochen kompostierbar, ohne Mikroplastik"
   - "Herkunft aller Materialien angegeben"
   - "Recyclingkarton, wenig Plastik"
@@ -45,7 +45,7 @@ minuspunkte:
   - "Widersprüchliche Angaben zum Herstellungsort"
   - "Klimabeitrag ohne Transparenz, keine Mengenangabe"
   - "Zum Normalpreis etwas mehr als doppelt so teuer wie bei großen Modeketten"
-  - "C2C-Zertifikat im offiziellen Register nicht unter DillySocks zu finden"
+  - "Die Socke selbst ist nicht C2C-zertifiziert, nur Materialien"
 stand: 2026-11-15
 quellen:
   - titel: "DillySocks: D-Compose (Produktseite)"
@@ -66,9 +66,9 @@ quellen:
   - titel: "DillySocks: D-Compose (Shop Deutschland, Euro-Preise)"
     url: https://dillysocks.com/en-de/collections/d-compose
     hinweis: "Preise in Euro, abgerufen am 15.11.2026"
-  - titel: "Cradle to Cradle Products Innovation Institute: OceanSafe Ready Made Garments"
-    url: https://c2ccertified.org/certified-products/oceansafe-ready-made
-    hinweis: "Offizielles Register; DillySocks selbst ist dort nicht gelistet"
+  - titel: "Cradle to Cradle Products Innovation Institute: OceanSafe naNea, coNea, seNea Yarns"
+    url: https://c2ccertified.org/certified-products/nanea-conea-senea-yarns
+    hinweis: "Offizielles Register: Gold, Zertifikat Nr. 7226, gültig bis 03.02.2028; DillySocks selbst ist dort nicht gelistet"
   - titel: "Galaxus: DillySocks D-Compose 2er-Pack"
     url: https://galaxus.ch/en/s8/product/dillysocks-d-compose-pack-of-2-43-46-socks-36903724
     hinweis: "Händlerangaben, nennt Portugal als Herstellungsort"
