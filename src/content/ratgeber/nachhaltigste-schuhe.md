@@ -62,6 +62,18 @@ quellen:
   - titel: "Bergfreunde: Doghammer Local Wool Commuter"
     url: https://www.bergfreunde.de/doghammer-local-wool-commuter-sneaker/
     hinweis: "Loden vom Pommerschen Landschaf"
+  - titel: "FashionUnited: Der Laufschuh, den man nie besitzen wird, Cyclon von On (2021)"
+    url: https://fashionunited.de/nachrichten/mode/der-laufschuh-den-man-nie-besitzen-wird-cyclon-von-on/2021052741128
+    hinweis: "Abo 29,95 €/Monat, Rückgabe nach 600 bis 800 km, Schuh aus Polyamid, Recycling zu Granulat"
+  - titel: "SGI Europe: On replaces Cyclon program with resale recycling scheme"
+    url: https://www.sgieurope.com/csr-and-sustainability/on-replaces-cyclon-program-with-esale-recycling-scheme/120250.article
+    hinweis: "Abo-Ende im März 2026, Ersatz durch Cyclon Resale"
+  - titel: "ReVivo: So funktioniert die Aufbereitung"
+    url: https://revivo.com/about/the-revivo-process
+    hinweis: "Herstellerangaben Vivobarefoot: prüfen, reinigen, reparieren, 20 bis 50 % günstiger"
+  - titel: "Galaxus: Schöne Schuhe mit schlauem Konzept, das Kindersneaker-Abo (2023)"
+    url: https://www.galaxus.at/de/page/schoene-schuhe-mit-schlauem-konzept-das-kindersneaker-abo-28581
+    hinweis: "Konzept Neunoi, Zürcher Hochschule der Künste"
 ---
 
 ## Die Rangfolge
@@ -168,6 +180,30 @@ Cradle to Cradle heißt aber nicht automatisch, dass der Hersteller alte Schuhe 
 Unter den sechs Schuhen nur einer: **Solk** aus der Schweiz. Man bekommt eine kostenlose, kompostierbare Rücksendetasche. Solk zerkleinert die Schuhe und kompostiert sie in Industrieanlagen in Deutschland und Vietnam. Das Ziel nach eigenem Standard: 70 % Abbau in drei Monaten (Herstellerangabe). In die Biotonne gehören die Schuhe laut Solk nicht.
 
 VEJA hat nach eigenen Angaben Reparaturstationen mit Sammelcontainern für Schuhe, die nicht mehr zu retten sind. Die Stationen gibt es aber nur in einigen Städten.
+
+## Wie sähe der nachhaltigste Schuh aus?
+
+<aside class="rand randzitat"><p>Die Sohle ist ein Verschleißteil. Der Rest des Schuhs kann viel länger halten.</p></aside>
+
+Meine Wunschvorstellung: Ein Hersteller vermietet seine Schuhe nur und bleibt Eigentümer. Ist der Schuh abgenutzt oder gefällt er dir nicht mehr, gibst du ihn zurück. Der Hersteller prüft ihn, reinigt ihn, repariert ihn, erneuert die Sohle und gibt ihn an die nächste Person weiter. So hat der Hersteller selbst ein Interesse daran, dass seine Schuhe lange halten.
+
+<aside class="rand grafik" aria-label="Kreislauf eines Mietschuhs">
+<p class="grafik-titel">Ein Schuh, viele Leben</p>
+<ol class="stufen">
+<li><span>Mieten<small>statt kaufen</small></span></li>
+<li><span>Zurückgeben<small>abgenutzt oder nicht mehr gewollt</small></span></li>
+<li class="stufe-top"><span>Aufbereiten<small>prüfen, reinigen, neue Sohle</small></span></li>
+<li><span>Weitergeben<small>an die nächste Person</small></span></li>
+</ol>
+</aside>
+
+Ganz so gibt es das heute nicht. Ein paar Anläufe in diese Richtung habe ich gefunden:
+
+- **On Cyclon:** Ein Laufschuh im Abo für 29,95 € im Monat. Nach etwa 600 bis 800 km bekam man ein neues Paar und schickte das alte im selben Paket zurück. On blieb Eigentümer und machte aus den alten Schuhen Granulat für neue. Der Haken: Der Schuh war ganz aus Kunststoff (Polyamid), die Sohle reibt sich also als Mikroplastik ab. Im März 2026 hat On das Abo beendet. Seitdem kauft On gebrauchte Ware gegen Gutschrift zurück, bereitet gut erhaltene Stücke auf und verkauft sie weiter.
+- **Vivobarefoot ReVivo:** Gebrauchte Schuhe werden geprüft, gereinigt und repariert, dünne Sohlen ersetzt und dann 20 bis 50 % günstiger weiterverkauft (Herstellerangabe). Gemietet wird hier aber nicht.
+- **Neunoi:** Zwei Designer der Zürcher Hochschule der Künste haben 2023 ein Abo für Kinderschuhe entworfen. Wird der Schuh zu klein, kommt die nächste Größe. Der alte Schuh bekommt eine neue Sohle, wird gereinigt und geht an das nächste Kind. Bisher ist das nur ein Konzept.
+
+Einschätzung: Technisch ist das alles machbar, wie die Beispiele zeigen. Fehlt nur ein Hersteller, der es mit einer abbaubaren Sohle verbindet.
 
 ## Die sechs Schuhe im Überblick
 

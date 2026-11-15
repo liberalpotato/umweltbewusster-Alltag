@@ -5,6 +5,11 @@
 export interface Unterkategorie {
   slug: string;
   name: string;
+  /**
+   * Florians Wunschvorstellung: Wie sähe das nachhaltigste Modell für diese Kategorie aus?
+   * Gibt nur Florian vor (2026-11-15). Erscheint als Kasten oben auf der Kategorieseite.
+   */
+  wunsch?: { text: string; schritte: string[] };
 }
 
 export interface AlltagsBereich {
@@ -33,7 +38,19 @@ export const alltagsBereiche: AlltagsBereich[] = [
       { slug: 'pullover-hoodies', name: 'Pullover & Hoodies' },
       { slug: 'hosen-jeans', name: 'Hosen & Jeans' },
       { slug: 'jacken', name: 'Jacken' },
-      { slug: 'schuhe', name: 'Schuhe' },
+      {
+        slug: 'schuhe',
+        name: 'Schuhe',
+        wunsch: {
+          text: 'Die Sohle nutzt sich ab, der Rest des Schuhs kann viel länger halten. Ideal wäre deshalb ein Schuh, den der Hersteller nur vermietet. Er bleibt Eigentümer und kümmert sich darum, dass der Schuh möglichst lange genutzt wird.',
+          schritte: [
+            'Du mietest den Schuh, statt ihn zu kaufen.',
+            'Ist er abgenutzt oder gefällt er dir nicht mehr, gibst du ihn zurück.',
+            'Der Hersteller prüft ihn, reinigt ihn, repariert ihn und erneuert die Sohle.',
+            'Dann geht der Schuh an die nächste Person.',
+          ],
+        },
+      },
       { slug: 'sportkleidung', name: 'Sportkleidung' },
       { slug: 'accessoires', name: 'Accessoires' },
       { slug: 'taschen', name: 'Taschen' },
