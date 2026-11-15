@@ -5,7 +5,7 @@ bereich: kleidung
 unterkategorie: schuhe
 beschreibung: "glerups Shoe im Check: ganzes Produkt Cradle to Cradle Bronze, Wolle und Naturkautschuk, aber keine Rücknahme und keine Reparatur."
 kurz: "Ein leichter Filzschuh aus reiner Schafwolle mit Sohle aus Naturkautschuk, gedacht auch für draußen. Als einziger Schuh im Vergleich ist er als ganzes Produkt Cradle to Cradle zertifiziert. Eine Rücknahme oder einen Reparaturservice gibt es nicht."
-material: "Obermaterial 100 % Schafwolle (RWS, mulesingfrei), Laufsohle Naturkautschuk (Anteil nicht angegeben)"
+material: "Obermaterial 100 % Schafwolle von Gotland-Schafen aus Dänemark und Mischwolle aus Neuseeland (RWS, mulesingfrei), Laufsohle Naturkautschuk (Anteil nicht angegeben)"
 preis: "95 € bei die-form.de, 145 US-Dollar bei glerups (November 2026)"
 shop:
   name: die-form.de
@@ -19,7 +19,7 @@ kriterien:
     text: "glerups schreibt, dass Reparatur möglich ist, beschreibt aber keinen Service und keine neue Sohle. Es gibt nur ein Formular für die Garantie."
   transparenz:
     status: teilweise
-    text: "glerups nennt die Wolle (Gotland-Schafe der Familie in Dänemark und Mischwolle aus Neuseeland über Zentera) und die eigene Fabrik in Rumänien. Ein Händler schreibt dagegen „Gotland- und Merinowolle“. Das widerspricht sich."
+    text: "glerups nennt die Wolle (Gotland-Schafe der Familie in Dänemark und Mischwolle aus Neuseeland über Zentera) und die eigene Fabrik in Rumänien."
   haltbarkeit:
     status: fehlt
     text: "Keine Garantie über die gesetzliche Gewährleistung hinaus und keine Zahlen gefunden. glerups wirbt mit zeitlosem Design, das jahrelang hält (Herstellerangabe). Laut glerups kann die Naturkautschuk-Sohle auf nassen Fliesen und Eis rutschig sein. Nach einem Test passe ich die Bewertung an."
@@ -45,7 +45,6 @@ pluspunkte:
   - "Wolle mulesingfrei (RWS)"
 minuspunkte:
   - "Keine Rücknahme, kein Reparaturservice"
-  - "Widersprüchliche Angaben zur Wolle (Merino laut einem Händler)"
   - "Sohle laut Hersteller rutschig auf nassen Fliesen und Eis"
   - "Keine Angaben zu Klima und Verpackung"
 stand: 2026-11-15
@@ -67,7 +66,7 @@ quellen:
     hinweis: "Upcycling von Produktionsresten, keine Rücknahme beschrieben"
   - titel: "die-form.de: glerups Shoe mit Gummisohle"
     url: https://die-form.de/en/437/glerups-shoe-xx-ar-01-rubber-sole
-    hinweis: "Händler, Preis 95 €, nennt Gotland- und Merinowolle, abgerufen am 15.11.2026"
+    hinweis: "Händler, Preis 95 €, abgerufen am 15.11.2026"
   - titel: "C&A: Herrenschuhe (Übersicht)"
     url: https://www.c-and-a.com/at/de/shop/herren-accessoires-schuhe
     hinweis: "Preisvergleich große Modeketten, abgerufen am 15.11.2026"
