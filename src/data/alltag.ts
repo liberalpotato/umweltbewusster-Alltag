@@ -103,7 +103,7 @@ export const kriterienKleidung = [
   { key: 'siegel', name: 'Siegel', frage: 'Gibt es unabhängige Siegel wie Cradle to Cradle oder Grüner Knopf?' },
   { key: 'versand', name: 'Versand & Verpackung', frage: 'Wie ressourcenschonend ist der Versand?' },
   { key: 'preis', name: 'Preis', frage: 'Höchstens doppelt so teuer wie vergleichbare Ware großer Modeketten? Gibt es ein Abo, bei dem der Hersteller Eigentümer bleibt?' },
-  { key: 'aussehen', name: 'Aussehen', frage: 'Sieht es modern aus?' },
+  { key: 'aussehen', name: 'Aussehen & Tragegefühl', frage: 'Sieht es modern aus, und wie trägt es sich?' },
 ] as const;
 
 export type KriteriumKey = (typeof kriterienKleidung)[number]['key'];

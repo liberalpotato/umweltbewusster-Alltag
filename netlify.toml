@@ -76,3 +76,9 @@
   from = "/kontakt/"
   to = "/impressum/"
   status = 301
+
+# Snocks: statt der Bio-Baumwoll-Shorts steht jetzt die von Florian getestete Tencel-Variante auf der Seite (15.11.2026).
+[[redirects]]
+  from = "/produkte/snocks-boxershorts/"
+  to = "/produkte/snocks-premium-boxershorts/"
+  status = 301
