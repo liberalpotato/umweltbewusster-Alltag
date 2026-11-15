@@ -18,8 +18,8 @@ kriterien:
     status: teilweise
     text: "Hergestellt in Deutschland, laut Trigema „100 % Made in Burladingen“. Woher die Baumwolle kommt und was mit den Shorts nach dem Tragen passieren soll, steht auf der Produktseite nicht."
   haltbarkeit:
-    status: offen
-    text: "Eine Garantie oder Angaben zur Haltbarkeit macht Trigema nicht. Laut Pflegehinweis nicht in den Trockner geben."
+    status: gut
+    text: "Bei mir haben die Shorts rund 2 Jahre gehalten, bis Waschen und Tragen sichtbare Spuren hinterlassen haben. Eine Garantie gibt Trigema nicht. Laut Pflegehinweis nicht in den Trockner geben."
   klima:
     status: fehlt
     text: "Trigema macht keine Angaben zu CO₂, Reduktion oder Ausgleich. Einschätzung: Die Fertigung in Deutschland spart lange Transportwege, beziffert ist das nicht."
@@ -33,19 +33,20 @@ kriterien:
     status: fehlt
     text: "48,20 € pro Stück. Vergleichbare Unterhosen im Mehrfachpack kosten bei großen Modeketten 4 bis 6,50 € pro Stück (Stand November 2026). Trigema liegt damit beim 7- bis 12-Fachen. Ein Abo, bei dem der Hersteller Eigentümer bleibt, gibt es nicht."
   aussehen:
-    status: offen
-    text: "Klassische Boxershorts mit Zierknöpfen. Ob das Design modern wirkt, bewerte ich selbst."
+    status: teilweise
+    text: "Klassische Boxershorts mit Zierknöpfen. Sie fühlen sich an wie ganz normale Unterwäsche: nicht besonders atmungsaktiv, aber auch nicht unbequem."
 pluspunkte:
   - "Cradle to Cradle Gold und Grüner Knopf"
   - "100 % Bio-Baumwolle, laut Utopia kompostierbar"
   - "In Deutschland genäht"
+  - "Hält bei mir rund 2 Jahre"
 minuspunkte:
   - "Keine Anleitung zum Kompostieren, keine Rücknahme"
   - "C2C-Zertifikat laut Register nur bis April 2026 gültig"
   - "Sehr teuer: 48,20 € pro Stück"
-  - "Keine Angaben zu Klima und Garantie"
+  - "Keine Angaben zu Klima, keine Garantie"
 punkte: 5
-stand: 2026-11-14
+stand: 2026-11-15
 entwurf: false
 quellen:
   - titel: "Trigema: Boxershorts aus 100 % Biobaumwolle schwarz-C2C (Produktseite)"
