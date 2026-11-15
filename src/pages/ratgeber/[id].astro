@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Quellen from '../../components/Quellen.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
 import { findeBereich } from '../../data/alltag';
 import { veroeffentlichteRatgeber, datum, lesezeit } from '../../data/inhalte';
 
@@ -20,23 +21,14 @@ const kapitel = headings.filter((h) => h.depth === 2);
 ---
 
 <Base titel={d.titel} beschreibung={d.beschreibung} weit lesefortschritt>
-  <header slot="kopf" class:list={['artikel-kopf', `farbe-${farbe}`]}>
-    <div class="weit artikel-kopf-innen">
-      <div class="artikel-kopf-text">
-        <a class="rubrik" href={bereichLink}>{bereich?.name ?? d.bereich}</a>
-        <h1>{d.titel}</h1>
-        <p class="vorspann">{d.beschreibung}</p>
-        <p class="autor-zeile">
-          <span class="autor-bild" aria-hidden="true">F</span>
-          <span>Von <a href="/ueber/">Florian</a></span>
-          <span>Stand: {datum(d.stand)}</span>
-          <span>{lesezeit(eintrag.body)} Min. Lesezeit</span>
-        </p>
-      </div>
-      {d.titelbild && <img class="artikel-titelbild" src={d.titelbild} alt={d.titelbildAlt ?? ''} width="400" height="360" />}
-    </div>
-    <svg class="artikel-kopf-welle" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 V30 C240 0 480 0 720 24 C960 48 1200 52 1440 20 V60 Z" /></svg>
-  </header>
+  <SeitenKopf slot="kopf" farbe={farbe} rubrik={bereich?.name ?? d.bereich} rubrikLink={bereichLink} titel={d.titel} lead={d.beschreibung} bild={d.titelbild} bildAlt={d.titelbildAlt}>
+    <p class="autor-zeile">
+      <span class="autor-bild" aria-hidden="true">F</span>
+      <span>Von <a href="/ueber/">Florian</a></span>
+      <span>Stand: {datum(d.stand)}</span>
+      <span>{lesezeit(eintrag.body)} Min. Lesezeit</span>
+    </p>
+  </SeitenKopf>
 
   <article class:list={['text-mit-rand', 'artikel', `farbe-${farbe}`]}>
     <div class="kurz-kasten">

@@ -38,7 +38,7 @@ Längere Ratgeber und Lexikon-Einträge nie als reinen Fließtext (Florian, 2026
 - Kreisläufe: biologisch in Grün (`kreislauf bio`), technisch in Silber (`kreislauf tech`). Beispiel in `src/content/ratgeber/kompostierbare-produkte.md`.
 - Große Zahl über die volle Breite in der Bereichsfarbe: `<div class="grosse-zahl"><strong>100 g</strong><p>Was die Zahl bedeutet.</p><small>Quelle</small></div>`, direkt nach dem Absatz mit der Zahl.
 - Titelbild: `titelbild: /bilder/<slug>.svg` und `titelbildAlt` im Frontmatter; eigene, bunte SVG-Illustration in `public/bilder/` (erscheint im Artikelkopf und auf der Startseite).
-- Magazin-Look „Modern und farbig“ (Florian, 2026-11-15): Jeder Bereich hat eine Erkennungsfarbe (`farbe` in `src/data/alltag.ts`), Überschriften in Bricolage Grotesque.
+- Magazin-Look „Modern und farbig“ (Florian, 2026-11-15): Jeder Bereich hat eine Erkennungsfarbe (`farbe` in `src/data/alltag.ts`), Überschriften in Bricolage Grotesque. Gilt für alle Seiten: Jede Seite beginnt mit `SeitenKopf` (farbiger Kopf, `slot="kopf"` in `Base`), Karten haben dunklen Rand mit versetztem Schatten.
 - Bilder nur mit geklärter Lizenz (eigene Fotos, freie Lizenz oder Erlaubnis), sonst eigene Illustration als SVG.
 
 ## Regeln für Produktseiten

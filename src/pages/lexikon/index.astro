@@ -1,17 +1,24 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
 
 const eintraege = (await getCollection('lexikon')).sort((a, b) => a.data.begriff.localeCompare(b.data.begriff, 'de'));
 ---
 
-<Base titel="Lexikon" beschreibung="Kurze, belegte Erklärungen zu Begriffen rund um Nachhaltigkeit im Alltag.">
-  <h1>Lexikon</h1>
-  <ul class="karten">
+<Base titel="Lexikon" beschreibung="Kurze, belegte Erklärungen zu Begriffen rund um Nachhaltigkeit im Alltag." weit>
+  <SeitenKopf slot="kopf" farbe="himmel" rubrik="Lexikon" titel="Begriffe kurz erklärt" lead="Kurze, belegte Erklärungen zu Begriffen rund um Nachhaltigkeit im Alltag." icon="frage" />
+
+  <ul class="raster raster-beitraege seiten-start">
     {eintraege.map((e) => (
       <li>
-        <a href={`/lexikon/${e.id}/`}>{e.data.begriff}</a>
-        <p>{e.data.beschreibung}</p>
+        <a class="karte lexikon-karte farbe-himmel" href={`/lexikon/${e.id}/`}>
+          <span class="lexikon-buchstabe" aria-hidden="true">{e.data.begriff.charAt(0)}</span>
+          <h2>{e.data.begriff}</h2>
+          <p>{e.data.beschreibung}</p>
+          <span class="mehr">Lesen <Icon name="pfeil" size={18} /></span>
+        </a>
       </li>
     ))}
   </ul>

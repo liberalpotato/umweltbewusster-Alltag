@@ -5,6 +5,7 @@ import Punkte from '../../components/Punkte.astro';
 import Icon from '../../components/Icon.astro';
 import StatusChip from '../../components/StatusChip.astro';
 import Quellen from '../../components/Quellen.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
 import { findeBereich, findeUnterkategorie, kriterienFuer, zaehleStatus, type Status } from '../../data/alltag';
 import { sichtbareProdukte, datum } from '../../data/inhalte';
 
@@ -19,6 +20,13 @@ const { Content } = await render(eintrag);
 const hatText = (eintrag.body ?? '').trim().length > 0;
 const bereich = findeBereich(d.bereich);
 const unter = findeUnterkategorie(d.bereich, d.unterkategorie);
+const farbe = bereich?.farbe ?? 'mint';
+const brotkrumen = [
+  { name: 'Alltagsgegenstände', href: '/alltag/' },
+  ...(bereich ? [{ name: bereich.name, href: `/alltag/${bereich.slug}/` }] : []),
+  ...(bereich && unter ? [{ name: unter.name, href: `/alltag/${bereich.slug}/${unter.slug}/` }] : []),
+  { name: d.marke },
+];
 const zahl = zaehleStatus(d.kriterien);
 const kriterien = kriterienFuer(d.unterkategorie).flatMap((k) => {
   const kr = d.kriterien[k.key];
@@ -29,43 +37,27 @@ const woerter: Record<Status, string> = { gut: 'erfüllt', teilweise: 'teilweise
 ---
 
 <Base titel={`${d.marke} ${d.name}: Wie nachhaltig?`} beschreibung={d.beschreibung} weit>
-  <nav class="brotkrumen" aria-label="Brotkrumen">
-    <ol>
-      <li><a href="/alltag/">Alltagsgegenstände</a></li>
-      {bereich && <li><a href={`/alltag/${bereich.slug}/`}>{bereich.name}</a></li>}
-      {bereich && unter && <li><a href={`/alltag/${bereich.slug}/${unter.slug}/`}>{unter.name}</a></li>}
-      <li aria-current="page">{d.marke}</li>
-    </ol>
-  </nav>
+  <SeitenKopf slot="kopf" farbe={farbe} brotkrumen={brotkrumen} rubrik={d.marke} titel={d.name} lead={d.kurz}>
+    {d.entwurf && <p class="entwurf-banner"><strong>Entwurf:</strong> Diese Seite ist nur in der Vorschau sichtbar und noch nicht veröffentlicht.</p>}
+    <dl class="fakten-zeile">
+      <div><dt>Material</dt><dd>{d.material}</dd></div>
+      <div><dt>Preis</dt><dd>{d.preis}</dd></div>
+      <div><dt>Stand</dt><dd>{datum(d.stand)}</dd></div>
+    </dl>
+    <div class="knopf-reihe">
+      <a class="knopf knopf-hell" href={d.shop.url} rel="noopener" target="_blank">Bei {d.shop.name} ansehen <Icon name="extern" size={18} /></a>
+    </div>
+    <p class="kein-affiliate">Kein Affiliate-Link: Ich verdiene nichts an diesem Link.</p>
+    <div slot="rechts" class="bewertung-box">
+      <p class="bewertung-titel">Meine Bewertung</p>
+      <Punkte punkte={d.punkte} gross />
+    </div>
+  </SeitenKopf>
 
-  {d.entwurf && (
-    <p class="entwurf-banner"><strong>Entwurf:</strong> Diese Seite ist nur in der Vorschau sichtbar und noch nicht veröffentlicht.</p>
-  )}
+  <article class:list={['produkt-seite', `farbe-${farbe}`]}>
+    {d.tipp && <p class="tipp"><strong>Tipp:</strong> {d.tipp}</p>}
 
-  <article>
-    <header class="produkt-kopf">
-      <div>
-        <p class="produkt-marke">{d.marke}</p>
-        <h1>{d.name}</h1>
-        <p class="lead">{d.kurz}</p>
-        <dl class="fakten-zeile">
-          <div><dt>Material</dt><dd>{d.material}</dd></div>
-          <div><dt>Preis</dt><dd>{d.preis}</dd></div>
-          <div><dt>Stand</dt><dd>{datum(d.stand)}</dd></div>
-        </dl>
-        <div class="knopf-reihe">
-          <a class="knopf" href={d.shop.url} rel="noopener" target="_blank">Bei {d.shop.name} ansehen <Icon name="extern" size={18} /></a>
-        </div>
-        <p class="kein-affiliate">Kein Affiliate-Link: Ich verdiene nichts an diesem Link.</p>
-        {d.tipp && <p class="tipp"><strong>Tipp:</strong> {d.tipp}</p>}
-      </div>
-      <div class="bewertung-box">
-        <p class="bewertung-titel">Meine Bewertung</p>
-        <Punkte punkte={d.punkte} gross />
-      </div>
-    </header>
-
-    <div class="abschnitt-kopf">
+    <div class="abschnitt-kopf abschnitt-kopf-oben">
       <h2>Auf einen Blick</h2>
       <ul class="bilanz" aria-label="Kriterien gezählt">
         {reihenfolge.filter((s) => zahl[s] > 0).map((s) => (

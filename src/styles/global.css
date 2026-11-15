@@ -500,7 +500,6 @@ mark { background: linear-gradient(transparent 58%, var(--sonne) 58%, var(--sonn
 .autor-zeile a { color: inherit; }
 .autor-bild { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--sonne); color: var(--tinte); font-family: var(--titel-schrift); font-weight: 800; font-size: 1.1rem; }
 .artikel-titelbild { display: block; width: 100%; max-width: 26rem; height: auto; justify-self: center; }
-@media (min-width: 56rem) { .artikel-kopf::after { display: block; } }
 @media (max-width: 56rem) { .artikel-titelbild { max-width: 17rem; order: -1; } }
 .artikel-kopf-welle { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(1.5rem, 4vw, 3.5rem); z-index: 1; }
 .artikel-kopf-welle path { fill: var(--grund); }
@@ -514,7 +513,7 @@ mark { background: linear-gradient(transparent 58%, var(--sonne) 58%, var(--sonn
 /* Text im Beitrag */
 .artikel h2 { position: relative; font-size: clamp(1.5rem, 1.25rem + 1vw, 2.05rem); }
 .artikel-text h2::before { content: ''; display: block; width: 3rem; height: 0.4rem; margin-bottom: 0.8rem; border-radius: 999px; background: var(--b); }
-.artikel-text > p:first-of-type::first-letter { float: left; margin: 0.08em 0.12em 0 0; font-family: var(--titel-schrift); font-size: 4.1em; line-height: 0.82; font-weight: 800; color: var(--b-ton); }
+.text-mit-rand .artikel-text > p:first-of-type::first-letter { float: left; margin: 0.08em 0.12em 0 0; font-family: var(--titel-schrift); font-size: 4.1em; line-height: 0.82; font-weight: 800; color: var(--b-ton); }
 .artikel a { color: var(--b-ton); }
 .artikel strong { color: var(--text); }
 
@@ -579,3 +578,110 @@ a.bereich-kachel { border-top: 6px solid var(--b); }
 a.bereich-kachel:hover { border-color: var(--b); }
 a.bereich-kachel .mehr { color: var(--b-ton); }
 .karte-bald.bereich-kachel .symbol { background: var(--b-hell); color: var(--b-ton); opacity: 0.8; }
+
+/* ---------- Magazin-Look auf allen Seiten ---------- */
+/* Seitenkopf (Übersichten, Bereiche, Produkte, Lexikon, Über …) */
+.artikel-kopf-innen.ohne-rechts { grid-template-columns: minmax(0, 1fr); }
+.seiten-kopf-klein .artikel-kopf-innen { padding-top: clamp(1.5rem, 4vw, 2.75rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); }
+.seiten-kopf-klein h1 { font-size: clamp(2rem, 1.3rem + 2.8vw, 3.2rem); }
+.seiten-kopf .brotkrumen { margin: 0 0 1rem; }
+.seiten-kopf .brotkrumen ol { color: inherit; }
+.seiten-kopf .brotkrumen a { color: inherit; opacity: 0.85; }
+.seiten-kopf .brotkrumen a:hover { color: inherit; opacity: 1; }
+.seiten-kopf .brotkrumen li + li::before { color: inherit; opacity: 0.6; }
+.seiten-kopf-rechts { display: grid; place-items: center; }
+@media (max-width: 56rem) { .seiten-kopf-rechts { order: 2; justify-items: start; } .seiten-kopf .artikel-titelbild { order: 0; } }
+.kopf-symbol { display: grid; place-items: center; width: clamp(8rem, 18vw, 13rem); aspect-ratio: 1; border-radius: 50%; background: var(--sonne); color: var(--tinte); border: 4px solid var(--tinte); box-shadow: 8px 8px 0 var(--tinte); transform: rotate(-6deg); }
+.kopf-symbol .icon { width: 55%; height: 55%; stroke-width: 1.4; }
+@media (max-width: 56rem) { .kopf-symbol { display: none; } }
+.symbol-wolke { display: grid; grid-template-columns: repeat(3, auto); gap: 0.9rem; transform: rotate(-4deg); }
+.symbol-wolke span { display: grid; place-items: center; width: 4.6rem; height: 4.6rem; border-radius: 22px; background: var(--b); color: var(--b-auf); border: 3px solid var(--tinte); box-shadow: 4px 4px 0 var(--tinte); }
+.symbol-wolke span:nth-child(even) { transform: translateY(1rem) rotate(6deg); }
+@media (max-width: 56rem) { .symbol-wolke { display: none; } }
+.kopf-zahlen { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0 0; }
+.kopf-zahlen span { padding: 0.4rem 0.9rem; border-radius: 999px; background: color-mix(in srgb, #ffffff 18%, transparent); font-weight: 600; }
+.kopf-zahlen strong { font-family: var(--titel-schrift); font-size: 1.15rem; }
+.seiten-kopf .fakten-zeile { gap: 0.75rem 2rem; margin-top: 1.5rem; }
+.seiten-kopf .fakten-zeile dt { color: inherit; opacity: 0.8; }
+.seiten-kopf .kein-affiliate { color: inherit; opacity: 0.85; }
+.seiten-kopf .entwurf-banner { margin: 1.25rem 0 0; display: inline-block; }
+.seiten-kopf .bewertung-box { background: var(--karte); color: var(--text); border: 3px solid var(--tinte); box-shadow: 6px 6px 0 var(--tinte); border-radius: 22px; padding: 1.5rem 2rem; }
+@media (max-width: 56rem) { .seiten-kopf .bewertung-box { flex-direction: row; gap: 1.25rem; padding: 1rem 1.25rem; } .seiten-kopf .bewertung-titel { margin: 0; } }
+.knopf-hell { background: var(--sonne); color: var(--tinte); border: 3px solid var(--tinte); box-shadow: 4px 4px 0 var(--tinte); }
+.knopf-hell:hover { background: #ffe27a; color: var(--tinte); box-shadow: 6px 6px 0 var(--tinte); transform: translate(-2px, -2px); }
+.seiten-start { margin-top: 1rem; }
+.abschnitt-kopf-oben { margin-top: 1rem; }
+.produkt-seite .tipp { margin-top: 0; }
+
+/* Knöpfe */
+.knopf { border: 3px solid var(--tinte); box-shadow: 4px 4px 0 var(--tinte); }
+.knopf:hover { box-shadow: 6px 6px 0 var(--tinte); transform: translate(-2px, -2px); }
+.knopf-zweit { border-color: var(--tinte); }
+@media (prefers-color-scheme: dark) {
+  .knopf, .knopf-zweit, .knopf-hell { border-color: var(--tinte); }
+}
+
+/* Karten als „Sticker“ mit Rand und Versatz-Schatten */
+a.karte:not(.karte-bald), .pro-contra > div, .kriterium, .kriterien-kurz li, .tabelle-rahmen {
+  border: 3px solid var(--tinte); box-shadow: 5px 5px 0 var(--tinte); border-radius: 22px;
+}
+a.karte:not(.karte-bald):hover { border-color: var(--tinte); box-shadow: 8px 8px 0 var(--tinte); transform: translate(-2px, -2px); }
+@media (prefers-color-scheme: dark) {
+  a.karte:not(.karte-bald), .pro-contra > div, .kriterium, .kriterien-kurz li, .tabelle-rahmen { border-color: var(--linie); box-shadow: 5px 5px 0 var(--linie); }
+  a.karte:not(.karte-bald):hover { border-color: var(--linie); box-shadow: 8px 8px 0 var(--b, var(--akzent)); }
+}
+a.bereich-kachel { border-top-width: 3px; }
+a.bereich-kachel .symbol { background: var(--b); color: var(--b-auf); }
+.karte-bald { border-width: 2px; border-radius: 22px; }
+
+/* Produktkarten */
+.produkt-karte { overflow: hidden; padding-top: 0; }
+.produkt-karte::before { content: ''; display: block; height: 0.6rem; margin: 0 -1.5rem 0.6rem; background: var(--b); }
+.produkt-karte .produkt-marke { color: var(--b-ton) !important; }
+.produkt-karte .mehr { color: var(--b-ton); }
+.produkt-karte .entwurf-hinweis { top: 1.2rem; left: auto; right: 5.5rem; }
+.produkt-karte h3 { font-size: 1.3rem; }
+
+/* Unterkategorien und Kriterien */
+a.unter-kachel { background: var(--b-hell); }
+a.unter-kachel span { color: var(--b-ton); }
+.kriterien-kurz li::before { background: var(--b, var(--akzent)); color: var(--b-auf, #fff); }
+.produkt-seite .kriterium::before { background: var(--b); color: var(--b-auf); }
+.kriterium-gut, .kriterium-teilweise, .kriterium-fehlt, .kriterium-offen { border-left-width: 10px; }
+.kriterium-gut { border-left-color: var(--gut); }
+.kriterium-teilweise { border-left-color: var(--teil); }
+.kriterium-fehlt { border-left-color: var(--fehlt); }
+.kriterium-offen { border-left-color: var(--offen); }
+.pro { background: var(--gut-hell) !important; }
+.contra { background: var(--fehlt-hell) !important; }
+.produkt-seite h2, .produkt-seite .abschnitt-kopf h2 { font-size: clamp(1.5rem, 1.25rem + 1vw, 2.05rem); }
+
+/* Lexikon-Karten */
+.lexikon-karte { position: relative; overflow: hidden; }
+.lexikon-karte h2 { margin: 0; font-size: 1.5rem; }
+.lexikon-buchstabe { position: absolute; right: -0.5rem; top: -1.5rem; font-family: var(--titel-schrift); font-size: 8rem; font-weight: 800; line-height: 1; color: var(--b-hell); z-index: 0; pointer-events: none; }
+.lexikon-karte > *:not(.lexikon-buchstabe) { position: relative; z-index: 1; }
+.lexikon-karte .mehr { color: var(--b-ton); }
+
+/* Einfache Textseiten (Über, Impressum, Datenschutz) */
+main.breite .artikel-text h2::before { background: var(--b); }
+main.breite .artikel-text ol li { margin-bottom: 0.4rem; }
+
+/* Kopfzeile und Fußzeile */
+.logo svg { color: var(--beere); }
+.kopf nav a[aria-current='page'] { background: var(--sonne); color: var(--tinte); font-weight: 650; }
+.fuss { position: relative; border-top: 0; background: var(--tinte); color: #e9ddd3; padding-top: 3rem; }
+.fuss::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--mint) 0 20%, var(--sonne) 20% 40%, var(--orange) 40% 60%, var(--beere) 60% 80%, var(--himmel) 80%); }
+.fuss-logo { color: #ffffff; font-family: var(--titel-schrift); font-size: 1.3rem; }
+.fuss a { color: #e9ddd3; }
+.fuss a:hover { color: var(--sonne); }
+@media (prefers-color-scheme: dark) { .fuss { background: #0a0e0b; } }
+
+/* Auf gelbem Kopf: Rubrik und Symbol in Weiß, damit sie sich abheben */
+.farbe-sonne .rubrik, .farbe-sonne .autor-bild, .farbe-sonne .kopf-symbol { background: #ffffff; }
+.farbe-sonne .kopf-zahlen span { background: color-mix(in srgb, #ffffff 45%, transparent); }
+
+/* Alter „Kurz gesagt“-Kasten im Text im neuen Look */
+.artikel .fazit { padding: 1.4rem 1.5rem 1.5rem; border-radius: 22px; background: var(--sonne-hell); border: 3px solid var(--tinte); box-shadow: 6px 6px 0 var(--tinte); }
+.artikel .fazit strong { font-family: var(--titel-schrift); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+@media (prefers-color-scheme: dark) { .artikel .fazit { border-color: var(--sonne); box-shadow: 6px 6px 0 var(--sonne); } }

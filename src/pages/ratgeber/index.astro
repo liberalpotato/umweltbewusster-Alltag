@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import BeitragKarte from '../../components/BeitragKarte.astro';
 import Icon from '../../components/Icon.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
 import { alltagsBereiche } from '../../data/alltag';
 import { veroeffentlichteRatgeber } from '../../data/inhalte';
 
@@ -13,16 +14,12 @@ const gruppen = alltagsBereiche
 ---
 
 <Base titel="Ratgeber" beschreibung="Alle Ratgeber: ehrliche Antworten auf die Frage, was im Alltag wirklich nachhaltiger ist, mit Quellen und klarem Fazit." weit>
-  <section class="held">
-    <p class="ueberzeile">Ratgeber</p>
-    <h1>Ehrliche Antworten auf Alltagsfragen</h1>
-    <p class="lead">Jeder Ratgeber beantwortet eine konkrete Frage, mit Quellen und klarem Fazit. Du findest sie auch oben in jedem Bereich der Alltagsgegenstände.</p>
-  </section>
+  <SeitenKopf slot="kopf" farbe="sonne" rubrik="Ratgeber" titel="Ehrliche Antworten auf Alltagsfragen" lead="Jeder Ratgeber beantwortet eine konkrete Frage, mit Quellen und klarem Fazit. Du findest sie auch oben in jedem Bereich der Alltagsgegenstände." icon="haken" />
 
   {gruppen.length > 0 ? (
     gruppen.map(({ bereich, liste }) => (
       <section>
-        <div class="abschnitt-kopf">
+        <div class="abschnitt-kopf abschnitt-kopf-oben">
           <h2>{bereich.name}</h2>
           {bereich.aktiv && <p><a href={`/alltag/${bereich.slug}/`}>Produkte im Check</a></p>}
         </div>

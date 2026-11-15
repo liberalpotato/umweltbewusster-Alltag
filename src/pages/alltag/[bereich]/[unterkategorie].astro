@@ -2,6 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import ProduktKarte from '../../../components/ProduktKarte.astro';
 import StatusChip from '../../../components/StatusChip.astro';
+import SeitenKopf from '../../../components/SeitenKopf.astro';
 import { alltagsBereiche, kriterienFuer } from '../../../data/alltag';
 import { sichtbareProdukte } from '../../../data/inhalte';
 
@@ -26,21 +27,9 @@ const kriterien = kriterienFuer(unterkategorie.slug);
 ---
 
 <Base titel={`Nachhaltige ${unterkategorie.name}`} beschreibung={`${unterkategorie.name} im ehrlichen Nachhaltigkeits-Check: ${produkte.map((p) => p.data.marke).join(', ')} im Vergleich, mit Punktzahl und Quellen.`} weit>
-  <nav class="brotkrumen" aria-label="Brotkrumen">
-    <ol>
-      <li><a href="/alltag/">Alltagsgegenstände</a></li>
-      <li><a href={`/alltag/${bereich.slug}/`}>{bereich.name}</a></li>
-      <li aria-current="page">{unterkategorie.name}</li>
-    </ol>
-  </nav>
+  <SeitenKopf slot="kopf" farbe={bereich.farbe} brotkrumen={[{ name: 'Alltagsgegenstände', href: '/alltag/' }, { name: bereich.name, href: `/alltag/${bereich.slug}/` }, { name: unterkategorie.name }]} titel={unterkategorie.name} lead={`${produkte.length} ${produkte.length === 1 ? 'Produkt' : 'Produkte'} im Check. Ein Klick auf ein Produkt öffnet den ausführlichen Bericht.`} icon={bereich.icon} klein />
 
-  <section class="held">
-    <p class="ueberzeile">{bereich.name}</p>
-    <h1>{unterkategorie.name}</h1>
-    <p class="lead">{produkte.length} {produkte.length === 1 ? 'Produkt' : 'Produkte'} im Check. Ein Klick auf ein Produkt öffnet den ausführlichen Bericht.</p>
-  </section>
-
-  <ul class="raster raster-produkte">
+  <ul class="raster raster-produkte seiten-start">
     {produkte.map((p) => <li><ProduktKarte produkt={p} /></li>)}
   </ul>
 

@@ -31,6 +31,8 @@ const lexikon = defineCollection({
     begriff: z.string(),
     beschreibung: z.string().max(160),
     stand: z.coerce.date(),
+    titelbild: z.string().optional(),
+    titelbildAlt: z.string().optional(),
     quellen: z.array(quelle).min(1),
   }),
 });

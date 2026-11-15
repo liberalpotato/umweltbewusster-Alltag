@@ -1,9 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import SeitenKopf from '../components/SeitenKopf.astro';
 ---
 
 <Base titel="Impressum" beschreibung="Impressum von Umweltbewusster Alltag.">
-  <h1>Impressum</h1>
+  <SeitenKopf slot="kopf" farbe="lila" titel="Impressum" klein />
+  <div class="artikel artikel-text seiten-start farbe-lila">
   <p>Angaben gemäß § 5 DDG:</p>
   <p>
     Florian Marks<br />
@@ -14,4 +16,5 @@ import Base from '../layouts/Base.astro';
   <p>E-Mail: <a href="mailto:florian@eaton-getriebe.de">florian@eaton-getriebe.de</a></p>
   <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
   <p>Florian Marks, Anschrift wie oben</p>
+  </div>
 </Base>
