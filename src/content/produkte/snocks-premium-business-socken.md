@@ -33,8 +33,8 @@ kriterien:
     status: teilweise
     text: "8,75 € pro Paar im 4er-Pack, im 12er-Pack rund 7,44 €. Baumwollsocken im Mehrfachpack kosten bei großen Modeketten 1,86 bis 4,33 € pro Paar (Stand November 2026). Snocks liegt damit knapp beim Doppelten der teureren Mehrfachpacks und weit über den günstigen. Das Snocks-Abo ist eine regelmäßige Lieferung mit Rabatt, die Socken gehören danach dir."
   aussehen:
-    status: offen
-    text: "Leichte, lange Socken in Schwarz für Anzug und Alltag. Wie sie sich tragen, teste ich noch."
+    status: gut
+    text: "Leichte, lange Socken in Schwarz für Anzug und Alltag. Das Aussehen gefällt mir sehr gut. Wie sie sich tragen, teste ich noch."
 pluspunkte:
   - "Anti-Loch-Garantie"
   - "Bio-Baumwolle und recyceltes Polyamid, OCS-Siegel"

@@ -3,10 +3,10 @@ name: D-Compose Socken (2er-Pack)
 marke: DillySocks
 bereich: kleidung
 unterkategorie: socken
-beschreibung: "DillySocks D-Compose im Check: Cradle to Cradle Gold und laut Hersteller kompostierbar, aber ohne Rücknahme und recht teuer."
-kurz: "Socken aus mindestens 98 % Bio-Baumwolle, bei denen auch Polyester und Elasthan abbaubar sein sollen. Die einzigen Socken mit Cradle-to-Cradle-Gold, die ich gefunden habe. Wie man sie kompostiert, erklärt DillySocks nicht, und eine Rücknahme gibt es nicht."
+beschreibung: "DillySocks D-Compose im Check: laut Hersteller kompostierbar, Materialien mit C2C-Zertifikat, aber ohne Rücknahme und Anleitung."
+kurz: "Socken aus mindestens 98 % Bio-Baumwolle, bei denen auch Polyester und Elasthan abbaubar sein sollen. Zwei der Materialien sind Cradle to Cradle zertifiziert, die Socke selbst steht nicht im offiziellen Register. Wie man sie kompostiert, erklärt DillySocks nicht, und eine Rücknahme gibt es nicht."
 material: "mind. 98 % Bio-Baumwolle, 1 % naNea (abbaubares Polyester von OceanSafe), 1 % ROICA™ (Elasthan)"
-preis: "21,90 CHF im 2er-Pack (im Angebot 17,50 CHF), also rund 9 bis 11 CHF pro Paar"
+preis: "17,90 € im 2er-Pack (8,95 € pro Paar), im Angebot 14,30 €"
 shop:
   name: dillysocks.com
   url: https://dillysocks.com/en/collections/d-compose
@@ -18,33 +18,34 @@ kriterien:
     status: teilweise
     text: "DillySocks nennt die Herkunft jedes Materials: Bio-Baumwolle aus der Türkei, naNea aus Taiwan, ROICA™ aus Japan. Genäht wird laut Hersteller in Pakistan in einem Betrieb mit Cradle-to-Cradle-Gold-Zertifikat. Ein Händler nennt dagegen einen Familienbetrieb in Portugal. Das passt nicht zusammen, den Betrieb selbst nennt DillySocks nicht."
   haltbarkeit:
-    status: offen
-    text: "Laut Hersteller so bequem und haltbar wie die übrigen DillySocks, Zahlen dazu gibt es nicht. Waschen bei 30 °C, nicht in den Trockner. Meine eigene Erfahrung folgt."
-  klima:
-    status: offen
-    text: "DillySocks zahlt laut eigener Seite seit 2020 jedes Jahr einen Klimabeitrag und gleicht damit nicht vermeidbare Emissionen über Wind- und Solarprojekte in Afrika und Asien aus. Für eine eigene „Climate Box“ arbeitet die Marke mit Climeworks, die CO₂ dauerhaft aus der Luft holen. Für die D-Compose-Socken gilt nur der allgemeine Klimabeitrag. Wie viel CO₂ das ist, steht nirgends. Mehr dazu unten unter „Gut zu wissen“."
-  siegel:
-    status: gut
-    text: "Cradle to Cradle Certified® Gold für die Socken. Dazu haben laut Hersteller alle DillySocks das Siegel OEKO-TEX® Standard 100, das auf Schadstoffe im fertigen Produkt prüft."
-  versand:
-    status: offen
-    text: "Laut Hersteller kommen die Socken in einer Schachtel aus 100 % Recyclingkarton, wo möglich ohne zusätzlichen Umkarton. Etiketten sind aus Recyclingpapier, Plastikhüllen werden durch PLA ersetzt. Eine wiederverwendbare Versandverpackung gibt es nicht. Wie die Lieferung bei mir ankommt, trage ich nach dem Test ein."
-  preis:
     status: fehlt
-    text: "21,90 CHF im 2er-Pack, im Angebot 17,50 CHF, also rund 9 bis 11 CHF pro Paar. Baumwollsocken im Mehrfachpack kosten bei großen Modeketten 1,86 bis 4,33 € pro Paar (Stand November 2026). Einschätzung: D-Compose liegt damit deutlich über dem Doppelten. Ein Abo, bei dem der Hersteller Eigentümer bleibt, gibt es nicht."
+    text: "DillySocks gibt keine Garantie und keine Zahlen zur Haltbarkeit an. Laut Hersteller sind die Socken so bequem und haltbar wie die übrigen DillySocks. Waschen bei 30 °C, nicht in den Trockner. Nach meinem Test passe ich die Bewertung an."
+  klima:
+    status: teilweise
+    text: "DillySocks tut etwas: Laut eigener Seite zahlt die Marke seit 2020 jedes Jahr einen Klimabeitrag und gleicht damit nicht vermeidbare Emissionen über Wind- und Solarprojekte in Afrika und Asien aus. Kritikpunkt: Es fehlt die Transparenz. Wie viel CO₂ DillySocks ausstößt und wie viel ausgeglichen wird, steht nirgends. Mehr dazu unten unter „Gut zu wissen“."
+  siegel:
+    status: teilweise
+    text: "DillySocks wirbt damit, die Socken seien Cradle to Cradle Certified® Gold. Im offiziellen C2C-Register sind aber nur zwei Materialien eingetragen: das Garn naNea (Gold, gültig bis 3. Februar 2028) und das Elasthan ROICA™. Die Socken selbst habe ich dort nicht gefunden. Dazu haben laut Hersteller alle DillySocks das Siegel OEKO-TEX® Standard 100, das auf Schadstoffe im fertigen Produkt prüft."
+  versand:
+    status: teilweise
+    text: "Laut Hersteller kommen die Socken in einer Schachtel aus 100 % Recyclingkarton, wo möglich ohne zusätzlichen Umkarton. Etiketten sind aus Recyclingpapier, Plastikhüllen werden durch PLA ersetzt. Eine wiederverwendbare Versandverpackung gibt es nicht."
+  preis:
+    status: teilweise
+    text: "17,90 € im 2er-Pack (8,95 € pro Paar), im Angebot 14,30 € (7,15 € pro Paar). Baumwollsocken im Mehrfachpack kosten bei großen Modeketten 1,86 bis 4,33 € pro Paar (Stand November 2026). Im Angebot liegt DillySocks damit unter dem Doppelten der teureren Mehrfachpacks (8,66 €), zum Normalpreis knapp darüber. Gegenüber den günstigsten Packs ist es ein Vielfaches. Ein Abo, bei dem der Hersteller Eigentümer bleibt, gibt es nicht."
   aussehen:
-    status: offen
-    text: "Einfarbige Socken in sechs Farben (Gelb, Weinrot, Moosgrün, Hellblau, Royalblau, Schwarz), kurz oder hoch. Laut Händler mit flachen Nähten an den Zehen. Wie sie sich tragen, teste ich noch."
+    status: teilweise
+    text: "Einfarbige Socken in vielen Farben (Gelb, Weinrot, Moosgrün, Hellblau, Royalblau, Schwarz), kurz oder hoch. Das Aussehen finde ich in Ordnung. Wie sie sich tragen, teste ich noch."
 pluspunkte:
-  - "Cradle to Cradle Gold, auch Polyester und Elasthan sind laut Hersteller abbaubar"
+  - "Polyester und Elasthan laut Hersteller abbaubar, beide Materialien mit C2C-Zertifikat"
   - "Laut Hersteller in sechs Wochen kompostierbar, ohne Mikroplastik"
   - "Herkunft aller Materialien angegeben"
   - "Recyclingkarton, wenig Plastik"
 minuspunkte:
   - "Keine Anleitung zum Kompostieren, keine Rücknahme"
   - "Widersprüchliche Angaben zum Herstellungsort"
-  - "Klimabeitrag ohne Mengenangabe"
-  - "Deutlich mehr als doppelt so teuer wie bei großen Modeketten"
+  - "Klimabeitrag ohne Transparenz, keine Mengenangabe"
+  - "Zum Normalpreis etwas mehr als doppelt so teuer wie bei großen Modeketten"
+  - "Die Socke selbst ist nicht C2C-zertifiziert, nur Materialien"
 stand: 2026-11-15
 quellen:
   - titel: "DillySocks: D-Compose (Produktseite)"
@@ -62,6 +63,12 @@ quellen:
   - titel: "DillySocks: Über uns"
     url: https://dillysocks.com/en/pages/about-us
     hinweis: "Firma aus Zürich, gegründet 2013"
+  - titel: "DillySocks: D-Compose (Shop Deutschland, Euro-Preise)"
+    url: https://dillysocks.com/en-de/collections/d-compose
+    hinweis: "Preise in Euro, abgerufen am 15.11.2026"
+  - titel: "Cradle to Cradle Products Innovation Institute: OceanSafe naNea, coNea, seNea Yarns"
+    url: https://c2ccertified.org/certified-products/nanea-conea-senea-yarns
+    hinweis: "Offizielles Register: Gold, Zertifikat Nr. 7226, gültig bis 03.02.2028; DillySocks selbst ist dort nicht gelistet"
   - titel: "Galaxus: DillySocks D-Compose 2er-Pack"
     url: https://galaxus.ch/en/s8/product/dillysocks-d-compose-pack-of-2-43-46-socks-36903724
     hinweis: "Händlerangaben, nennt Portugal als Herstellungsort"
@@ -87,4 +94,4 @@ Welche Farbstoffe DillySocks verwendet, steht auf keiner Seite. Cradle to Cradle
 
 ### Wie der Klimabeitrag funktioniert
 
-DillySocks gibt an, seit 2020 jährlich Geld für Klimaprojekte zu zahlen. Aktuell sind das Wind- und Solarprojekte in Afrika und Asien. Einschätzung: Solche Projekte vermeiden Emissionen, sie holen kein CO₂ aus der Luft. Nur für die „Climate Box“ arbeitet DillySocks mit Climeworks. Climeworks filtert CO₂ aus der Luft und speichert es dauerhaft, laut DillySocks 1 kg CO₂ pro Paar dieser Klimasocken. Für die D-Compose-Socken gilt das nicht. Wie viel CO₂ die Marke insgesamt verursacht und ausgleicht, legt sie nicht offen. Ob das zählt, entscheide ich noch.
+DillySocks gibt an, seit 2020 jährlich Geld für Klimaprojekte zu zahlen. Aktuell sind das Wind- und Solarprojekte in Afrika und Asien. Einschätzung: Solche Projekte vermeiden Emissionen, sie holen kein CO₂ aus der Luft. Nur für die „Climate Box“ arbeitet DillySocks mit Climeworks. Climeworks filtert CO₂ aus der Luft und speichert es dauerhaft, laut DillySocks 1 kg CO₂ pro Paar dieser Klimasocken. Für die D-Compose-Socken gilt das nicht. Wie viel CO₂ die Marke insgesamt verursacht und ausgleicht, legt sie nicht offen. Meine Einschätzung: DillySocks tut etwas für das Klima, aber ohne Transparenz.

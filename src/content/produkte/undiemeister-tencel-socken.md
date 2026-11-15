@@ -18,8 +18,8 @@ kriterien:
     status: teilweise
     text: "Laut Produktdaten in der Türkei hergestellt, die Beschreibung spricht von Produktion in Europa. Die Produktionspartner nennt Undiemeister nicht. Die Holzfaser stammt vom österreichischen Hersteller Lenzing, das Holz laut Undiemeister aus nachhaltig bewirtschafteten Wäldern."
   haltbarkeit:
-    status: offen
-    text: "Laut Undiemeister sorgt das Polyamid für mehr Abriebfestigkeit. Eine Garantie auf die Socken nennt die Produktseite nicht, die 2 Jahre Qualitätsgarantie gelten nur für den Unterwäsche-Stoff Mellowood. Meine Erfahrung zur Haltbarkeit trage ich später nach."
+    status: teilweise
+    text: "Laut Undiemeister sorgt das Polyamid für mehr Abriebfestigkeit. Eine Garantie auf die Socken nennt die Produktseite nicht, die 2 Jahre Qualitätsgarantie gelten nur für den Unterwäsche-Stoff Mellowood. Bei mir hat sich der Stoff innen etwas gelöst, die Ursache kläre ich gerade mit Undiemeister."
   klima:
     status: teilweise
     text: "Laut Produktseite werden die Socken „CO₂-neutral“ hergestellt, ohne Erklärung. Undiemeister arbeitet mit Greenspark zusammen: Für jede Bestellung wird laut Hersteller CO₂ über Kochofen-Projekte ausgeglichen, und es werden Bäume in Kenia gepflanzt. Ich halte das für einen seriösen Weg. Wie viel CO₂ Undiemeister selbst ausstößt und wie viel ausgeglichen wird, ist aber nicht offengelegt."

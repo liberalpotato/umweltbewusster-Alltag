@@ -2,7 +2,7 @@
 titel: "Was sind die nachhaltigsten Socken?"
 beschreibung: "Am nachhaltigsten sind Socken, die lange halten und ganz aus Naturfasern bestehen, etwa reine Wolle oder Cradle-to-Cradle-Socken."
 bereich: kleidung
-fazit: "Am nachhaltigsten sind die Socken, die du schon hast: lange tragen, Wolle auslüften statt oft waschen, Löcher stopfen. Wenn du neue brauchst, achte auf Socken ganz aus Naturfasern, die vollständig in die Natur zurück können, zum Beispiel reine Bio-Wollsocken oder die Cradle-to-Cradle-Socken D-Compose von DillySocks. Socken mit viel Polyamid und Elasthan halten oft gut, lassen sich aber weder kompostieren noch gut recyceln."
+fazit: "Am nachhaltigsten sind die Socken, die du schon hast: lange tragen, Wolle auslüften statt oft waschen, Löcher stopfen. Wenn du neue brauchst, achte auf Socken ganz aus Naturfasern, die vollständig in die Natur zurück können, zum Beispiel reine Bio-Wollsocken oder die kompostierbaren Socken D-Compose von DillySocks. Socken mit viel Polyamid und Elasthan halten oft gut, lassen sich aber weder kompostieren noch gut recyceln."
 stand: 2026-11-15
 entwurf: true
 quellen:
@@ -24,6 +24,12 @@ quellen:
   - titel: "DillySocks: D-Compose"
     url: https://dillysocks.com/en/collections/d-compose
     hinweis: "Herstellerangaben zu Material und Abbaubarkeit"
+  - titel: "Cradle to Cradle Products Innovation Institute: OceanSafe naNea Yarns"
+    url: https://c2ccertified.org/certified-products/nanea-conea-senea-yarns
+    hinweis: "Offizielles Register, Gold bis 03.02.2028"
+  - titel: "Cradle to Cradle Products Innovation Institute: Socklab"
+    url: https://c2ccertified.org/certified-products/socklab
+    hinweis: "Offizielles Register, Silber, Zertifikat Nr. 12295, gültig bis 13.03.2028"
   - titel: "Finkhof: Wolle"
     url: https://finkhof.de/wolle/
     hinweis: "Herstellerangabe zur Verstärkung von Ferse und Spitze"
@@ -45,7 +51,7 @@ quellen:
 
 1. **Weniger neue Socken kaufen.** Wollsocken musst du oft nicht waschen. Auslüften reicht meistens, das schont die Fasern.
 2. **Weiter tragen und stopfen.** Ein kleines Loch an der Ferse lässt sich in wenigen Minuten stopfen. Gebraucht kaufen ist bei Socken dagegen eher unüblich.
-3. **Bester Neukauf:** Socken, die lange halten und am Ende in einen Kreislauf zurückkönnen. Das sind vor allem Socken ganz aus Naturfasern oder mit Cradle-to-Cradle-Zertifikat.
+3. **Bester Neukauf:** Socken, die lange halten und am Ende in einen Kreislauf zurückkönnen. Das sind vor allem Socken ganz aus Naturfasern oder aus Materialien, die nachweislich abbaubar sind.
 
 ## Worauf ich bei Socken achte
 
@@ -62,7 +68,9 @@ Das Problem: Eine Mischung aus Naturfaser und Kunstfaser kann weder vollständig
 Deshalb sehe ich zurzeit zwei Arten von Socken vorne:
 
 - **Socken aus reiner Wolle**, ganz ohne Kunstfaser, zum Beispiel von Finkhof oder Hirsch Natur.
-- **Socken mit Cradle-to-Cradle-Zertifikat für den biologischen Kreislauf.** Die einzigen, die ich gefunden habe, sind D-Compose von DillySocks. Sie bestehen aus mindestens 98 % Bio-Baumwolle. Das restliche Polyester und Elasthan ist laut Hersteller ebenfalls abbaubar. Unter guten Kompostbedingungen sollen sie in sechs Wochen zerfallen (Herstellerangabe).
+- **Socken, die vollständig kompostierbar sein sollen**, wie D-Compose von DillySocks. Sie bestehen aus mindestens 98 % Bio-Baumwolle. Das restliche Polyester und Elasthan ist laut Hersteller ebenfalls abbaubar. Unter guten Kompostbedingungen sollen sie in sechs Wochen zerfallen (Herstellerangabe). DillySocks wirbt mit Cradle to Cradle Gold. Im offiziellen Register sind aber nur die Materialien naNea und ROICA™ zertifiziert, nicht die Socken selbst.
+
+Eine ganze Sockenkollektion mit Cradle-to-Cradle-Zertifikat hat die niederländische Marke Socklab: Silber, gültig bis März 2028. Einen Shop, in dem man die Socken als Privatperson kaufen kann, habe ich aber nicht gefunden.
 
 ## Wolle oder Baumwolle?
 

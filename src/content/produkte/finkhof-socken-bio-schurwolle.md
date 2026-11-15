@@ -18,8 +18,8 @@ kriterien:
     status: gut
     text: "Finkhof beschreibt den Weg der Wolle Schritt für Schritt: von Partnerhöfen mit kontrolliert biologischer Tierhaltung in Mittel- und Süddeutschland über die Wäscherei im belgischen Verviers und die Spinnerei in Forst (Brandenburg) bis zur Färberei in Deutschland. Ein Schafkopf-Logo kennzeichnet Ware aus dieser regionalen Wolle. Wo genau gestrickt wird und welche Höfe liefern, steht nicht dabei."
   haltbarkeit:
-    status: offen
-    text: "Finkhof macht keine Angaben zur Haltbarkeit. Für selbst gestrickte Socken empfiehlt Finkhof, Ferse und Spitze mit Baumwolle oder Leinen zu verstärken. Die gefärbte Variante ist dort mit Bio-Baumwolle verstärkt, die ungefärbte laut Produktseite nicht. Ich teste die Socken gerade und trage meine Erfahrung nach."
+    status: fehlt
+    text: "Finkhof gibt keine Garantie und keine Angaben zur Haltbarkeit. Für selbst gestrickte Socken empfiehlt Finkhof, Ferse und Spitze mit Baumwolle oder Leinen zu verstärken. Die gefärbte Variante ist dort mit Bio-Baumwolle verstärkt, die ungefärbte laut Produktseite nicht. Nach meinem Test passe ich die Bewertung an."
   klima:
     status: fehlt
     text: "Finkhof macht keine Angaben zu CO₂, Reduktion oder Ausgleich. Einschätzung: Die Wolle legt nur kurze Wege zurück. Wolle aus Deutschland ist oft ein Abfallprodukt der Landschaftspflege, das sonst teuer entsorgt wird. Beziffert ist der Vorteil für diese Socken nicht."
@@ -27,14 +27,14 @@ kriterien:
     status: teilweise
     text: "Die Wolle stammt aus kontrolliert biologischer Tierhaltung (kbT). Die Farbstoffe der gefärbten Variante entsprechen laut Finkhof den Richtlinien des Naturtextil-Verbands IVN. Ein unabhängiges Produktsiegel wie GOTS, Cradle to Cradle oder den Grünen Knopf nennt die Produktseite nicht."
   versand:
-    status: offen
-    text: "Wie Finkhof verschickt, trage ich nach meiner Bestellung ein. Wer in der Nähe wohnt, kann im Hofladen in Bad Wurzach-Arnach kaufen."
+    status: teilweise
+    text: "Finkhof verschickt mit DHL und nimmt an GoGreen Plus teil. Damit unterstützt der Versand Klimaschutzmaßnahmen von DHL, das einzelne Paket fährt aber nicht unbedingt emissionsarm. Zur Verpackung macht Finkhof keine Angaben. Versand 6,95 € ohne Grenze für kostenlosen Versand. Wer in der Nähe wohnt, kann im Hofladen in Bad Wurzach-Arnach kaufen."
   preis:
     status: fehlt
     text: "18 € pro Paar ungefärbt, 19,90 € gefärbt. Baumwollsocken im Mehrfachpack kosten bei großen Modeketten 1,86 bis 4,33 € pro Paar (Stand November 2026). Wollsocken habe ich dort nicht gefunden. Finkhof liegt damit beim 4- bis 10-Fachen. Ein Abo gibt es nicht."
   aussehen:
-    status: offen
-    text: "Dicke, rustikale Socken im Rippenstrick. Ungefärbt in Naturweiß, Beige und Grau, gefärbt in Rauchblau und Anthrazit. Fallen laut Finkhof groß aus. Wie sie sich tragen, teste ich gerade."
+    status: gut
+    text: "Dicke, rustikale Socken im Rippenstrick. Ungefärbt in Naturweiß, Beige und Grau, gefärbt in Rauchblau und Anthrazit. Fallen laut Finkhof groß aus. Das Aussehen gefällt mir gut. Wie sie sich tragen, teste ich noch."
 pluspunkte:
   - "100 % Wolle, ohne Kunstfaser"
   - "Wolle von Bio-Höfen aus Mittel- und Süddeutschland"
@@ -60,6 +60,9 @@ quellen:
   - titel: "Finkhof: Wolle"
     url: https://finkhof.de/wolle/
     hinweis: "Herstellerangaben zu Wäscherei, Spinnerei und Verstärkung von Ferse und Spitze"
+  - titel: "Finkhof: Versand- und Zahlungsbedingungen"
+    url: https://finkhof.de/versand-und-zahlungsbedingungen
+    hinweis: "Versandkosten, DHL GoGreen Plus"
   - titel: "Finkhof: Hofladen"
     url: https://finkhof.de/hofladen
   - titel: "KlimaschutzAgentur Landkreis Reutlingen (2024): Treibhausgas-Bilanzierung von Schafwolle im Biosphärengebiet Schwäbische Alb"
