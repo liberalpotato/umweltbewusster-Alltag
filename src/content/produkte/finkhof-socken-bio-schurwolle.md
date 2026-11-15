@@ -46,6 +46,7 @@ minuspunkte:
   - "Ungefärbte Variante ohne verstärkte Ferse"
   - "Keine Angaben zu Klima und Haltbarkeit"
   - "Teuer: 4- bis 10-mal so viel wie Baumwollsocken großer Modeketten"
+punkte: 4
 entwurf: false
 stand: 2026-11-15
 quellen:

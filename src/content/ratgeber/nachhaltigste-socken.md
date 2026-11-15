@@ -59,7 +59,7 @@ quellen:
 
 Mir sind bei Socken zwei Dinge am wichtigsten: Sie sollen lange halten, und sie sollen nach dem Prinzip Cradle to Cradle in einen Kreislauf passen. Entweder zurück in die Natur (biologischer Kreislauf) oder zurück zu neuer Kleidung (technischer Kreislauf). Danach kommen Tragegefühl, Preis, Aussehen und eine möglichst umweltfreundliche Färbung.
 
-Alle Produkte im Vergleich findest du unter [Socken](/alltag/kleidung/socken/). Die Socken teste ich gerade selbst und trage meine Erfahrungen und Punkte nach.
+Alle Produkte im Vergleich findest du unter [Socken](/alltag/kleidung/socken/). Meine Punkte stehen bei jedem Produkt. Das Tragegefühl teste ich noch und trage es nach.
 
 ## Warum ist der Kreislauf bei Socken so schwierig?
 

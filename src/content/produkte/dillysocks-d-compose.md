@@ -46,6 +46,7 @@ minuspunkte:
   - "Klimabeitrag ohne Transparenz, keine Mengenangabe"
   - "Zum Normalpreis etwas mehr als doppelt so teuer wie bei großen Modeketten"
   - "Die Socke selbst ist nicht C2C-zertifiziert, nur Materialien"
+punkte: 6
 entwurf: false
 stand: 2026-11-15
 quellen:

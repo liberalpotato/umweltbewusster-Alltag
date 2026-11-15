@@ -46,6 +46,7 @@ minuspunkte:
   - "Keine Rücknahme, keine Anleitung zur Rückführung"
   - "Keine Angaben zu Klima und Haltbarkeit"
   - "3- bis 7-mal so teuer wie Baumwollsocken großer Modeketten"
+punkte: 6
 entwurf: false
 stand: 2026-11-15
 quellen:

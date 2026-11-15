@@ -45,6 +45,7 @@ minuspunkte:
   - "Keine Rücknahme"
   - "Widersprüchliche Angaben zum Herstellungsort"
   - "Keine Garantie auf die Socken"
+punkte: 6
 entwurf: false
 stand: 2026-11-15
 quellen:

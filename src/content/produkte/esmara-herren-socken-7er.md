@@ -43,6 +43,7 @@ minuspunkte:
   - "Bis zu 35 % Kunstfaser, kein Kreislauf, keine Rücknahme"
   - "Herstellungsort und Herkunft der Baumwolle nicht angegeben"
   - "Keine Angaben zu Klima und Färbung"
+punkte: 4
 entwurf: false
 stand: 2026-11-15
 quellen:
