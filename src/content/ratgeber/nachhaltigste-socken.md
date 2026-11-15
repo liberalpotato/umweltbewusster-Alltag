@@ -4,6 +4,8 @@ beschreibung: "Am nachhaltigsten sind Socken, die lange halten und ganz aus Natu
 bereich: kleidung
 fazit: "Am nachhaltigsten sind die Socken, die du schon hast: lange tragen, Wolle auslüften statt oft waschen, Löcher stopfen. Wenn du neue brauchst, achte auf Socken ganz aus Naturfasern, die vollständig in die Natur zurück können, zum Beispiel reine Bio-Wollsocken oder die kompostierbaren Socken D-Compose von DillySocks. Socken mit viel Polyamid und Elasthan halten oft gut, lassen sich aber weder kompostieren noch gut recyceln."
 stand: 2026-11-15
+titelbild: /bilder/nachhaltigste-socken.svg
+titelbildAlt: "Illustration: Zwei Socken und ein Wollknäuel"
 entwurf: true
 quellen:
   - titel: "Umweltbundesamt: Fragen und Antworten zu Cradle to Cradle"

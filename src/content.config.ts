@@ -18,6 +18,9 @@ const ratgeber = defineCollection({
     fazit: z.string(),
     stand: z.coerce.date(),
     entwurf: z.boolean().default(false),
+    /** Titelbild aus public/bilder/, z. B. '/bilder/mein-beitrag.svg'. Nur mit geklärter Lizenz. */
+    titelbild: z.string().optional(),
+    titelbildAlt: z.string().optional(),
     quellen: z.array(quelle).min(1),
   }),
 });
@@ -28,6 +31,8 @@ const lexikon = defineCollection({
     begriff: z.string(),
     beschreibung: z.string().max(160),
     stand: z.coerce.date(),
+    titelbild: z.string().optional(),
+    titelbildAlt: z.string().optional(),
     quellen: z.array(quelle).min(1),
   }),
 });

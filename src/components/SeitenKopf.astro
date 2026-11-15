@@ -1,0 +1,51 @@
+---
+/**
+ * Farbiger Seitenkopf im Magazin-Look („Modern und farbig“), volle Breite.
+ * In Base über slot="kopf" einsetzen. Rechts optional ein Titelbild, ein großes Symbol oder eigener Inhalt (slot "rechts").
+ */
+import Icon from './Icon.astro';
+
+type Farbe = 'beere' | 'himmel' | 'orange' | 'sonne' | 'mint' | 'lila';
+type IconName = 'kleidung' | 'bad' | 'haushalt' | 'kueche' | 'garten' | 'reisen' | 'pfeil' | 'extern' | 'frage' | 'kreislauf' | 'haken';
+
+interface Props {
+  farbe: Farbe;
+  titel: string;
+  lead?: string;
+  rubrik?: string;
+  rubrikLink?: string;
+  brotkrumen?: { name: string; href?: string }[];
+  bild?: string;
+  bildAlt?: string;
+  icon?: IconName;
+  klein?: boolean;
+}
+const { farbe, titel, lead, rubrik, rubrikLink, brotkrumen, bild, bildAlt = '', icon, klein = false } = Astro.props;
+const hatRechts = Astro.slots.has('rechts') || bild || icon;
+---
+
+<header class:list={['artikel-kopf', 'seiten-kopf', `farbe-${farbe}`, { 'seiten-kopf-klein': klein }]}>
+  <div class:list={['weit', 'artikel-kopf-innen', { 'ohne-rechts': !hatRechts }]}>
+    <div class="artikel-kopf-text">
+      {brotkrumen && brotkrumen.length > 0 && (
+        <nav class="brotkrumen" aria-label="Brotkrumen">
+          <ol>
+            {brotkrumen.map((b) => <li>{b.href ? <a href={b.href}>{b.name}</a> : <span aria-current="page">{b.name}</span>}</li>)}
+          </ol>
+        </nav>
+      )}
+      {rubrik && (rubrikLink ? <a class="rubrik" href={rubrikLink}>{rubrik}</a> : <span class="rubrik">{rubrik}</span>)}
+      <h1>{titel}</h1>
+      {lead && <p class="vorspann">{lead}</p>}
+      <slot />
+    </div>
+    {hatRechts && (
+      <div class="seiten-kopf-rechts">
+        <slot name="rechts">
+          {bild ? <img class="artikel-titelbild" src={bild} alt={bildAlt} width="400" height="360" /> : icon && <span class="kopf-symbol"><Icon name={icon} size={120} /></span>}
+        </slot>
+      </div>
+    )}
+  </div>
+  <svg class="artikel-kopf-welle" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 V30 C240 0 480 0 720 24 C960 48 1200 52 1440 20 V60 Z" /></svg>
+</header>

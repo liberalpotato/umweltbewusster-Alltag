@@ -2,6 +2,8 @@
 begriff: "Mikroplastik"
 beschreibung: "Ist Mikroplastik im Körper auf Dauer gefährlich? Was Forschende vermuten, was belegt ist und was noch offen ist."
 stand: 2026-11-15
+titelbild: /bilder/mikroplastik.svg
+titelbildAlt: "Illustration: Ein Wassertropfen mit bunten Plastikteilchen darin"
 quellen:
   - titel: "Bundesinstitut für Risikobewertung (BfR): Mikroplastik – Fakten, Forschung und offene Fragen"
     url: "https://www.bfr.bund.de/fragen-und-antworten/thema/mikroplastik-fakten-forschung-und-offene-fragen/"

@@ -1,9 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import SeitenKopf from '../components/SeitenKopf.astro';
 ---
 
 <Base titel="Über das Projekt" beschreibung="Wer hinter Umweltbewusster Alltag steht, warum es die Seite gibt und wie Empfehlungen entstehen.">
-  <h1>Über das Projekt</h1>
+  <SeitenKopf slot="kopf" farbe="mint" titel="Über das Projekt" lead="Ehrliche Antworten auf Alltagsfragen, unabhängig und ohne Werbung." icon="kreislauf" klein />
+  <div class="artikel artikel-text seiten-start farbe-mint">
 
   <h2>Worum es geht</h2>
   <p>Diese Seite soll aufzeigen, wie ein umweltbewusster Alltag aktuell schon möglich ist und welche Möglichkeiten man in verschiedenen Alltagssituationen hat, vom Zähneputzen bis zum Waschmaschinenkauf. Ich bin Florian Marks und schreibe die Seite in meiner Freizeit.</p>
@@ -22,4 +24,5 @@ import Base from '../layouts/Base.astro';
 
   <h2>Wie die Texte entstehen</h2>
   <p>Ich recherchiere und schreibe mit Unterstützung einer KI (Claude). Jeder Text wird von mir gelesen und freigegeben, bevor er online geht, und jede Zahl ist mit ihrer Quelle verlinkt.</p>
+  </div>
 </Base>

@@ -10,7 +10,7 @@ const { bereich, anzahlProdukte } = Astro.props;
 const Tag = bereich.aktiv ? 'a' : 'div';
 ---
 
-<Tag class:list={['karte', { 'karte-bald': !bereich.aktiv }]} href={bereich.aktiv ? `/alltag/${bereich.slug}/` : undefined}>
+<Tag class:list={['karte', 'bereich-kachel', `farbe-${bereich.farbe}`, { 'karte-bald': !bereich.aktiv }]} href={bereich.aktiv ? `/alltag/${bereich.slug}/` : undefined}>
   <span class="symbol"><Icon name={bereich.icon} /></span>
   <h3>{bereich.name}</h3>
   <p>{bereich.beschreibung}</p>

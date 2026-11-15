@@ -1,9 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import SeitenKopf from '../components/SeitenKopf.astro';
 ---
 
 <Base titel="Datenschutz" beschreibung="Datenschutzerklärung von Umweltbewusster Alltag: keine Cookies, kein Tracking.">
-  <h1>Datenschutzerklärung</h1>
+  <SeitenKopf slot="kopf" farbe="lila" titel="Datenschutzerklärung" lead="Keine Cookies, kein Tracking." klein />
+  <div class="artikel artikel-text seiten-start farbe-lila">
   <h2>Verantwortlicher</h2>
   <p>Verantwortlich ist die im <a href="/impressum/">Impressum</a> genannte Person.</p>
 
@@ -18,4 +20,5 @@ import Base from '../layouts/Base.astro';
 
   <h2>Deine Rechte</h2>
   <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Datenübertragbarkeit sowie das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
+  </div>
 </Base>

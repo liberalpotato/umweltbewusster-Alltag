@@ -2,8 +2,9 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Quellen from '../../components/Quellen.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
 import { findeBereich } from '../../data/alltag';
-import { veroeffentlichteRatgeber, datum } from '../../data/inhalte';
+import { veroeffentlichteRatgeber, datum, lesezeit } from '../../data/inhalte';
 
 export async function getStaticPaths() {
   const alle = await veroeffentlichteRatgeber();
@@ -11,18 +12,38 @@ export async function getStaticPaths() {
 }
 
 const { eintrag } = Astro.props;
-const { Content } = await render(eintrag);
+const { Content, headings } = await render(eintrag);
 const d = eintrag.data;
 const bereich = findeBereich(d.bereich);
 const bereichLink = bereich?.aktiv ? `/alltag/${bereich.slug}/` : '/alltag/';
+const farbe = bereich?.farbe ?? 'mint';
+const kapitel = headings.filter((h) => h.depth === 2);
 ---
 
-<Base titel={d.titel} beschreibung={d.beschreibung}>
-  <article>
-    <p class="meta"><a href={bereichLink}>{bereich?.name ?? d.bereich}</a> · Stand: {datum(d.stand)}</p>
-    <h1>{d.titel}</h1>
-    <div class="fazit"><strong>Kurz gesagt</strong>{d.fazit}</div>
-    <Content />
+<Base titel={d.titel} beschreibung={d.beschreibung} weit lesefortschritt>
+  <SeitenKopf slot="kopf" farbe={farbe} rubrik={bereich?.name ?? d.bereich} rubrikLink={bereichLink} titel={d.titel} lead={d.beschreibung} bild={d.titelbild} bildAlt={d.titelbildAlt}>
+    <p class="autor-zeile">
+      <span class="autor-bild" aria-hidden="true">F</span>
+      <span>Von <a href="/ueber/">Florian</a></span>
+      <span>Stand: {datum(d.stand)}</span>
+      <span>{lesezeit(eintrag.body)} Min. Lesezeit</span>
+    </p>
+  </SeitenKopf>
+
+  <article class:list={['text-mit-rand', 'artikel', `farbe-${farbe}`]}>
+    <div class="kurz-kasten">
+      <p class="kurz-titel">Das Wichtigste in Kürze</p>
+      <p>{d.fazit}</p>
+    </div>
+    {kapitel.length > 2 && (
+      <nav class="rand grafik inhaltsverzeichnis" aria-label="Inhalt">
+        <p class="grafik-titel">In diesem Beitrag</p>
+        <ol>{kapitel.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+      </nav>
+    )}
+    <div class="artikel-text">
+      <Content />
+    </div>
     <Quellen quellen={d.quellen} />
     <p class="hinweis">Keine bezahlten Links, keine Kooperationen. Fehler gefunden oder eine bessere Quelle? Schreib mir über das <a href="/impressum/">Impressum</a>.</p>
   </article>

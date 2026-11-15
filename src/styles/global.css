@@ -2,7 +2,7 @@
 :root {
   --text: #18221c;
   --text-leise: #56635b;
-  --grund: #f6f5ef;
+  --grund: #fbf7ef;
   --karte: #ffffff;
   --flaeche: #eeece3;
   --akzent: #2c6a47;
@@ -380,3 +380,308 @@ th { background: var(--flaeche); }
   *, *::before, *::after { transition: none !important; }
   a.karte:hover, .knopf:hover { transform: none; }
 }
+
+/* ---------- Längere Texte: Randzitate und Grafiken ---------- */
+:root { --bio: #2f8a4f; --bio-hell: #e3f2e7; --tech: #8b949c; --tech-dunkel: #5d666e; --tech-hell: #eef0f2; }
+@media (prefers-color-scheme: dark) {
+  :root { --bio: #7fd1a0; --bio-hell: #18301f; --tech: #b9c1c8; --tech-dunkel: #d5dbe0; --tech-hell: #22282d; }
+}
+
+.text-mit-rand { max-width: 46rem; margin: 0 auto; }
+.text-mit-rand::after { content: ''; display: block; clear: both; }
+.rand, figure.rand { margin: 2rem 0; }
+@media (min-width: 72rem) {
+  .text-mit-rand { max-width: 67rem; padding-right: 21rem; }
+  .rand, figure.rand { float: right; clear: right; width: 18rem; margin: 0.4rem -21rem 1.5rem 0; }
+}
+
+.randzitat { position: relative; padding: 0.25rem 0 0.25rem 1.25rem; border-left: 4px solid var(--akzent); }
+.randzitat p { margin: 0; font-size: clamp(1.35rem, 1.1rem + 0.9vw, 1.65rem); line-height: 1.25; font-weight: 750; letter-spacing: -0.02em; color: var(--akzent-stark); text-wrap: balance; }
+.randzitat p::before { content: '„'; color: var(--akzent); }
+.randzitat p::after { content: '“'; color: var(--akzent); }
+.randzitat small { display: block; margin-top: 0.5rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-leise); }
+
+.grafik { padding: 1.25rem 1.25rem 1rem; border-radius: var(--radius); background: var(--karte); border: 1px solid var(--linie); box-shadow: var(--schatten); }
+.grafik-titel { margin: 0 0 0.85rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-leise); }
+
+.stufen { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.15rem; counter-reset: stufe; }
+.stufen li { counter-increment: stufe; position: relative; display: grid; grid-template-columns: 2.1rem 1fr; align-items: center; gap: 0.75rem; padding: 0.55rem 0.7rem; border-radius: 12px; font-weight: 650; }
+.stufen li::before { content: counter(stufe); display: grid; place-items: center; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--flaeche); color: var(--text-leise); font-weight: 800; }
+.stufen li + li { margin-top: 0.9rem; }
+.stufen li + li::after { content: '↓'; position: absolute; left: 1.35rem; top: -1.2rem; color: var(--text-leise); font-size: 0.9rem; }
+.stufen li small { display: block; font-size: 0.82rem; font-weight: 450; color: var(--text-leise); }
+.stufen .stufe-top { background: var(--akzent-hell); }
+.stufen .stufe-top::before { background: var(--akzent); color: var(--akzent-text); }
+
+.kreislaeufe { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.kreislauf { border-radius: 14px; padding: 0.5rem 0.5rem 0.75rem; }
+.kreislauf.bio { background: var(--bio-hell); }
+.kreislauf.tech { background: var(--tech-hell); }
+.kreislauf .kreislauf-titel { margin: 0.25rem 0 0.4rem; text-align: center; font-weight: 800; font-size: 1rem; letter-spacing: 0.02em; }
+.kreislauf.bio .kreislauf-titel { color: var(--bio); }
+.kreislauf.tech .kreislauf-titel { color: var(--tech-dunkel); }
+.kreislauf-svg { display: block; width: 100%; max-width: 9rem; height: auto; margin: 0 auto; }
+.kreislauf-svg .bogen { fill: none; stroke-width: 5; stroke-linecap: round; }
+.kreislauf-svg.bio .bogen { stroke: var(--bio); }
+.kreislauf-svg.bio .pfeil-spitze { fill: var(--bio); }
+.kreislauf-svg.tech .bogen { stroke: var(--tech); }
+.kreislauf-svg.tech .pfeil-spitze { fill: var(--tech); }
+
+.grafik-bild svg { display: block; width: 100%; height: auto; }
+.grafik-bild figcaption { margin-top: 0.6rem; font-size: 0.85rem; line-height: 1.45; color: var(--text-leise); }
+
+/* =====================================================================
+   Magazin-Look „Modern und farbig“ (Florian, 2026-11-15)
+   Jeder Bereich hat eine Erkennungsfarbe (.farbe-*), Überschriften in Bricolage Grotesque.
+   ===================================================================== */
+:root {
+  --titel-schrift: 'Bricolage Grotesque Variable', var(--schrift);
+  --tinte: #2a1a14;
+  --beere: #c8235f;  --beere-hell: #fde4ee;  --beere-ton: #ad1c51;
+  --himmel: #1f73b7; --himmel-hell: #dcecf9; --himmel-ton: #1a659f;
+  --orange: #e8681a; --orange-hell: #ffe6d4; --orange-ton: #b24d0e;
+  --sonne: #ffd23f;  --sonne-hell: #fff4c7;  --sonne-ton: #8a6500;
+  --mint: #138a5a;   --mint-hell: #d8f5e7;   --mint-ton: #0f7a4f;
+  --lila: #6c4ee0;   --lila-hell: #e8e3fd;   --lila-ton: #5a3dcc;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --beere-hell: #3a1525;  --beere-ton: #ff8fb5;
+    --himmel-hell: #132a3d; --himmel-ton: #8cc6f2;
+    --orange-hell: #3a2213; --orange-ton: #ffb27e;
+    --sonne-hell: #362d0c;  --sonne-ton: #ffd966;
+    --mint-hell: #11301f;   --mint-ton: #7fd9ab;
+    --lila-hell: #241c45;   --lila-ton: #b9a8ff;
+  }
+}
+.farbe-beere  { --b: var(--beere);  --b-hell: var(--beere-hell);  --b-ton: var(--beere-ton);  --b-auf: #ffffff; }
+.farbe-himmel { --b: var(--himmel); --b-hell: var(--himmel-hell); --b-ton: var(--himmel-ton); --b-auf: #ffffff; }
+.farbe-orange { --b: var(--orange); --b-hell: var(--orange-hell); --b-ton: var(--orange-ton); --b-auf: #1e120a; }
+.farbe-sonne  { --b: var(--sonne);  --b-hell: var(--sonne-hell);  --b-ton: var(--sonne-ton);  --b-auf: #2a1a14; }
+.farbe-mint   { --b: var(--mint);   --b-hell: var(--mint-hell);   --b-ton: var(--mint-ton);   --b-auf: #ffffff; }
+.farbe-lila   { --b: var(--lila);   --b-hell: var(--lila-hell);   --b-ton: var(--lila-ton);   --b-auf: #ffffff; }
+
+h1, h2, h3, .logo, .randzitat p, .grosse-zahl strong, .kurz-titel, .schritte-titel {
+  font-family: var(--titel-schrift);
+  font-optical-sizing: auto;
+}
+h1 { font-weight: 800; letter-spacing: -0.035em; }
+h2 { font-weight: 750; letter-spacing: -0.025em; }
+
+mark { background: linear-gradient(transparent 58%, var(--sonne) 58%, var(--sonne) 92%, transparent 92%); color: inherit; padding: 0 0.1em; }
+@media (prefers-color-scheme: dark) { mark { background: linear-gradient(transparent 58%, #8a6a00 58%, #8a6a00 92%, transparent 92%); } }
+
+/* Startseite: bunter Kopf */
+.held-flaeche {
+  background:
+    radial-gradient(circle at calc(100% + 1.5rem) -1.5rem, var(--sonne) 0 6rem, transparent 6.1rem),
+    radial-gradient(circle at 4% 96%, color-mix(in srgb, var(--beere) 70%, transparent) 0 4rem, transparent 4.1rem),
+    radial-gradient(circle at 60% 110%, color-mix(in srgb, var(--himmel) 30%, transparent) 0 7rem, transparent 7.1rem),
+    var(--mint-hell);
+}
+.ueberzeile { color: var(--beere-ton); }
+
+/* Lesefortschritt */
+.lesefortschritt { position: fixed; top: 0; left: 0; right: 0; height: 4px; z-index: 40; pointer-events: none; }
+.lesefortschritt span { display: block; height: 100%; background: linear-gradient(90deg, var(--sonne), var(--orange), var(--beere)); transform-origin: left; transform: scaleX(0); }
+
+/* Artikelkopf in der Bereichsfarbe */
+.artikel-kopf { position: relative; background: var(--b); color: var(--b-auf); overflow: hidden; }
+.artikel-kopf::before, .artikel-kopf::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; }
+.artikel-kopf::before { width: 22rem; height: 22rem; left: -8rem; top: -10rem; background: color-mix(in srgb, var(--sonne) 35%, transparent); }
+.artikel-kopf::after { display: none; width: 9rem; height: 9rem; right: 38%; bottom: -3rem; background: color-mix(in srgb, #ffffff 14%, transparent); }
+.artikel-kopf-innen { position: relative; z-index: 1; display: grid; gap: 1.5rem; align-items: center; padding-top: clamp(2rem, 5vw, 4rem); padding-bottom: clamp(3.5rem, 7vw, 5.5rem); }
+@media (min-width: 56rem) { .artikel-kopf-innen { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 3rem; } }
+.artikel-kopf h1 { margin: 0.9rem 0 1rem; font-size: clamp(2.2rem, 1.3rem + 3.6vw, 4rem); line-height: 1.04; text-wrap: balance; }
+.rubrik { display: inline-block; padding: 0.3rem 0.85rem; border-radius: 999px; background: var(--sonne); color: var(--tinte); font-size: 0.8rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
+.rubrik:hover { color: var(--tinte); background: #ffe27a; }
+.vorspann { margin: 0; max-width: 38rem; font-size: clamp(1.1rem, 1rem + 0.45vw, 1.35rem); line-height: 1.5; opacity: 0.95; }
+.autor-zeile { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 1.1rem; margin: 1.5rem 0 0; font-size: 0.92rem; font-weight: 550; }
+.autor-zeile a { color: inherit; }
+.autor-bild { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--sonne); color: var(--tinte); font-family: var(--titel-schrift); font-weight: 800; font-size: 1.1rem; }
+.artikel-titelbild { display: block; width: 100%; max-width: 26rem; height: auto; justify-self: center; }
+@media (max-width: 56rem) { .artikel-titelbild { max-width: 17rem; order: -1; } }
+.artikel-kopf-welle { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(1.5rem, 4vw, 3.5rem); z-index: 1; }
+.artikel-kopf-welle path { fill: var(--grund); }
+
+/* Kasten „Das Wichtigste in Kürze“ */
+.kurz-kasten { position: relative; z-index: 2; margin: -1.25rem 0 2.5rem; padding: 1.4rem 1.5rem 1.5rem; border-radius: 22px; background: var(--sonne-hell); border: 3px solid var(--tinte); box-shadow: 6px 6px 0 var(--tinte); }
+@media (prefers-color-scheme: dark) { .kurz-kasten { border-color: var(--sonne); box-shadow: 6px 6px 0 var(--sonne); } }
+.kurz-kasten p { margin: 0; font-size: 1.08rem; }
+.kurz-kasten .kurz-titel { margin-bottom: 0.4rem; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+
+/* Text im Beitrag */
+.artikel h2 { position: relative; font-size: clamp(1.5rem, 1.25rem + 1vw, 2.05rem); }
+.artikel-text h2::before { content: ''; display: block; width: 3rem; height: 0.4rem; margin-bottom: 0.8rem; border-radius: 999px; background: var(--b); }
+.text-mit-rand .artikel-text > p:first-of-type::first-letter { float: left; margin: 0.08em 0.12em 0 0; font-family: var(--titel-schrift); font-size: 4.1em; line-height: 0.82; font-weight: 800; color: var(--b-ton); }
+.artikel a { color: var(--b-ton); }
+.artikel strong { color: var(--text); }
+
+/* Inhaltsverzeichnis am Rand */
+.inhaltsverzeichnis ol { margin: 0; padding: 0; list-style: none; counter-reset: kapitel; display: grid; gap: 0.15rem; }
+.inhaltsverzeichnis li { counter-increment: kapitel; display: grid; grid-template-columns: 1.7rem 1fr; gap: 0.4rem; font-size: 0.92rem; line-height: 1.35; }
+.inhaltsverzeichnis li::before { content: counter(kapitel); font-family: var(--titel-schrift); font-weight: 800; color: var(--b-ton); }
+.inhaltsverzeichnis a { display: block; padding: 0.2rem 0; color: var(--text); text-decoration: none; }
+.inhaltsverzeichnis a:hover { color: var(--b-ton); text-decoration: underline; }
+@media (max-width: 71.99rem) { .inhaltsverzeichnis { display: none; } }
+h2[id] { scroll-margin-top: 5rem; }
+
+/* Randzitate in Farbe */
+.artikel .randzitat { padding: 1.4rem 1.4rem 1.2rem; border: 0; border-radius: 22px; background: var(--b-hell); }
+.artikel .randzitat::before { content: '“'; position: absolute; top: -1.6rem; left: 1rem; font-family: var(--titel-schrift); font-size: 6rem; line-height: 1; font-weight: 800; color: var(--b); }
+.artikel .randzitat p { color: var(--b-ton); font-size: clamp(1.45rem, 1.2rem + 0.9vw, 1.8rem); font-weight: 800; }
+.artikel .randzitat p::before, .artikel .randzitat p::after { content: none; }
+
+/* Grafik-Kästen */
+.artikel .grafik { border: 3px solid var(--tinte); box-shadow: 5px 5px 0 var(--tinte); border-radius: 22px; }
+@media (prefers-color-scheme: dark) { .artikel .grafik { border-color: var(--linie); box-shadow: 5px 5px 0 var(--linie); } }
+.artikel .stufen .stufe-top { background: var(--sonne-hell); }
+.artikel .stufen .stufe-top::before { background: var(--sonne); color: var(--tinte); }
+
+/* Große Zahl über die volle Breite */
+.grosse-zahl { clear: both; display: grid; gap: 0.25rem 2rem; align-items: center; margin: 2.5rem 0; padding: clamp(1.5rem, 4vw, 2.5rem); border-radius: 26px; background: var(--b); color: var(--b-auf); }
+@media (min-width: 40rem) { .grosse-zahl { grid-template-columns: auto 1fr; } }
+@media (min-width: 72rem) { .grosse-zahl { margin-right: -21rem; } }
+.grosse-zahl strong { color: var(--sonne) !important; font-size: clamp(4rem, 2.5rem + 6vw, 7.5rem); line-height: 0.95; font-weight: 800; letter-spacing: -0.05em; }
+.grosse-zahl p { margin: 0; font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem); line-height: 1.35; font-weight: 650; }
+.grosse-zahl small { grid-column: 1 / -1; font-size: 0.8rem; font-weight: 650; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; }
+@media (min-width: 40rem) { .grosse-zahl small { grid-column: 2; } }
+
+/* Beitragskarten mit Bild */
+.beitrag-karte { padding: 0; overflow: visible; gap: 0; border: 3px solid var(--tinte); box-shadow: 5px 5px 0 var(--tinte); border-radius: 22px; }
+a.beitrag-karte:hover { border-color: var(--tinte); box-shadow: 8px 8px 0 var(--tinte); transform: translate(-2px, -2px); }
+@media (prefers-color-scheme: dark) {
+  .beitrag-karte, a.beitrag-karte:hover { border-color: var(--linie); }
+  .beitrag-karte { box-shadow: 5px 5px 0 var(--linie); }
+  a.beitrag-karte:hover { box-shadow: 8px 8px 0 var(--b); }
+}
+.beitrag-bild { display: grid; place-items: center; padding: 1.25rem; background: var(--b); color: var(--b-auf); border-radius: 19px 19px 0 0; aspect-ratio: 16 / 10; overflow: hidden; }
+.beitrag-bild img { display: block; width: auto; height: 100%; max-width: 100%; object-fit: contain; }
+.beitrag-text { display: flex; flex-direction: column; gap: 0.55rem; flex: 1; padding: 1.25rem 1.4rem 1.4rem; }
+.beitrag-text h2, .beitrag-text h3 { margin: 0; }
+.beitrag-text h3 { font-size: 1.3rem; line-height: 1.2; }
+.rubrik-chip { align-self: flex-start; padding: 0.15rem 0.65rem; border-radius: 999px; background: var(--b-hell); color: var(--b-ton); font-size: 0.75rem; font-weight: 750; letter-spacing: 0.05em; text-transform: uppercase; }
+.beitrag-karte .mehr { color: var(--b-ton); }
+.beitrag-karte .entwurf-hinweis { z-index: 2; }
+@media (min-width: 50rem) {
+  .beitrag-gross { flex-direction: row; }
+  .beitrag-gross .beitrag-bild { flex: 0 0 44%; aspect-ratio: auto; min-height: 20rem; border-radius: 19px 0 0 19px; }
+  .beitrag-gross .beitrag-text { justify-content: center; padding: 2rem 2.5rem; }
+}
+.beitrag-gross h2 { font-size: clamp(1.7rem, 1.2rem + 2vw, 2.6rem); line-height: 1.08; }
+.beitrag-gross p { font-size: 1.05rem; }
+.weitere-beitraege { margin-top: 1.5rem; }
+
+/* Bereichskacheln in ihrer Farbe */
+.bereich-kachel .symbol { background: var(--b-hell); color: var(--b-ton); }
+a.bereich-kachel { border-top: 6px solid var(--b); }
+a.bereich-kachel:hover { border-color: var(--b); }
+a.bereich-kachel .mehr { color: var(--b-ton); }
+.karte-bald.bereich-kachel .symbol { background: var(--b-hell); color: var(--b-ton); opacity: 0.8; }
+
+/* ---------- Magazin-Look auf allen Seiten ---------- */
+/* Seitenkopf (Übersichten, Bereiche, Produkte, Lexikon, Über …) */
+.artikel-kopf-innen.ohne-rechts { grid-template-columns: minmax(0, 1fr); }
+.seiten-kopf-klein .artikel-kopf-innen { padding-top: clamp(1.5rem, 4vw, 2.75rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); }
+.seiten-kopf-klein h1 { font-size: clamp(2rem, 1.3rem + 2.8vw, 3.2rem); }
+.seiten-kopf .brotkrumen { margin: 0 0 1rem; }
+.seiten-kopf .brotkrumen ol { color: inherit; }
+.seiten-kopf .brotkrumen a { color: inherit; opacity: 0.85; }
+.seiten-kopf .brotkrumen a:hover { color: inherit; opacity: 1; }
+.seiten-kopf .brotkrumen li + li::before { color: inherit; opacity: 0.6; }
+.seiten-kopf-rechts { display: grid; place-items: center; }
+@media (max-width: 56rem) { .seiten-kopf-rechts { order: 2; justify-items: start; } .seiten-kopf .artikel-titelbild { order: 0; } }
+.kopf-symbol { display: grid; place-items: center; width: clamp(8rem, 18vw, 13rem); aspect-ratio: 1; border-radius: 50%; background: var(--sonne); color: var(--tinte); border: 4px solid var(--tinte); box-shadow: 8px 8px 0 var(--tinte); transform: rotate(-6deg); }
+.kopf-symbol .icon { width: 55%; height: 55%; stroke-width: 1.4; }
+@media (max-width: 56rem) { .kopf-symbol { display: none; } }
+.symbol-wolke { display: grid; grid-template-columns: repeat(3, auto); gap: 0.9rem; transform: rotate(-4deg); }
+.symbol-wolke span { display: grid; place-items: center; width: 4.6rem; height: 4.6rem; border-radius: 22px; background: var(--b); color: var(--b-auf); border: 3px solid var(--tinte); box-shadow: 4px 4px 0 var(--tinte); }
+.symbol-wolke span:nth-child(even) { transform: translateY(1rem) rotate(6deg); }
+@media (max-width: 56rem) { .symbol-wolke { display: none; } }
+.kopf-zahlen { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0 0; }
+.kopf-zahlen span { padding: 0.4rem 0.9rem; border-radius: 999px; background: color-mix(in srgb, #ffffff 18%, transparent); font-weight: 600; }
+.kopf-zahlen strong { font-family: var(--titel-schrift); font-size: 1.15rem; }
+.seiten-kopf .fakten-zeile { gap: 0.75rem 2rem; margin-top: 1.5rem; }
+.seiten-kopf .fakten-zeile dt { color: inherit; opacity: 0.8; }
+.seiten-kopf .kein-affiliate { color: inherit; opacity: 0.85; }
+.seiten-kopf .entwurf-banner { margin: 1.25rem 0 0; display: inline-block; }
+.seiten-kopf .bewertung-box { background: var(--karte); color: var(--text); border: 3px solid var(--tinte); box-shadow: 6px 6px 0 var(--tinte); border-radius: 22px; padding: 1.5rem 2rem; }
+@media (max-width: 56rem) { .seiten-kopf .bewertung-box { flex-direction: row; gap: 1.25rem; padding: 1rem 1.25rem; } .seiten-kopf .bewertung-titel { margin: 0; } }
+.knopf-hell { background: var(--sonne); color: var(--tinte); border: 3px solid var(--tinte); box-shadow: 4px 4px 0 var(--tinte); }
+.knopf-hell:hover { background: #ffe27a; color: var(--tinte); box-shadow: 6px 6px 0 var(--tinte); transform: translate(-2px, -2px); }
+.seiten-start { margin-top: 1rem; }
+.abschnitt-kopf-oben { margin-top: 1rem; }
+.produkt-seite .tipp { margin-top: 0; }
+
+/* Knöpfe */
+.knopf { border: 3px solid var(--tinte); box-shadow: 4px 4px 0 var(--tinte); }
+.knopf:hover { box-shadow: 6px 6px 0 var(--tinte); transform: translate(-2px, -2px); }
+.knopf-zweit { border-color: var(--tinte); }
+@media (prefers-color-scheme: dark) {
+  .knopf, .knopf-zweit, .knopf-hell { border-color: var(--tinte); }
+}
+
+/* Karten als „Sticker“ mit Rand und Versatz-Schatten */
+a.karte:not(.karte-bald), .pro-contra > div, .kriterium, .kriterien-kurz li, .tabelle-rahmen {
+  border: 3px solid var(--tinte); box-shadow: 5px 5px 0 var(--tinte); border-radius: 22px;
+}
+a.karte:not(.karte-bald):hover { border-color: var(--tinte); box-shadow: 8px 8px 0 var(--tinte); transform: translate(-2px, -2px); }
+@media (prefers-color-scheme: dark) {
+  a.karte:not(.karte-bald), .pro-contra > div, .kriterium, .kriterien-kurz li, .tabelle-rahmen { border-color: var(--linie); box-shadow: 5px 5px 0 var(--linie); }
+  a.karte:not(.karte-bald):hover { border-color: var(--linie); box-shadow: 8px 8px 0 var(--b, var(--akzent)); }
+}
+a.bereich-kachel { border-top-width: 3px; }
+a.bereich-kachel .symbol { background: var(--b); color: var(--b-auf); }
+.karte-bald { border-width: 2px; border-radius: 22px; }
+
+/* Produktkarten */
+.produkt-karte { overflow: hidden; padding-top: 0; }
+.produkt-karte::before { content: ''; display: block; height: 0.6rem; margin: 0 -1.5rem 0.6rem; background: var(--b); }
+.produkt-karte .produkt-marke { color: var(--b-ton) !important; }
+.produkt-karte .mehr { color: var(--b-ton); }
+.produkt-karte .entwurf-hinweis { top: 1.2rem; left: auto; right: 5.5rem; }
+.produkt-karte h3 { font-size: 1.3rem; }
+
+/* Unterkategorien und Kriterien */
+a.unter-kachel { background: var(--b-hell); }
+a.unter-kachel span { color: var(--b-ton); }
+.kriterien-kurz li::before { background: var(--b, var(--akzent)); color: var(--b-auf, #fff); }
+.produkt-seite .kriterium::before { background: var(--b); color: var(--b-auf); }
+.kriterium-gut, .kriterium-teilweise, .kriterium-fehlt, .kriterium-offen { border-left-width: 10px; }
+.kriterium-gut { border-left-color: var(--gut); }
+.kriterium-teilweise { border-left-color: var(--teil); }
+.kriterium-fehlt { border-left-color: var(--fehlt); }
+.kriterium-offen { border-left-color: var(--offen); }
+.pro { background: var(--gut-hell) !important; }
+.contra { background: var(--fehlt-hell) !important; }
+.produkt-seite h2, .produkt-seite .abschnitt-kopf h2 { font-size: clamp(1.5rem, 1.25rem + 1vw, 2.05rem); }
+
+/* Lexikon-Karten */
+.lexikon-karte { position: relative; overflow: hidden; }
+.lexikon-karte h2 { margin: 0; font-size: 1.5rem; }
+.lexikon-buchstabe { position: absolute; right: -0.5rem; top: -1.5rem; font-family: var(--titel-schrift); font-size: 8rem; font-weight: 800; line-height: 1; color: var(--b-hell); z-index: 0; pointer-events: none; }
+.lexikon-karte > *:not(.lexikon-buchstabe) { position: relative; z-index: 1; }
+.lexikon-karte .mehr { color: var(--b-ton); }
+
+/* Einfache Textseiten (Über, Impressum, Datenschutz) */
+main.breite .artikel-text h2::before { background: var(--b); }
+main.breite .artikel-text ol li { margin-bottom: 0.4rem; }
+
+/* Kopfzeile und Fußzeile */
+.logo svg { color: var(--beere); }
+.kopf nav a[aria-current='page'] { background: var(--sonne); color: var(--tinte); font-weight: 650; }
+.fuss { position: relative; border-top: 0; background: var(--tinte); color: #e9ddd3; padding-top: 3rem; }
+.fuss::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--mint) 0 20%, var(--sonne) 20% 40%, var(--orange) 40% 60%, var(--beere) 60% 80%, var(--himmel) 80%); }
+.fuss-logo { color: #ffffff; font-family: var(--titel-schrift); font-size: 1.3rem; }
+.fuss a { color: #e9ddd3; }
+.fuss a:hover { color: var(--sonne); }
+@media (prefers-color-scheme: dark) { .fuss { background: #0a0e0b; } }
+
+/* Auf gelbem Kopf: Rubrik und Symbol in Weiß, damit sie sich abheben */
+.farbe-sonne .rubrik, .farbe-sonne .autor-bild, .farbe-sonne .kopf-symbol { background: #ffffff; }
+.farbe-sonne .kopf-zahlen span { background: color-mix(in srgb, #ffffff 45%, transparent); }
+
+/* Alter „Kurz gesagt“-Kasten im Text im neuen Look */
+.artikel .fazit { padding: 1.4rem 1.5rem 1.5rem; border-radius: 22px; background: var(--sonne-hell); border: 3px solid var(--tinte); box-shadow: 6px 6px 0 var(--tinte); }
+.artikel .fazit strong { font-family: var(--titel-schrift); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+@media (prefers-color-scheme: dark) { .artikel .fazit { border-color: var(--sonne); box-shadow: 6px 6px 0 var(--sonne); } }

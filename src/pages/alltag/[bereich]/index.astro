@@ -2,6 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import Icon from '../../../components/Icon.astro';
 import BeitragKarte from '../../../components/BeitragKarte.astro';
+import SeitenKopf from '../../../components/SeitenKopf.astro';
 import { alltagsBereiche, kriterienKleidung, type AlltagsBereich } from '../../../data/alltag';
 import { sichtbareProdukte, veroeffentlichteRatgeber } from '../../../data/inhalte';
 
@@ -20,20 +21,11 @@ const kriterien = bereich.slug === 'kleidung' ? kriterienKleidung : [];
 ---
 
 <Base titel={bereich.name} beschreibung={`${bereich.name} nachhaltig: Beiträge und Produkte im ehrlichen Check. ${bereich.beschreibung}`} weit>
-  <nav class="brotkrumen" aria-label="Brotkrumen">
-    <ol>
-      <li><a href="/alltag/">Alltagsgegenstände</a></li>
-      <li aria-current="page">{bereich.name}</li>
-    </ol>
-  </nav>
+  <SeitenKopf slot="kopf" farbe={bereich.farbe} brotkrumen={[{ name: 'Alltagsgegenstände', href: '/alltag/' }, { name: bereich.name }]} titel={bereich.name} lead={bereich.beschreibung} icon={bereich.icon}>
+    <p class="kopf-zahlen"><span><strong>{beitraege.length}</strong> {beitraege.length === 1 ? 'Beitrag' : 'Beiträge'}</span><span><strong>{produkte.length}</strong> {produkte.length === 1 ? 'Produkt' : 'Produkte'} im Check</span></p>
+  </SeitenKopf>
 
-  <section class="held-flaeche">
-    <span class="symbol"><Icon name={bereich.icon} /></span>
-    <h1>{bereich.name}</h1>
-    <p class="lead">{bereich.beschreibung}</p>
-  </section>
-
-  <div class="abschnitt-kopf">
+  <div class="abschnitt-kopf abschnitt-kopf-oben">
     <h2>Beiträge zum Thema</h2>
   </div>
   {beitraege.length > 0 ? (
@@ -48,7 +40,7 @@ const kriterien = bereich.slug === 'kleidung' ? kriterienKleidung : [];
     <h2>Unterkategorien</h2>
     <p>{produkte.length} {produkte.length === 1 ? 'Produkt' : 'Produkte'} im Check</p>
   </div>
-  <ul class="raster raster-unter">
+  <ul class:list={["raster", "raster-unter", `farbe-${bereich.farbe}`]}>
     {bereich.unterkategorien.map((u) => {
       const n = anzahl(u.slug);
       return (
@@ -75,7 +67,7 @@ const kriterien = bereich.slug === 'kleidung' ? kriterienKleidung : [];
         <h2>Worauf ich bei Kleidung achte</h2>
         <p>In dieser Reihenfolge, das Wichtigste zuerst.</p>
       </div>
-      <ol class="kriterien-kurz">
+      <ol class:list={["kriterien-kurz", `farbe-${bereich.farbe}`]}>
         {kriterien.map((k) => (
           <li>
             <div>

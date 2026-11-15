@@ -26,3 +26,10 @@ export async function sichtbareProdukte() {
 export function datum(d: Date): string {
   return d.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
 }
+
+/** Geschätzte Lesezeit in Minuten (rund 200 Wörter pro Minute, HTML-Bausteine nicht mitgezählt). */
+export function lesezeit(text: string | undefined): number {
+  const ohneHtml = (text ?? '').replace(/<[^>]+>/g, ' ');
+  const woerter = ohneHtml.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(woerter / 200));
+}

@@ -1,19 +1,29 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Icon from './Icon.astro';
-import { alltagName } from '../data/alltag';
+import { findeBereich } from '../data/alltag';
+import { lesezeit } from '../data/inhalte';
 
 interface Props {
   beitrag: CollectionEntry<'ratgeber'>;
+  /** Großer Aufmacher (Startseite) statt normaler Karte. */
+  gross?: boolean;
 }
-const { beitrag } = Astro.props;
+const { beitrag, gross = false } = Astro.props;
 const d = beitrag.data;
+const bereich = findeBereich(d.bereich);
+const farbe = bereich?.farbe ?? 'mint';
 ---
 
-<a class="karte" href={`/ratgeber/${beitrag.id}/`}>
+<a class:list={['karte', 'beitrag-karte', `farbe-${farbe}`, { 'beitrag-gross': gross }]} href={`/ratgeber/${beitrag.id}/`}>
   {d.entwurf && <span class="entwurf-hinweis">Entwurf</span>}
-  <span class="abzeichen abzeichen-akzent">{alltagName(d.bereich)}</span>
-  <h3>{d.titel}</h3>
-  <p>{d.fazit}</p>
-  <span class="mehr">Lesen <Icon name="pfeil" size={18} /></span>
+  <div class="beitrag-bild">
+    {d.titelbild ? <img src={d.titelbild} alt="" width="400" height="360" loading={gross ? 'eager' : 'lazy'} /> : <Icon name={bereich?.icon ?? 'kreislauf'} size={72} />}
+  </div>
+  <div class="beitrag-text">
+    <span class="rubrik-chip">{bereich?.name ?? d.bereich}</span>
+    {gross ? <h2>{d.titel}</h2> : <h3>{d.titel}</h3>}
+    <p>{gross ? d.fazit : d.beschreibung}</p>
+    <span class="mehr">{lesezeit(beitrag.body)} Min. lesen <Icon name="pfeil" size={18} /></span>
+  </div>
 </a>

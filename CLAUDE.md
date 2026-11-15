@@ -29,10 +29,22 @@ Vor jedem Text, der veröffentlicht werden soll, Florian fragen, was ihm bei gen
 
 Neue Beiträge kommen immer als Pull Request mit Netlify-Vorschau. Florian liest und gibt frei, nichts wird direkt auf `main` veröffentlicht.
 
+## Gestaltung längerer Texte
+
+Längere Ratgeber und Lexikon-Einträge nie als reinen Fließtext (Florian, 2026-11-15). Immer einbauen, direkt vor dem Absatz, neben dem es stehen soll (auf großen Bildschirmen steht es am Rand, auf dem Handy im Text):
+
+- Randzitat in großer Schrift: `<aside class="rand randzitat"><p>Wichtige Aussage.</p><small>Quelle oder „Einschätzung“</small></aside>`
+- Grafik-Kasten: `<aside class="rand grafik"><p class="grafik-titel">Titel</p> … </aside>`, z. B. Rangfolge mit `<ol class="stufen">` (`<li class="stufe-top">` hebt den besten Schritt hervor).
+- Kreisläufe: biologisch in Grün (`kreislauf bio`), technisch in Silber (`kreislauf tech`). Beispiel in `src/content/ratgeber/kompostierbare-produkte.md`.
+- Große Zahl über die volle Breite in der Bereichsfarbe: `<div class="grosse-zahl"><strong>100 g</strong><p>Was die Zahl bedeutet.</p><small>Quelle</small></div>`, direkt nach dem Absatz mit der Zahl.
+- Titelbild: `titelbild: /bilder/<slug>.svg` und `titelbildAlt` im Frontmatter; eigene, bunte SVG-Illustration in `public/bilder/` (erscheint im Artikelkopf und auf der Startseite).
+- Magazin-Look „Modern und farbig“ (Florian, 2026-11-15): Jeder Bereich hat eine Erkennungsfarbe (`farbe` in `src/data/alltag.ts`), Überschriften in Bricolage Grotesque. Gilt für alle Seiten: Jede Seite beginnt mit `SeitenKopf` (farbiger Kopf, `slot="kopf"` in `Base`), Karten haben dunklen Rand mit versetztem Schatten.
+- Bilder nur mit geklärter Lizenz (eigene Fotos, freie Lizenz oder Erlaubnis), sonst eigene Illustration als SVG.
+
 ## Regeln für Produktseiten
 
 1. Die Punktzahl (`punkte`, 0 bis 10) vergibt nur Florian. Nie selbst eintragen; ohne Punktzahl zeigt die Seite „Bewertung folgt“.
-2. Jedes Kriterium aus `kriterienKleidung` bekommt einen Status (`gut`, `teilweise`, `fehlt`, `offen`) und einen kurzen, belegten Text. `offen` heißt: keine Angaben gefunden oder Florian entscheidet (z. B. Aussehen).
+2. Jedes Kriterium aus `kriterienKleidung` bekommt einen Status (`gut`, `teilweise`, `fehlt`, `offen`) und einen kurzen, belegten Text. `offen` ist nur erlaubt, wenn Florian es ausdrücklich freigibt (Florian, 2026-11-15). Fehlen Angaben, erst weiter recherchieren und dann Florian gezielt fragen.
 3. Kreislauf nach Cradle to Cradle ist das wichtigste Kriterium. Faire Arbeitsbedingungen werden nicht bewertet.
 4. Wirbt ein Hersteller mit CO₂-Ausgleich oder „klimaneutral“: genau erklären, wie (welche Projekte, vermeiden oder dauerhaft entfernen), und Florian entscheiden lassen, ob das zählt.
 5. Preis: mit vergleichbarer Ware großer Modeketten (z. B. C&A, H&M) vergleichen. Auf der Seite die Kette nicht namentlich nennen, sondern „große Modeketten“ schreiben, mit Stand (Monat/Jahr).

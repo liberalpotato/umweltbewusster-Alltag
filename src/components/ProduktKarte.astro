@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import Punkte from './Punkte.astro';
 import Icon from './Icon.astro';
 import StatusChip from './StatusChip.astro';
-import { zaehleStatus, type Status } from '../data/alltag';
+import { zaehleStatus, findeBereich, type Status } from '../data/alltag';
 
 interface Props {
   produkt: CollectionEntry<'produkte'>;
@@ -11,11 +11,12 @@ interface Props {
 const { produkt } = Astro.props;
 const d = produkt.data;
 const zahl = zaehleStatus(d.kriterien);
+const farbe = findeBereich(d.bereich)?.farbe ?? 'mint';
 const reihenfolge: Status[] = ['gut', 'teilweise', 'fehlt', 'offen'];
 const woerter: Record<Status, string> = { gut: 'erfüllt', teilweise: 'teilweise', fehlt: 'fehlen', offen: 'offen' };
 ---
 
-<a class="karte produkt-karte" href={`/produkte/${produkt.id}/`}>
+<a class:list={['karte', 'produkt-karte', `farbe-${farbe}`]} href={`/produkte/${produkt.id}/`}>
   {d.entwurf && <span class="entwurf-hinweis">Entwurf</span>}
   <div class="produkt-karte-kopf">
     <div>

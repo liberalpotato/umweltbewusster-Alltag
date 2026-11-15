@@ -1,8 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import SeitenKopf from '../components/SeitenKopf.astro';
 ---
 
 <Base titel="Seite nicht gefunden" beschreibung="Diese Seite gibt es nicht (mehr).">
-  <h1>Seite nicht gefunden</h1>
+  <SeitenKopf slot="kopf" farbe="orange" titel="Seite nicht gefunden" icon="frage" klein />
+  <div class="artikel artikel-text seiten-start farbe-orange">
   <p>Diese Seite gibt es nicht oder nicht mehr. Die Website wurde neu aufgebaut. Schau gern auf der <a href="/">Startseite</a> nach.</p>
+  </div>
 </Base>

@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import BereichKachel from '../../components/BereichKachel.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
+import Icon from '../../components/Icon.astro';
 import { alltagsBereiche } from '../../data/alltag';
 import { sichtbareProdukte } from '../../data/inhalte';
 
@@ -9,13 +11,13 @@ const anzahl = (slug: string) => produkte.filter((p) => p.data.bereich === slug)
 ---
 
 <Base titel="Alltagsgegenstände" beschreibung="Alltagsgegenstände nachhaltig gedacht: Beiträge und Produkte im ehrlichen Check, von Kleidung bis Garten. Unabhängig und ohne bezahlte Links." weit>
-  <section class="held">
-    <p class="ueberzeile">Alltagsgegenstände</p>
-    <h1>Was du im Alltag brauchst, nachhaltig gedacht</h1>
-    <p class="lead">Zu jedem Bereich gibt es Beiträge und Produkte, die ich nach festen Kriterien prüfe. Die Bereiche kommen nach und nach dazu.</p>
-  </section>
+  <SeitenKopf slot="kopf" farbe="mint" rubrik="Alltagsgegenstände" titel="Was du im Alltag brauchst, nachhaltig gedacht" lead="Zu jedem Bereich gibt es Beiträge und Produkte, die ich nach festen Kriterien prüfe. Die Bereiche kommen nach und nach dazu.">
+    <div slot="rechts" class="symbol-wolke" aria-hidden="true">
+      {alltagsBereiche.map((b) => <span class:list={['farbe-' + b.farbe]}><Icon name={b.icon} size={40} /></span>)}
+    </div>
+  </SeitenKopf>
 
-  <ul class="raster raster-bereiche">
+  <ul class="raster raster-bereiche seiten-start">
     {alltagsBereiche.map((b) => (
       <li><BereichKachel bereich={b} anzahlProdukte={anzahl(b.slug)} /></li>
     ))}

@@ -4,6 +4,8 @@ beschreibung: "Kompostierbar ist vor allem bei Abrieb wichtig, etwa bei Schuhsoh
 bereich: kleidung
 fazit: "Kompostierbar ist vor allem dort sinnvoll, wo sich ein Produkt beim Benutzen abreibt und der Abrieb unkontrolliert in die Umwelt gelangt, etwa bei Schuhsohlen. Was danach vom Produkt übrig bleibt, sollte möglichst zu neuer Ware recycelt werden, zum Beispiel alte Socken zu neuen Socken. Kompost ist ein guter Notausgang, aber selten der beste Weg."
 stand: 2026-11-15
+titelbild: /bilder/kompostierbare-produkte.svg
+titelbildAlt: "Illustration: Eine Socke steckt in einem Komposthaufen, daneben Blätter und Recycling-Pfeile"
 quellen:
   - titel: "Umweltbundesamt: Fragen und Antworten zu Cradle to Cradle"
     url: https://umweltbundesamt.de/themen/abfall-ressourcen/ressourcenschonung-in-produktion-konsum/fragen-antworten-zu-cradle-to-cradle
@@ -55,6 +57,16 @@ quellen:
 
 ## Die Rangfolge
 
+<aside class="rand grafik" aria-label="Rangfolge">
+<p class="grafik-titel">Was am Ende mit einem Produkt passieren sollte</p>
+<ol class="stufen">
+<li><span>Lange nutzen<small>spart am meisten Material</small></span></li>
+<li><span>Reparieren<small>stopfen, neu besohlen, weitergeben</small></span></li>
+<li class="stufe-top"><span>Recyceln<small>zu neuer Ware, mein Favorit</small></span></li>
+<li><span>Kompostieren<small>wenn Recycling nicht geht</small></span></li>
+</ol>
+</aside>
+
 1. **Lange nutzen.** Ein Produkt, das doppelt so lange hält, braucht nur halb so viel Material. Das schlägt jeden Kompost.
 2. **Reparieren und weitergeben.** Socken stopfen, Schuhe neu besohlen lassen, gut erhaltene Kleidung spenden.
 3. **Recyceln zu neuer Ware.** Aus alten Socken werden neue Socken, aus alten Jeans neue Jeans. Das halte ich für den besten Weg am Ende des Lebens.
@@ -63,6 +75,13 @@ quellen:
 Es gibt aber eine wichtige Ausnahme: alles, was sich beim Benutzen abreibt. Dazu unten mehr.
 
 ## Was heißt „kompostierbar“ überhaupt?
+
+<aside class="rand grafik" aria-label="Die zwei Kreisläufe von Cradle to Cradle">
+<div class="kreislaeufe">
+<div class="kreislauf bio"><p class="kreislauf-titel">biologisch</p><svg class="kreislauf-svg bio" viewBox="56 32 128 128" role="img" aria-label="biologischer Kreislauf"><defs><marker id="pfeil-bio" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pfeil-spitze"/></marker></defs><path d="M141.2 48.5 A52 52 0 0 1 167.5 74.8" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M167.5 117.2 A52 52 0 0 1 141.2 143.5" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M98.8 143.5 A52 52 0 0 1 72.5 117.2" class="bogen" marker-end="url(#pfeil-bio)"/><path d="M72.5 74.8 A52 52 0 0 1 98.8 48.5" class="bogen" marker-end="url(#pfeil-bio)"/></svg></div>
+<div class="kreislauf tech"><p class="kreislauf-titel">technisch</p><svg class="kreislauf-svg tech" viewBox="56 32 128 128" role="img" aria-label="technischer Kreislauf"><defs><marker id="pfeil-tech" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pfeil-spitze"/></marker></defs><path d="M141.2 48.5 A52 52 0 0 1 167.5 74.8" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M167.5 117.2 A52 52 0 0 1 141.2 143.5" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M98.8 143.5 A52 52 0 0 1 72.5 117.2" class="bogen" marker-end="url(#pfeil-tech)"/><path d="M72.5 74.8 A52 52 0 0 1 98.8 48.5" class="bogen" marker-end="url(#pfeil-tech)"/></svg></div>
+</div>
+</aside>
 
 Die Idee stammt aus dem Prinzip Cradle to Cradle. Es unterscheidet zwei Kreisläufe:
 
@@ -85,11 +104,15 @@ Drei Dinge sind mir dabei aufgefallen:
 
 Für das Umweltbundesamt ist Kompostieren bei Textilien meist nicht die hochwertigste Lösung. Recycling ist in der Regel besser. Der Grund: Beim Kompostieren geht alles verloren, was in Anbau, Spinnen, Färben und Nähen gesteckt wurde. Übrig bleibt etwas Humus.
 
+<aside class="rand randzitat"><p>Auch eine Baumwollsocke ist ein eher schwacher Dünger.</p></aside>
+
 Dazu kommt: Abbaubare Kunststoffe bringen dem Boden laut Umweltbundesamt keine Nährstoffe. Einschätzung: Auch eine Baumwollsocke ist ein eher schwacher Dünger. Schafwolle ist hier eine Ausnahme: Als Pellets wird sie gezielt als Dünger eingesetzt und ersetzt dort Mineraldünger.
 
 Und Kompost braucht die richtigen Bedingungen. PUMA hat 2021 ein Experiment mit 500 Paar kompostierbaren Sneakern gestartet (RE:SUEDE). Die Schuhe wurden zerkleinert und rund dreieinhalb Monate in einer speziell ausgestatteten Industrieanlage in den Niederlanden kompostiert. Normale Kompostverfahren reichten laut PUMA nicht aus, vor allem die Sohle brauchte mehr Zeit.
 
 ## Warum ist Recycling zu neuen Socken besser?
+
+<aside class="rand randzitat"><p>2025 stellte die Marke eine Jeans mit 55 % Baumwolle aus alten Jeans vor.</p><small>Mud Jeans, laut FashionUnited</small></aside>
 
 Beim Recycling bleibt die Faser erhalten und wird wieder zu Garn. Dass das bei Socken geht, zeigt die Marke Smartwool in den USA: Sie sammelt alte Socken ein und spinnt aus alten Smartwool-Socken neues Garn, gemischt mit neuer Merinowolle. Ähnlich arbeitet Mud Jeans mit Jeans. 2025 stellte die Marke eine Jeans mit 55 % Baumwolle aus alten Jeans vor, üblich sind 20 bis 40 %.
 
@@ -104,7 +127,24 @@ Leider ist das noch die Ausnahme. Laut Öko-Institut werden weltweit nur etwa 1 
 
 Es gibt Produkte, bei denen ein Teil des Materials beim Benutzen verloren geht, ob man will oder nicht. Diesen Abrieb kann niemand einsammeln und recyceln. Er landet in der Luft, im Boden und im Wasser. Hier ist es deshalb entscheidend, dass das Material biologisch abbaubar und für die Natur unbedenklich ist.
 
+<figure class="rand grafik grafik-bild">
+<svg viewBox="0 0 280 160" role="img" aria-label="Illustration: Ein Sneaker, von dessen Sohle beim Gehen kleine Teilchen abreiben">
+<path d="M34 100 L31 66 C30 56 36 50 46 50 C58 50 68 56 80 56 C86 56 90 44 98 40 L108 38 C114 50 128 60 150 68 C176 77 210 78 234 84 C250 88 258 94 258 102 Z" fill="var(--flaeche)" stroke="var(--text-leise)" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M34 100 L32 72 C44 70 58 76 66 100" fill="none" stroke="var(--text-leise)" stroke-width="2" stroke-linejoin="round" opacity="0.7"/>
+<path d="M200 79 C214 84 222 94 222 102" fill="none" stroke="var(--text-leise)" stroke-width="2" opacity="0.7"/>
+<path d="M74 92 C100 88 128 84 176 88" fill="none" stroke="var(--akzent)" stroke-width="3" stroke-linecap="round"/>
+<path d="M106 46 L118 58 M116 44 L102 54 M122 56 L134 64 M132 54 L118 62 M140 62 L152 70 M150 60 L136 68 M158 68 L170 74 M168 66 L154 72" stroke="var(--text-leise)" stroke-width="2" stroke-linecap="round"/>
+<path d="M28 100 L260 100 C266 100 268 106 266 110 C264 116 258 118 250 118 L36 118 C29 118 26 113 26 108 C26 103 26 100 28 100 Z" fill="var(--grund)" stroke="var(--text-leise)" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M34 118 L254 118 C258 118 260 122 256 125 L36 125 C32 125 30 120 34 118 Z" fill="var(--akzent)"/><path d="M60 125 v-4 M90 125 v-4 M120 125 v-4 M150 125 v-4 M180 125 v-4 M210 125 v-4 M240 125 v-4" stroke="var(--grund)" stroke-width="3"/>
+<g fill="var(--akzent)"><circle cx="62" cy="138" r="3"/><circle cx="90" cy="147" r="2.2"/><circle cx="120" cy="140" r="2.6"/><circle cx="148" cy="150" r="1.8"/><circle cx="178" cy="139" r="2.8"/><circle cx="206" cy="148" r="2"/><circle cx="234" cy="140" r="2.4"/></g>
+<path d="M14 132 L266 132" stroke="var(--linie)" stroke-width="2" stroke-dasharray="4 6"/>
+</svg>
+<figcaption>Bei jedem Schritt reibt sich ein wenig Sohle ab. Dieser Abrieb lässt sich nicht einsammeln, er sollte deshalb abbaubar und unbedenklich sein. Illustration.</figcaption>
+</figure>
+
 Das beste Beispiel ist der Schuh. Bei jedem Schritt reibt sich die Sohle ein wenig ab. Laut einer Studie von Fraunhofer UMSICHT sind das in Deutschland rund 100 g Abrieb pro Kopf und Jahr. Die Forschenden halten ihre Zahlen selbst eher für hoch geschätzt. Trotzdem liegt Schuhsohlenabrieb damit auf Platz 7 der Quellen für Mikroplastik, weit vor Kosmetik.
+
+<div class="grosse-zahl"><strong>100 g</strong><p>Abrieb von Schuhsohlen pro Kopf und Jahr, so die Schätzung für Deutschland.</p><small>Fraunhofer UMSICHT</small></div>
 
 Noch größer ist das Problem bei Autoreifen, der größten Quelle für Mikroplastik. Laut Umweltbundesamt enthalten Kunststoffe oft Zusatzstoffe wie Weichmacher, Flammschutzmittel oder Antioxidantien. In einem Laborversuch der Universität Wien nahm Salat Zusatzstoffe aus Reifenabrieb über die Wurzeln auf. Ob das für Menschen giftig ist, ist noch nicht geklärt.
 
