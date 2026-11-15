@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Quellen from '../../components/Quellen.astro';
-import { bereichName } from '../../data/bereiche';
+import { findeBereich } from '../../data/alltag';
 import { veroeffentlichteRatgeber, datum } from '../../data/inhalte';
 
 export async function getStaticPaths() {
@@ -13,11 +13,13 @@ export async function getStaticPaths() {
 const { eintrag } = Astro.props;
 const { Content } = await render(eintrag);
 const d = eintrag.data;
+const bereich = findeBereich(d.bereich);
+const bereichLink = bereich?.aktiv ? `/alltag/${bereich.slug}/` : '/alltag/';
 ---
 
 <Base titel={d.titel} beschreibung={d.beschreibung}>
   <article>
-    <p class="meta"><a href={`/themen/${d.bereich}/`}>{bereichName(d.bereich)}</a> · Stand: {datum(d.stand)}</p>
+    <p class="meta"><a href={bereichLink}>{bereich?.name ?? d.bereich}</a> · Stand: {datum(d.stand)}</p>
     <h1>{d.titel}</h1>
     <div class="fazit"><strong>Kurz gesagt</strong>{d.fazit}</div>
     <Content />

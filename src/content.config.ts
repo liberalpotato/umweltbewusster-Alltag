@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { bereichSlugs } from './data/bereiche';
+import { alltagSlugs } from './data/alltag';
 
 const quelle = z.object({
   titel: z.string(),
@@ -13,7 +13,8 @@ const ratgeber = defineCollection({
   schema: z.object({
     titel: z.string(),
     beschreibung: z.string().max(160),
-    bereich: z.enum(bereichSlugs),
+    /** Slug eines Bereichs aus src/data/alltag.ts, z. B. 'kleidung'. */
+    bereich: z.enum(alltagSlugs),
     fazit: z.string(),
     stand: z.coerce.date(),
     entwurf: z.boolean().default(false),

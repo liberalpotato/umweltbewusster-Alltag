@@ -14,9 +14,7 @@ interface Props {
 }
 const { bereich } = Astro.props;
 const produkte = (await sichtbareProdukte()).filter((p) => p.data.bereich === bereich.slug);
-const beitraege = bereich.ratgeberBereich
-  ? (await veroeffentlichteRatgeber()).filter((r) => r.data.bereich === bereich.ratgeberBereich)
-  : [];
+const beitraege = (await veroeffentlichteRatgeber()).filter((r) => r.data.bereich === bereich.slug);
 const anzahl = (slug: string) => produkte.filter((p) => p.data.unterkategorie === slug).length;
 const kriterien = bereich.slug === 'kleidung' ? kriterienKleidung : [];
 ---
