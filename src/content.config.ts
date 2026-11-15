@@ -61,7 +61,7 @@ const produkte = defineCollection({
     tipp: z.string().optional(),
     kriterien: z.object({
       kreislauf: kriterium,
-      /** Nur bei Hosen, Jacken und Taschen (siehe reparaturUnterkategorien). */
+      /** Nur bei Hosen, Jacken, Taschen und Schuhen (siehe reparaturUnterkategorien). */
       reparatur: kriterium.optional(),
       transparenz: kriterium,
       haltbarkeit: kriterium,
@@ -71,6 +71,16 @@ const produkte = defineCollection({
       preis: kriterium,
       aussehen: kriterium,
     }),
+    /** Leder-Check mit Florians fünf Bedingungen (nur bei Produkten mit Leder, siehe lederKriterien). */
+    leder: z
+      .object({
+        chromfrei: kriterium,
+        beschichtung: kriterium,
+        abbautest: kriterium,
+        ruecknahme: kriterium,
+        sohle: kriterium,
+      })
+      .optional(),
     pluspunkte: z.array(z.string()),
     minuspunkte: z.array(z.string()),
     stand: z.coerce.date(),

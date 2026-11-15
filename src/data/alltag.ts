@@ -104,7 +104,7 @@ export function findeUnterkategorie(bereichSlug: string, slug: string) {
 /** Florians Bewertungskriterien für Kleidung, in seiner Reihenfolge. */
 export const kriterienKleidung = [
   { key: 'kreislauf', name: 'Kreislauf (Cradle to Cradle)', frage: 'Kann das Material vollständig zurück in die Natur oder wird es zu neuer Kleidung? Nimmt der Hersteller Altes zurück?' },
-  { key: 'reparatur', name: 'Reparatur', frage: 'Nur bei Hosen, Jacken und Taschen: Wie einfach und transparent lässt sich das Produkt reparieren?' },
+  { key: 'reparatur', name: 'Reparatur', frage: 'Nur bei Hosen, Jacken, Taschen und Schuhen: Wie einfach und transparent lässt sich das Produkt reparieren?' },
   { key: 'transparenz', name: 'Transparenz', frage: 'Erfährt man, wie das Produkt hergestellt wurde und was später damit passiert?' },
   { key: 'haltbarkeit', name: 'Haltbarkeit', frage: 'Hält das Produkt lange, mindestens ein Jahr in gutem Zustand?' },
   { key: 'klima', name: 'Klimabilanz', frage: 'Werden Emissionen gesenkt und der Rest nachvollziehbar und wirksam ausgeglichen?' },
@@ -116,8 +116,22 @@ export const kriterienKleidung = [
 
 export type KriteriumKey = (typeof kriterienKleidung)[number]['key'];
 
-/** Reparatur bewertet Florian nur bei hochwertigen Teilen (Hosen, Jacken, Rucksäcke und Taschen). */
-export const reparaturUnterkategorien = ['hosen-jeans', 'jacken', 'taschen'];
+/** Reparatur bewertet Florian nur bei hochwertigen Teilen (Hosen, Jacken, Rucksäcke und Taschen, Schuhe). */
+export const reparaturUnterkategorien = ['hosen-jeans', 'jacken', 'taschen', 'schuhe'];
+
+/**
+ * Florians Leder-Check (2026-11-15): Leder ist nur in Ordnung, wenn alle fünf Bedingungen erfüllt sind.
+ * Wird auf Produktseiten mit Leder als eigene Checkliste gezeigt (Feld `leder`).
+ */
+export const lederKriterien = [
+  { key: 'chromfrei', name: 'Chromfrei gegerbt', frage: 'Wurde pflanzlich, mit Zeolith oder anders ohne Chrom gegerbt?' },
+  { key: 'beschichtung', name: 'Ohne Kunststoffbeschichtung', frage: 'Ist das Leder frei von Kunststoff-Finish?' },
+  { key: 'abbautest', name: 'Abbaubarkeit belegt', frage: 'Zeigt ein Test, dass sich das Leder abbaut?' },
+  { key: 'ruecknahme', name: 'Rücknahme', frage: 'Nimmt der Hersteller alte Schuhe zurück?' },
+  { key: 'sohle', name: 'Sohle tauschbar', frage: 'Lässt sich die Sohle erneuern?' },
+] as const;
+
+export type LederKey = (typeof lederKriterien)[number]['key'];
 
 /** Die Kriterien, die für eine Unterkategorie gelten. */
 export function kriterienFuer(unterkategorie: string) {
