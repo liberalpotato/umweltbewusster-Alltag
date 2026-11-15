@@ -10,6 +10,7 @@ Technik: Astro 5, statisch, gehostet bei Netlify. `npm run build` muss fehlerfre
 - `entwurf: true` blendet einen Ratgeber im Live-Build aus.
 - Ratgeber gehören zu einem Bereich der Alltagsgegenstände: `bereich` ist ein Slug aus `src/data/alltag.ts` (z. B. `kleidung`). Sie erscheinen oben auf der Bereichsseite und unter /ratgeber/. Eigene Themenseiten (/themen/) gibt es nicht mehr.
 - Alltagsgegenstände (Bereiche, Unterkategorien, Florians Kriterien) stehen in `src/data/alltag.ts`. Bereiche mit `aktiv: false` erscheinen als „Kommt bald“.
+- Wunschvorstellung: Jede Unterkategorie kann in `src/data/alltag.ts` ein Feld `wunsch` haben (Kasten „Meine Wunschvorstellung“ oben auf der Kategorieseite). Den Inhalt gibt nur Florian vor, nie selbst ausdenken (Florian, 2026-11-15). Im passenden Ratgeber dazu einen Abschnitt „Wie sähe der nachhaltigste … aus?“ mit echten Beispielen.
 - Produkte: `src/content/produkte/<marke-produkt>.md`. `entwurf: true` (Standard) zeigt ein Produkt nur lokal und in Netlify-Vorschauen.
 
 ## Bevor ein Text entsteht

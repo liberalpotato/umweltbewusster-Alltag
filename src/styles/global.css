@@ -685,3 +685,12 @@ main.breite .artikel-text ol li { margin-bottom: 0.4rem; }
 .artikel .fazit { padding: 1.4rem 1.5rem 1.5rem; border-radius: 22px; background: var(--sonne-hell); border: 3px solid var(--tinte); box-shadow: 6px 6px 0 var(--tinte); }
 .artikel .fazit strong { font-family: var(--titel-schrift); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
 @media (prefers-color-scheme: dark) { .artikel .fazit { border-color: var(--sonne); box-shadow: 6px 6px 0 var(--sonne); } }
+
+/* Florians Wunschvorstellung auf Kategorieseiten */
+.wunsch-kasten { margin-bottom: 2rem; padding: 1.4rem 1.5rem 1.5rem; border-radius: 22px; background: var(--mint-hell); border: 3px solid var(--tinte); box-shadow: 6px 6px 0 var(--tinte); }
+@media (prefers-color-scheme: dark) { .wunsch-kasten { border-color: var(--mint-ton); box-shadow: 6px 6px 0 var(--mint-ton); } }
+.wunsch-kasten p { margin: 0 0 0.6rem; font-size: 1.05rem; }
+.wunsch-kasten .wunsch-titel { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; }
+.wunsch-schritte { margin: 0.4rem 0 0.8rem; padding-left: 1.4rem; }
+.wunsch-schritte li { margin: 0.25rem 0; }
+.wunsch-kasten .wunsch-hinweis { margin: 0; font-size: 0.92rem; opacity: 0.85; }
